@@ -1,0 +1,35 @@
+\hypertarget{classIController}{}\doxysection{I\+Controller Class Reference}
+\label{classIController}\index{IController@{IController}}
+
+
+{\ttfamily \#include $<$I\+Controller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIController_a9d4ed07090f564f3d6f1847440835610}\label{classIController_a9d4ed07090f564f3d6f1847440835610}} 
+virtual void \mbox{\hyperlink{classIController_a9d4ed07090f564f3d6f1847440835610}{Add\+Entity}} (const \mbox{\hyperlink{classIEntity}{I\+Entity}} \&entity)=0
+\begin{DoxyCompactList}\small\item\em Adds an entity to the program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIController_aae116763f3bbfc0875eb841912df7c59}\label{classIController_aae116763f3bbfc0875eb841912df7c59}} 
+virtual void \mbox{\hyperlink{classIController_aae116763f3bbfc0875eb841912df7c59}{Update\+Entity}} (const \mbox{\hyperlink{classIEntity}{I\+Entity}} \&entity)=0
+\begin{DoxyCompactList}\small\item\em Adds an entity to the program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIController_a35b431eb8e01216df8b33fa3f4c2b25c}\label{classIController_a35b431eb8e01216df8b33fa3f4c2b25c}} 
+virtual void \mbox{\hyperlink{classIController_a35b431eb8e01216df8b33fa3f4c2b25c}{Remove\+Entity}} (int id)=0
+\begin{DoxyCompactList}\small\item\em Removes an entity from the program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIController_aa50f4cf3a9cc11decfc8e201dc00ab39}\label{classIController_aa50f4cf3a9cc11decfc8e201dc00ab39}} 
+virtual void \mbox{\hyperlink{classIController_aa50f4cf3a9cc11decfc8e201dc00ab39}{Add\+Path}} (int id, const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&path)=0
+\begin{DoxyCompactList}\small\item\em Adds a path to the program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIController_a23bf74a0e1672c6daba1674137759f55}\label{classIController_a23bf74a0e1672c6daba1674137759f55}} 
+virtual void \mbox{\hyperlink{classIController_a23bf74a0e1672c6daba1674137759f55}{Remove\+Path}} (int id)=0
+\begin{DoxyCompactList}\small\item\em Removes a path from the program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIController_ab9ee95cb6f33c04b1323cec88e5d27b5}\label{classIController_ab9ee95cb6f33c04b1323cec88e5d27b5}} 
+virtual void \mbox{\hyperlink{classIController_ab9ee95cb6f33c04b1323cec88e5d27b5}{Send\+Event\+To\+View}} (const std\+::string \&event, const Json\+Object \&details)=0
+\begin{DoxyCompactList}\small\item\em Allows messages to be passed back to the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract controller class used in the Transit Service. Uses the Model View Controller Pattern 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/include/I\+Controller.\+h\end{DoxyCompactItemize}

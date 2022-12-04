@@ -1,0 +1,4 @@
+<map id="Car" name="Car">
+<area shape="rect" id="node1" title="the car entity class. It Creates a Car entity" alt="" coords="15,80,59,107"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title=" " alt="" coords="5,5,69,32"/>
+</map>

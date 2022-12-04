@@ -1,0 +1,305 @@
+\hypertarget{classLost__Duck}{}\doxysection{Lost\+\_\+\+Duck Class Reference}
+\label{classLost__Duck}\index{Lost\_Duck@{Lost\_Duck}}
+
+
+the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} entity class. It Creates a \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} entity  
+
+
+
+
+{\ttfamily \#include $<$Lost\+\_\+\+Duck.\+h$>$}
+
+
+
+Inheritance diagram for Lost\+\_\+\+Duck\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classLost__Duck__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lost\+\_\+\+Duck\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classLost__Duck__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLost__Duck_abffb5794b62b9b8fc53cc06d49275364}\label{classLost__Duck_abffb5794b62b9b8fc53cc06d49275364}} 
+{\bfseries Lost\+\_\+\+Duck} (Json\+Object \&obj)
+\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classLost__Duck_a559ce890eec3a36a5f7743444801339c}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current position of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classLost__Duck_ad85c8faaa3643a84f04dd0f931af1942}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current direction of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classLost__Duck_ad6a0263c2661cd257693f5eecb758338}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current Destination of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classLost__Duck_ae550a8a3a155301947185058d9750661}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the details about the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classLost__Duck_aeeea58f486ee6404493244cb9193d7c3}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current speed of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLost__Duck_a8d974c98bc57866b12d8e68e18cb74cd}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Update the Lost\+\_\+ducks position on using Dijk strategy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLost__Duck_ae79cf2268356505bc4e42852f7749a65}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current position of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLost__Duck_ad3684a940b754abdc4745f8cbf3d84ec}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current direction of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLost__Duck_a6a91e2b4f33cf127885bf210b3820c77}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current destination of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLost__Duck_a2c7a7ef7ab3fc5e4eb8453eed826609f}\label{classLost__Duck_a2c7a7ef7ab3fc5e4eb8453eed826609f}} 
+{\bfseries Lost\+\_\+\+Duck} (const \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} \&duck)=delete
+\item 
+\mbox{\Hypertarget{classLost__Duck_a2a05104761403a3b6cf1353eb36a8463}\label{classLost__Duck_a2a05104761403a3b6cf1353eb36a8463}} 
+\mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} \& {\bfseries operator=} (const \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} \&duck)=delete
+\item 
+void \mbox{\hyperlink{classLost__Duck_ada2ee96650c6f8886d42c8d9511c3c37}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotate the Lost\+\_\+ducks towards its destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} entity class. It Creates a \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} entity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Json\+Object\& \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLost__Duck_ad6a0263c2661cd257693f5eecb758338}\label{classLost__Duck_ad6a0263c2661cd257693f5eecb758338}} 
+\index{Lost\_Duck@{Lost\_Duck}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Lost\+\_\+\+Duck\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current Destination of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+direction, a \mbox{\hyperlink{classVector3}{Vector3}} value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_ae550a8a3a155301947185058d9750661}\label{classLost__Duck_ae550a8a3a155301947185058d9750661}} 
+\index{Lost\_Duck@{Lost\_Duck}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Lost\+\_\+\+Duck\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the details about the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+details, a Json\+Object filled with details about the \mbox{\hyperlink{classCar}{Car}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_ad85c8faaa3643a84f04dd0f931af1942}\label{classLost__Duck_ad85c8faaa3643a84f04dd0f931af1942}} 
+\index{Lost\_Duck@{Lost\_Duck}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Lost\+\_\+\+Duck\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current direction of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+direction, a \mbox{\hyperlink{classVector3}{Vector3}} value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_a559ce890eec3a36a5f7743444801339c}\label{classLost__Duck_a559ce890eec3a36a5f7743444801339c}} 
+\index{Lost\_Duck@{Lost\_Duck}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Lost\+\_\+\+Duck\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current position of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position, a \mbox{\hyperlink{classVector3}{Vector3}} value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_aeeea58f486ee6404493244cb9193d7c3}\label{classLost__Duck_aeeea58f486ee6404493244cb9193d7c3}} 
+\index{Lost\_Duck@{Lost\_Duck}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Lost\+\_\+\+Duck\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current speed of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+speed, a float value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_ada2ee96650c6f8886d42c8d9511c3c37}\label{classLost__Duck_ada2ee96650c6f8886d42c8d9511c3c37}} 
+\index{Lost\_Duck@{Lost\_Duck}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Lost\+\_\+\+Duck\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotate the Lost\+\_\+ducks towards its destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle,a} & double value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_a6a91e2b4f33cf127885bf210b3820c77}\label{classLost__Duck_a6a91e2b4f33cf127885bf210b3820c77}} 
+\index{Lost\_Duck@{Lost\_Duck}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Lost\+\_\+\+Duck\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current destination of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+,a} & \mbox{\hyperlink{classVector3}{Vector3}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_ad3684a940b754abdc4745f8cbf3d84ec}\label{classLost__Duck_ad3684a940b754abdc4745f8cbf3d84ec}} 
+\index{Lost\_Duck@{Lost\_Duck}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Lost\+\_\+\+Duck\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current direction of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+,a} & \mbox{\hyperlink{classVector3}{Vector3}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_ae79cf2268356505bc4e42852f7749a65}\label{classLost__Duck_ae79cf2268356505bc4e42852f7749a65}} 
+\index{Lost\_Duck@{Lost\_Duck}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Lost\+\_\+\+Duck\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current position of the \mbox{\hyperlink{classLost__Duck}{Lost\+\_\+\+Duck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+,a} & \mbox{\hyperlink{classVector3}{Vector3}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+\mbox{\Hypertarget{classLost__Duck_a8d974c98bc57866b12d8e68e18cb74cd}\label{classLost__Duck_a8d974c98bc57866b12d8e68e18cb74cd}} 
+\index{Lost\_Duck@{Lost\_Duck}!Update@{Update}}
+\index{Update@{Update}!Lost\_Duck@{Lost\_Duck}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Lost\+\_\+\+Duck\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the Lost\+\_\+ducks position on using Dijk strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt,a} & double value \\
+\hline
+{\em scheduler,a} & vector of type \mbox{\hyperlink{classIEntity}{I\+Entity}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/include/Lost\+\_\+\+Duck.\+h\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/src/Lost\+\_\+\+Duck.\+cc\end{DoxyCompactItemize}

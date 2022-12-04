@@ -1,0 +1,9 @@
+<map id="IEntityFactory" name="IEntityFactory">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,117,159"/>
+<area shape="rect" id="node2" href="$classCarFactory.html" title="Creates a new Car object if the text in the provided JsonObject parameter is “car”" alt="" coords="189,5,281,32"/>
+<area shape="rect" id="node3" href="$classCompositeFactory.html" title=" " alt="" coords="165,56,305,83"/>
+<area shape="rect" id="node4" href="$classDroneFactory.html" title=" " alt="" coords="181,107,290,133"/>
+<area shape="rect" id="node5" href="$classHelicopterFactory.html" title="Creates a new Helicopter object if the text in the provided JsonObject parameter is “helicopter”" alt="" coords="167,157,304,184"/>
+<area shape="rect" id="node6" href="$classLostDuckFactory.html" title="Creates a new LostDuck object if the text in the provided JsonObject parameter is “LostDuck”" alt="" coords="170,208,301,235"/>
+<area shape="rect" id="node7" href="$classRobotFactory.html" title=" " alt="" coords="181,259,289,285"/>
+</map>

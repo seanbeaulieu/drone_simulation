@@ -14,15 +14,10 @@ class RechargeStation : public IEntity{
     public:
      Vector3 GetPosition() const { return position; }
 
-     Vector3 GetDirection() const { return direction; }
-
-     Vector3 GetDestination() const { return destination; }
-
      JsonObject GetDetails() const { return details; }
      
      void SetPosition(Vector3 pos_) { position = pos_; }
      
-     float GetSpeed() const { return speed; }
-     
-     void Update(double dt, std::vector<IEntity*> scheduler);  
+
+     virtual void Update(double dt, std::vector<IEntity*> scheduler);  
 }

@@ -12,6 +12,7 @@ public:
     BatteryDecorator(JsonObject& entity);
     ~BatteryDecorator();
     //void SetDrone(Drone* drone);
+    void GetNearestEntity(std::vector<IEntity*> scheduler);
     void Update(double dt, std::vector<IEntity*> scheduler);
 };
 

@@ -14,6 +14,11 @@ BatteryDecorator :: ~BatteryDecorator(){
 
 // }
 
+void BatteryDecorator::GetNearestEntity(std::vector<IEntity*> scheduler){
+    drone->GetNearestEntity(scheduler);
+}
+
 void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
-//FIXME: battery
+//FIXME: not working right now with drone factory.
+    drone->Update(dt, scheduler);
 } 

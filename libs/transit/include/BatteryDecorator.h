@@ -2,16 +2,17 @@
 #define BATTERY_DECORATOR_H_
 
 #include "Drone.h"
-
+#include "IEntity.h"//fixme: drone of IEntity
 class BatteryDecorator : public Drone
 {
 private:
     double charge;
     Drone* drone;
 public:
-    BatteryDecorator();
+    BatteryDecorator(JsonObject& entity);
     ~BatteryDecorator();
-    void Update(double dt, std::vector<IEntity*> scheduler)
+    //void SetDrone(Drone* drone);
+    void Update(double dt, std::vector<IEntity*> scheduler);
 };
 
-
+#endif

@@ -40,7 +40,8 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
     JsonObject detailsTemp = entity->GetDetails();
     std::string nameTemp = detailsTemp["name"];
     std::string typeTemp = detailsTemp["type"];
-    if (name.compare(nameTemp) == 0 && typeTemp.compare("robot") == 0 && entity->GetAvailability()) {
+    //FIXME: pick, drone, moblibe recharge station, other??
+    if (name.compare(nameTemp) == 0 && typeTemp.compare("robot") == 0 && entity->GetAvailability()) { 
       std::string strategyName = details["search"];
       entity->SetStrategyName(strategyName);
       entity->SetDestination(Vector3(end[0], end[1], end[2]));

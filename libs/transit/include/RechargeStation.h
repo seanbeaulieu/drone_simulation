@@ -20,4 +20,6 @@ class RechargeStation : public IEntity{
      
 
      virtual void Update(double dt, std::vector<IEntity*> scheduler);  
-}
+};
+
+#endif

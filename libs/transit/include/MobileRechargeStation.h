@@ -23,4 +23,6 @@ class MobileRechargeStation : public RechargeStation{
      void SetStrategy(IStrategy* strategy);
     
 
-}
+};
+
+#endif

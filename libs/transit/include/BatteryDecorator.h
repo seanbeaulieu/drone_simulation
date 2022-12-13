@@ -3,13 +3,17 @@
 
 #include "Drone.h"
 #include "IEntity.h"//fixme: drone of IEntity
+#include "BeelineStrategy.h"
 class BatteryDecorator : public IEntity
 {
 private:
     double charge = 100;
-    Drone* drone;
+    Drone* drone = NULL;
     bool charging;
     Vector3 position;
+    IEntity* nearestRecharge = NULL;
+    bool nearIsMobile;
+    IStrategy* rechargeStrategy = NULL;
     
 public:
     BatteryDecorator(Drone* drone);

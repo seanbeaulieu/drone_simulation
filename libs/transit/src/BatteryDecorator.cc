@@ -33,5 +33,4 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
        charge -= dt;
        std::cout<<"charge is: "<<charge<<std::endl; 
     }
-
 } 

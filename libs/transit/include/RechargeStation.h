@@ -6,20 +6,36 @@
 
 class RechargeStation : public IEntity{
     private:
-     std::vector<BatteryDecorator*> recharging;
-     JsonObject details: 
+     //std::vector<BatteryDecorator*> recharging;
+     JsonObject details;
      Vector3 position;
+     Vector3 direction;
+     Vector3 destination;
+     bool available;
      float speed;
 
     public:
+     RechargeStation(JsonObject &obj);
+
+     ~RechargeStation() override = default;
+
      Vector3 GetPosition() const { return position; }
 
-     JsonObject GetDetails() const { return details; }
+     Vector3 GetDirection() const { return direction; }
      
-     void SetPosition(Vector3 pos_) { position = pos_; }
-     
+     Vector3 GetDestination() const { return destination; }
 
-     virtual void Update(double dt, std::vector<IEntity*> scheduler);  
+     bool GetAvailability() const { return available; }
+     
+     JsonObject GetDetails() const override;
+
+     void SetAvailability(bool choice);
+
+     void recharge();
+
+     float GetSpeed() const { return speed; }
+     
+     //virtual void Update(double dt, std::vector<IEntity*> scheduler);  
 };
 
 #endif

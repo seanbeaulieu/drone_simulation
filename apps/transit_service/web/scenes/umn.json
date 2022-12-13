@@ -58,6 +58,20 @@
             "offset": [0, -0.5, 0]
         }
     },
+    {   
+        "command": "CreateEntity",
+        "params": {
+            "type": "rechargestation",
+            "name": "RechargeStation",
+            "mesh": "assets/model/retro_gas_station.glb",
+            "position": [100, 240, 500],
+            "scale": [0.5, 0.5, 0.5],
+            "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 0,
+            "offset": [0, -0.5, 0]
+        }
+    },
     {
         "command": "SetScene",
         "params": {

@@ -7,7 +7,7 @@ class BatteryDecorator : public Drone
 {
 private:
     double charge;
-    Drone* drone;
+    Drone *drone;
 public:
     BatteryDecorator(JsonObject& entity);
     ~BatteryDecorator();

@@ -1,12 +1,19 @@
 #include "BatteryDecorator.h"
 
-BatteryDecorator :: BatteryDecorator(JsonObject& entity) : Drone(entity) {
+BatteryDecorator :: BatteryDecorator(Drone* drone) {
  this->charge = 100;
- drone = new Drone(entity);
+ this->drone = drone;
+}
+
+BatteryDecorator :: BatteryDecorator(JsonObject& obj) {
+	charge = 100;
+	drone = new Drone(obj);
 }
 
 BatteryDecorator :: ~BatteryDecorator(){
-    delete drone;
+    if (drone) {
+		delete drone;
+	}
 }
 
 //don't need it, maybe

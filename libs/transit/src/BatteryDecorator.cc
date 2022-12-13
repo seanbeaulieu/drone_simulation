@@ -29,7 +29,6 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
        charge -= dt;
        std::cout<<"charge is: "<<charge<<std::endl; 
     }
-<<<<<<< HEAD
 */
 
 	// note: may need a way to broadcast a dead battery to emergency pickup?
@@ -42,7 +41,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 	}
 	
 	if (this->GetAvailability()) { // no target, no moving
-		drone.Update(dt, scheduler); // try to initialize drone route
+		drone->Update(dt, scheduler); // try to initialize drone route
 		if (!(this->GetAvailability())) { // if successful (results in 1 move)
 			charge -= dt;
 			double totalDist = 0;
@@ -50,7 +49,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 			totalDist += this->GetPosition().Distance(this->GetDestination());
 			totalDist += this->GetDestination().Distance(robot->GetDestination());
 			//  total_dist += robot->GetDestination.Distance(nearestRecharge->GetPosition()); // relies on nearestRecharge, not fully implemented yet
-			if ((total_dist / speed) > (charge)) { // (DOUBLE CHECK MATH) if traveling total distance requires more time moving than the charge holds
+			if ((totalDist / this->GetSpeed()) > (charge)) { // (DOUBLE CHECK MATH) if traveling total distance requires more time moving than the charge holds
 				rechargeStrategy = new BeelineStrategy(this->GetPosition(), nearestRecharge->GetPosition());
 			}
 		}
@@ -65,10 +64,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		}
 	}
 	else {
-		drone.Update(dt, scheduler);
+		drone->Update(dt, scheduler);
 		charge -= dt;
 	}
-	
-=======
->>>>>>> 7516781c84c973007bde2847755185549e587f03
 } 

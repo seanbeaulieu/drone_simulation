@@ -1,12 +1,10 @@
 #include "BatteryDecorator.h"
 
 BatteryDecorator :: BatteryDecorator(Drone* drone) {
- this->charge = 100;
  this->drone = drone;
 }
 
 BatteryDecorator :: BatteryDecorator(JsonObject& obj) {
-	charge = 100;
 	drone = new Drone(obj);
 }
 
@@ -27,5 +25,13 @@ void BatteryDecorator::GetNearestEntity(std::vector<IEntity*> scheduler){
 
 void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 //FIXME: not working right now with drone factory.
-    drone->Update(dt, scheduler);
+    position = this->GetPosition();
+    if (charge > 0){
+       drone->Update(dt, scheduler); 
+    }
+    if(this->GetPosition().Distance(position) > 0.001){
+       charge -= dt;
+       std::cout<<"charge is: "<<charge<<std::endl; 
+    }
+
 } 

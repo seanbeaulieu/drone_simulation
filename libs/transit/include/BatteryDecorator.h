@@ -6,9 +6,10 @@
 class BatteryDecorator : public IEntity
 {
 private:
-    double charge;
+    double charge = 100;
     Drone* drone;
     bool charging;
+    Vector3 position;
     
 public:
     BatteryDecorator(Drone* drone);

@@ -29,6 +29,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
        charge -= dt;
        std::cout<<"charge is: "<<charge<<std::endl; 
     }
+<<<<<<< HEAD
 */
 
 	// note: may need a way to broadcast a dead battery to emergency pickup?
@@ -68,4 +69,6 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		charge -= dt;
 	}
 	
+=======
+>>>>>>> 7516781c84c973007bde2847755185549e587f03
 } 

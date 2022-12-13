@@ -5,7 +5,7 @@
 #include <vector>
 
 class RechargeStation : public IEntity{
-    private:
+    protected:
      //std::vector<BatteryDecorator*> recharging;
      JsonObject details;
      Vector3 position;
@@ -35,7 +35,7 @@ class RechargeStation : public IEntity{
 
      float GetSpeed() const { return speed; }
      
-     //virtual void Update(double dt, std::vector<IEntity*> scheduler);  
+     virtual void Update(double dt, std::vector<IEntity*> scheduler) {};  
 };
 
 #endif

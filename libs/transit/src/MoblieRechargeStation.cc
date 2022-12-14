@@ -13,6 +13,8 @@ MobileRechargeStation :: MobileRechargeStation(JsonObject &obj) : RechargeStatio
     available = true;
 }
 
+MobileRechargeStation :: ~MobileRechargeStation() {}
+
 void MobileRechargeStation :: SetStrategyName(std::string strategyName){
     //fixme later need startey name???
     return;
@@ -25,7 +27,6 @@ void MobileRechargeStation :: SetStrategy(IStrategy* strategy){
 
 void MobileRechargeStation:: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:why is this not moving?
-
     if (strategy) {
     strategy->Move(this, dt);
     if (strategy->IsCompleted()) {

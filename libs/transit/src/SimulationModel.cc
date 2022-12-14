@@ -6,6 +6,7 @@
 #include "LostDuckFactory.h"
 #include "RechargeStationFactory.h"
 #include "MoblieRechargeFactory.h"
+#include "EM_Pickup_Factory.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -17,6 +18,7 @@ SimulationModel::SimulationModel(IController& controller)
   AddFactory(new LostDuckFactory());
   AddFactory(new RechargeStationFactory());
   AddFactory(new MoblieRechargeFactory());
+  AddFactory(new EM_Pickup_Factory());
 }
 
 void SimulationModel::CreateEntity(JsonObject& entity) {

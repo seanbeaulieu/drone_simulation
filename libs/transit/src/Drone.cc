@@ -86,7 +86,7 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         available = true;
         nearestEntity = NULL;
     }
-  }  
+  }
 }
 
 void Drone::Rotate(double angle) {

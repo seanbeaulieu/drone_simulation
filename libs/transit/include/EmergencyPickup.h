@@ -10,26 +10,26 @@
 class EmergencyPickup : public IEntity {
  public:
   // start of .cc implemented
-  EmergencyPickup(); // should we use JsonObject& obj?
+  EmergencyPickup(JsonObject& obj); // should we use JsonObject& obj?
   ~EmergencyPickup();
-  virtual void Update(double dt, std::vector<IEntity*> scheduler);
-  void SetStrategy(IStrategy* strategy);
+  void Update(double dt, std::vector<IEntity*> scheduler);
+  //void SetStrategy(IStrategy* strategy);
   // virtual void Rotate(double angle); // implement in .cc if used
   // virtual void Jump(double height) {} // implement in .cc if used
   
   // start of .h implemented
-  Vector3 GetPosition() { return position; }
-  Vector3 GetDirection() { return direction; }
-  Vector3 GetDestination() { return destination; }
-  JsonObject GetDetails() { return details; }
-  float GetSpeed() { return speed; }
+  Vector3 GetPosition() const{ return position; }
+  Vector3 GetDirection() const { return direction; }
+  Vector3 GetDestination() const { return destination; }
+  JsonObject GetDetails() const { return details; }
+  float GetSpeed() const { return speed; }
   bool GetAvailability() { return available; }
   std::string GetStrategyName() { return strategyName; }
-  virtual void SetAvailability(bool choice) { this->available = choice; }
-  virtual void SetPosition(Vector3 pos_) { this->position = pos_; }
-  virtual void SetDirection(Vector3 dir_) { this->direction = dir_; }
-  virtual void SetDestination(Vector3 des_) { this->destination = des_; }
-  virtual void SetStrategyName(std::string strategyName_) { this->strategyName = strategyName; }
+  void SetAvailability(bool choice) { this->available = choice; }
+  void SetPosition(Vector3 pos_) { this->position = pos_; }
+  void SetDirection(Vector3 dir_) { this->direction = dir_; }
+  void SetDestination(Vector3 des_) { this->destination = des_; }
+  void SetStrategyName(std::string strategyName_) { this->strategyName = strategyName; }
 
  private:
   BatteryDecorator* droneBattery;

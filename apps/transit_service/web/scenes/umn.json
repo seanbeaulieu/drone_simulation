@@ -68,7 +68,7 @@
             "scale": [0.1, 0.1, 0.1],
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],
-            "speed": 20,
+            "speed": 20.0,
             "offset": [0, -0.5, 0]
         }
     },
@@ -78,6 +78,20 @@
             "type": "moblierecharge",
             "name": "MoblieRecharge",
             "mesh": "assets/model/billy_meier_ufo.glb",
+            "position": [400, 280, 500],
+            "scale": [0.5, 0.5, 0.5],
+            "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 30.0,
+            "offset": [0, -0.5, 0]
+        }
+    },
+    {   
+        "command": "CreateEntity",
+        "params": {
+            "type": "emergencypickup",
+            "name": "EmergencyPickup",
+            "mesh": "assets/model/Blue_Cyber_Winged_Avatar.glb",
             "position": [100, 240, 500],
             "scale": [0.5, 0.5, 0.5],
             "rotation": [0, 0, 0, 0],

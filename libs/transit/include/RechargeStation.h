@@ -3,7 +3,6 @@
 
 #include "IEntity.h"
 #include <vector>
-
 class RechargeStation : public IEntity{
     protected:
      //std::vector<BatteryDecorator*> recharging;

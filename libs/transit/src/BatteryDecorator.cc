@@ -45,9 +45,9 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		if (!(this->GetAvailability())) { // if successful (results in 1 move)
 			charge -= dt;
 			double totalDist = 0;
-			IEntity* robot = drone->RetNearestEntity();
+			//IEntity* robot = drone->GetNearestEntity(scheduler); // this function is void?
 			totalDist += this->GetPosition().Distance(this->GetDestination());
-			totalDist += this->GetDestination().Distance(robot->GetDestination());
+			//totalDist += this->GetDestination().Distance(robot->GetDestination());
 			//  total_dist += robot->GetDestination.Distance(nearestRecharge->GetPosition()); // relies on nearestRecharge, not fully implemented yet
 			if ((totalDist / this->GetSpeed()) > (charge)) { // (DOUBLE CHECK MATH) if traveling total distance requires more time moving than the charge holds
 				rechargeStrategy = new BeelineStrategy(this->GetPosition(), nearestRecharge->GetPosition());

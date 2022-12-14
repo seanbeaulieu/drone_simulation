@@ -3,7 +3,7 @@
 
 #include "RechargeStation.h"
 #include "IStrategy.h"
-#include "AstarStrategy.h"
+#include "BeelineStrategy.h"
 #include <iostream>
 #include <string>
 class MobileRechargeStation : public RechargeStation{
@@ -20,6 +20,7 @@ class MobileRechargeStation : public RechargeStation{
      void SetDestination(Vector3 des_) { destination = des_; }
      void SetStrategyName(std::string strategyName);
      void SetStrategy(IStrategy* strategy);
+     void Rotate(double angle);
 
 };
 

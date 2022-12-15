@@ -17,6 +17,7 @@ private:
     bool nearIsMobile = true;
     IStrategy* rechargeStrategy = NULL;
     std::vector<IEntity*>* entities = NULL; // POINTER to find nearest recharge
+    bool emergency = false;
     
 public:
     BatteryDecorator(Drone* drone);
@@ -29,6 +30,7 @@ public:
     void Recharge(double amount); // called by recharge stations
     
     // getters
+    bool GetEmergency() const { return emergency; }
     Drone* GetDrone() const { return drone; }
     double GetCharge() const { return charge; }
     int GetId() const { return drone->GetId(); }

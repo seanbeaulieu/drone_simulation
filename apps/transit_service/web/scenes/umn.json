@@ -78,7 +78,7 @@
             "type": "moblierecharge",
             "name": "MoblieRecharge",
             "mesh": "assets/model/billy_meier_ufo.glb",
-            "position": [400, 280, 500],
+            "position": [200, 280, -100],
             "scale": [0.5, 0.5, 0.5],
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],

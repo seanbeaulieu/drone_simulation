@@ -15,7 +15,11 @@ EmergencyPickup :: EmergencyPickup(JsonObject &obj) : details(obj){
 EmergencyPickup :: ~EmergencyPickup(){}
 
 
+
+
 void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:
+
+    
 }
 

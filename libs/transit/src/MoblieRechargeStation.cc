@@ -22,13 +22,14 @@ void MobileRechargeStation :: SetStrategyName(std::string strategyName){
 
 void MobileRechargeStation :: SetStrategy(IStrategy* strategy){
     //FIXME later
+    this->strategy = strategy;
     return;
 }
 
 void MobileRechargeStation:: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:why is this not moving?
     if (strategy) {
-    strategy->Move(this, dt);
+      strategy->Move(this, dt);
     if (strategy->IsCompleted()) {
       delete strategy;
       strategy = NULL;
@@ -45,7 +46,7 @@ void MobileRechargeStation:: Update(double dt, std::vector<IEntity*> scheduler){
     random.y = y;
     random.z = z;
     SetDestination(random);
-    strategy = new BeelineStrategy(this->position, this->destination);
+    SetStrategy(new BeelineStrategy(this->position, this->destination));
   }
 }
 

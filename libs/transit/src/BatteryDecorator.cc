@@ -23,11 +23,18 @@ IEntity* BatteryDecorator::GetNearestRecharge(std::vector<IEntity*> search) {
 		delete nearestRecharge;
 		nearestRecharge = NULL;
 	}
+	double minDist = -1;
 	for (IEntity* entity : search) {
-		// TODO: strcmp to find recharge stations, compare distances
-		if (nearestRecharge) { // prevent leaks
-			delete nearestRecharge;
-			nearestRecharge = entity;
+		std::string type = (entity->GetDetails())["type"]; // type check
+		if (type.compare("rechargestation") == 0 || type.compare("moblierechargestation") == 0) {
+			double curDist = entity->GetPosition().Distance(GetPosition());
+			if (curDist < minDist || minDist == -1) { // distance check
+				minDist = curDist;
+				if (nearestRecharge) { // prevent leaks
+					delete nearestRecharge;
+					nearestRecharge = entity;
+				}
+			}
 		}
 	}
 	if (nearestRecharge) { // if successful
@@ -64,7 +71,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 	}
 	
 	if (nearestRecharge == NULL) {
-		// GetNearestRecharge(*entities);
+		GetNearestRecharge(*entities);
 	}
 	
 	if (this->GetAvailability()) { // no target, no moving
@@ -105,7 +112,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		drone->Update(dt, scheduler);
 		charge -= dt;
 		if (this->GetAvailability()) {
-			// GetNearestRecharge(*entities);
+			GetNearestRecharge(*entities);
 		}
 	}
 }

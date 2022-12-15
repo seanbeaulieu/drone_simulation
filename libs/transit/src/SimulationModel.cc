@@ -34,7 +34,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
 
-  if(type.compare("drone") || type.compare("emergencypickup")){
+  if(type.compare("drone") == 0  || type.compare("emergencypickup") == 0){
       myNewEntity->SetEntities(&entities);
   }
 }

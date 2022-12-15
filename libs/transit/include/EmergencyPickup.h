@@ -31,6 +31,7 @@ class EmergencyPickup : public IEntity {
   void SetDestination(Vector3 des_) { this->destination = des_; }
   void SetStrategyName(std::string strategyName_) { this->strategyName = strategyName; }
   void SetEntities(std::vector<IEntity*>* entities) { this->entities = entities; }
+  void SearchDrone();
 
  private:
   BatteryDecorator* droneBattery = NULL;
@@ -39,8 +40,10 @@ class EmergencyPickup : public IEntity {
   Vector3 destination;
   Vector3 direction;
   float speed;
+  bool pickup;
   std::string strategyName;
-  IStrategy* strategy = NULL;
+  IStrategy* toTargetPosStrategy = NULL;
+  IStrategy* toTargetDestStrategy = NULL;
   bool available;
   std::vector<IEntity*>* entities = NULL;
   

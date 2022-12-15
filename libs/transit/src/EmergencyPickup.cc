@@ -15,27 +15,39 @@ EmergencyPickup :: EmergencyPickup(JsonObject &obj) : details(obj){
 EmergencyPickup :: ~EmergencyPickup(){}
 
 
+void EmergencyPickup :: SearchDrone(){
+  for(int i = 0; i<(*entities).size(); i++){
+    JsonObject detailsTemp = (*entities)[i]->GetDetails();
+    std::string typeTemp = detailsTemp["type"];
+    if(typeTemp.compare("drone") == 0){
+      //FIXME if have error.
+      droneBattery = static_cast<BatteryDecorator*>((*entities)[i]);
+      break;
+    }
+  }
+}
 
 
 void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:
 
-    if(strategy){
-      strategy->Move(this, dt);
+    if(toTargetPosStrategy){
+      toTargetPosStrategy->Move(this, dt);
 
-      if(strategy->IsCompleted()){
-        delete strategy;
-        strategy = NULL;
+      if(toTargetPosStrategy->IsCompleted()){
+        delete toTargetPosStrategy;
+        toTargetPosStrategy = NULL;
       }  
     }
-    else{
+    else if (toTargetDestStrategy){
         //FIXME:check if it need to pick up the drone
-        if(false){
-            destination = droneBattery->GetDestination();
-            strategy = new BeelineStrategy(this->position, this->destination);
-        }
-    }
 
-        
+    }
+    else if (true) {
+      if(droneBattery -> GetEmergency()){
+        destination = droneBattery->GetPosition();
+        toTargetPosStrategy = new BeelineStrategy(this->position, this->destination);
+      }
+    }
 }
 

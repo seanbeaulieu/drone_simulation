@@ -30,17 +30,19 @@ class EmergencyPickup : public IEntity {
   void SetDirection(Vector3 dir_) { this->direction = dir_; }
   void SetDestination(Vector3 des_) { this->destination = des_; }
   void SetStrategyName(std::string strategyName_) { this->strategyName = strategyName; }
+  void SetEntities(std::vector<IEntity*>* entities) { this->entities = entities; }
 
  private:
-  BatteryDecorator* droneBattery;
+  BatteryDecorator* droneBattery = NULL;
   JsonObject details;
   Vector3 position;
   Vector3 destination;
   Vector3 direction;
   float speed;
   std::string strategyName;
-  IStrategy* strategy;
+  IStrategy* strategy = NULL;
   bool available;
+  std::vector<IEntity*>* entities = NULL;
   
 };
 

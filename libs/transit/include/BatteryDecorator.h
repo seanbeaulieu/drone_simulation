@@ -41,7 +41,7 @@ public:
 	std::string GetStrategyName(){ return drone->GetStrategyName(); }
 	
 	// setters
-	void SetEntities(std::vector<IEntity*> entities) { this->entities = &entities; }
+	void SetEntities(std::vector<IEntity*>* entities) { this->entities = entities; }
 	void SetGraph(const IGraph* graph) { this->graph = graph; drone->SetGraph(graph); }
 	void SetPosition(Vector3 pos_) { drone->SetPosition(pos_); }
 	void SetDirection(Vector3 dir_) { drone->SetDirection(dir_); }

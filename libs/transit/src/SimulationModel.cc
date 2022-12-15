@@ -33,6 +33,10 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
+
+  if(type.compare("drone") || type.compare("emergencypickup")){
+      myNewEntity->SetEntities(&entities);
+  }
 }
 
 /// Schedules a trip for an object in the scene

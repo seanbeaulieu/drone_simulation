@@ -42,6 +42,8 @@ class Drone : public IEntity {
 
   void SetDestination(Vector3 des_) { destination = des_; }
 
+  IEntity* ReturnNearestEntity() {return nearestEntity;}
+
   // Rotates a drone
   void Rotate(double angle);
 

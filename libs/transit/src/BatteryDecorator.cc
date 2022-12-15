@@ -68,3 +68,13 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		charge -= dt;
 	}
 } 
+
+void BatteryDecorator::Recharge(double amount) {
+	charging = true;
+	charge += amount;
+	if (charge >= 100) {
+		charge = 100;
+		charging = false;
+	}
+}
+	

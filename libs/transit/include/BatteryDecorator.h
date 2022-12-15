@@ -9,7 +9,7 @@ class BatteryDecorator : public IEntity
 private:
     double charge = 100;
     Drone* drone = NULL;
-    bool charging;
+    bool charging = false;
     Vector3 position;
     IEntity* nearestRecharge = NULL;
     bool nearIsMobile;
@@ -21,6 +21,7 @@ public:
     ~BatteryDecorator();
     void GetNearestEntity(std::vector<IEntity*> scheduler);
     void Update(double dt, std::vector<IEntity*> scheduler);
+    void Recharge(double amount);
     
     // getters
     Drone* GetDrone() const { return drone; }

@@ -15,14 +15,17 @@ private:
     IEntity* nearestRecharge = NULL;
     bool nearIsMobile = true;
     IStrategy* rechargeStrategy = NULL;
+    std::vector<IEntity*>* entities = NULL; // POINTER to find nearest recharge
     
 public:
     BatteryDecorator(Drone* drone);
     BatteryDecorator(JsonObject& obj);
     ~BatteryDecorator();
-    void GetNearestEntity(std::vector<IEntity*> scheduler);
+    IEntity* GetNearestRecharge(std::vector<IEntity*> search); // find recharge station
+    double TripDistance(IEntity* passenger); // calculate trip distance
+    void GetNearestEntity(std::vector<IEntity*> scheduler); // mimic drone
     void Update(double dt, std::vector<IEntity*> scheduler);
-    void Recharge(double amount);
+    void Recharge(double amount); // called by recharge stations
     
     // getters
     Drone* GetDrone() const { return drone; }
@@ -38,6 +41,7 @@ public:
 	std::string GetStrategyName(){ return drone->GetStrategyName(); }
 	
 	// setters
+	void SetEntities(std::vector<IEntity*> entities) { this->entities = &entities; }
 	void SetGraph(const IGraph* graph) { this->graph = graph; drone->SetGraph(graph); }
 	void SetPosition(Vector3 pos_) { drone->SetPosition(pos_); }
 	void SetDirection(Vector3 dir_) { drone->SetDirection(dir_); }

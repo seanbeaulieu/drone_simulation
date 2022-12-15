@@ -11,8 +11,9 @@ private:
     Drone* drone = NULL;
     bool charging = false;
     Vector3 position;
+    Vector3 rechargeDest;
     IEntity* nearestRecharge = NULL;
-    bool nearIsMobile;
+    bool nearIsMobile = true;
     IStrategy* rechargeStrategy = NULL;
     
 public:
@@ -33,6 +34,7 @@ public:
 	Vector3 GetDestination() const { return drone->GetDestination(); }
 	JsonObject GetDetails() const { return drone->GetDetails(); }
 	bool GetAvailability() const { return drone->GetAvailability(); }
+	bool GetCharging() const { return charging; }
 	std::string GetStrategyName(){ return drone->GetStrategyName(); }
 	
 	// setters

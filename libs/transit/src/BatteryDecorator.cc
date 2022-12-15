@@ -36,7 +36,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 	// current implementation allows battery failure due to the mobile recharge station,
 	// which is both less difficult on us and can actually showcase the pickup
 	
-	if (charge <= 0) {
+	if (charge <= 0 || charging) { // dead or charging, do nothing
 		return;
 	}
 	
@@ -50,7 +50,9 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 			totalDist += this->GetDestination().Distance(robot->GetDestination());
 			//total_dist += robot->GetDestination().Distance(nearestRecharge->GetPosition()); // relies on nearestRecharge, not fully implemented yet
 			if ((totalDist / this->GetSpeed()) > (charge)) { // (DOUBLE CHECK MATH) if traveling total distance requires more time moving than the charge holds
-				rechargeStrategy = new BeelineStrategy(this->GetPosition(), nearestRecharge->GetPosition());
+				robot->SetAvailability(true);
+				rechargeDest = nearestRecharge->GetPosition();
+				rechargeStrategy = new BeelineStrategy(this->GetPosition(), rechargeDest);
 			}
 		}
 	}
@@ -58,6 +60,8 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		// move to nearestRecharge, recalc if the station is mobile
 
 		if (nearIsMobile) {
+			// if (nearestRecharge.GetPosition() - rechargeDest)
+				// delete rechargeStrategy;
 			// recalc then move
 		}
 		else {

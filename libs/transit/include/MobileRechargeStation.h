@@ -9,7 +9,7 @@
 class MobileRechargeStation : public RechargeStation{
     private:
      std::string strategyName;
-     IStrategy* strategy;
+     IStrategy* strategy = NULL;
 
     public:
      MobileRechargeStation(JsonObject &obj);

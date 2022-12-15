@@ -20,6 +20,22 @@ EmergencyPickup :: ~EmergencyPickup(){}
 void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:
 
-    
+    if(strategy){
+      strategy->Move(this, dt);
+
+      if(strategy->IsCompleted()){
+        delete strategy;
+        strategy = NULL;
+      }  
+    }
+    else{
+        //FIXME:check if it need to pick up the drone
+        if(false){
+            destination = droneBattery->GetDestination();
+            strategy = new BeelineStrategy(this->position, this->destination);
+        }
+    }
+
+        
 }
 

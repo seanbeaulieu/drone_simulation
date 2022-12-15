@@ -1,7 +1,7 @@
 #ifndef MRF_H_
 #define MRF_H_
 
-#include "RechargeStation.h"
+#include "MobileRechargeStation.h"
 #include "IEntity.h"
 #include "IEntityFactory.h"
 

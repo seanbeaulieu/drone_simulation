@@ -21,7 +21,7 @@ void EmergencyPickup :: SearchDrone(){
     std::string typeTemp = detailsTemp["type"];
     if(typeTemp.compare("drone") == 0){
       //FIXME if have error.
-      droneBattery = static_cast<BatteryDecorator*>((*entities)[i]);
+      droneBattery = dynamic_cast<BatteryDecorator*>((*entities)[i]);
       break;
     }
   }
@@ -30,7 +30,6 @@ void EmergencyPickup :: SearchDrone(){
 
 void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:
-
     if(toTargetPosStrategy){
       toTargetPosStrategy->Move(this, dt);
 
@@ -41,12 +40,28 @@ void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     }
     else if (toTargetDestStrategy){
         //FIXME:check if it need to pick up the drone
-
+        toTargetDestStrategy->Move(this, dt);
+        droneBattery->SetPosition(this->GetPosition());
+        droneBattery->SetDirection(this->GetDirection());
+        if(toTargetDestStrategy->IsCompleted()){
+          delete toTargetDestStrategy;
+          toTargetDestStrategy = NULL;
+        }
     }
-    else if (true) {
-      if(droneBattery -> GetEmergency()){
-        destination = droneBattery->GetPosition();
-        toTargetPosStrategy = new BeelineStrategy(this->position, this->destination);
+    else{
+      if(pickup == false){
+        if(droneBattery -> GetEmergency()){
+          destination = droneBattery->GetPosition();
+          toTargetPosStrategy = new BeelineStrategy(this->position, this->destination);
+          pickup = true;
+          available = false;
+        }
+      }
+      else{
+        destination = droneBattery->GetDestination();
+        toTargetDestStrategy = new BeelineStrategy(this->position, this->destination);
+          pickup = false;
+          available = true;
       }
     }
 }

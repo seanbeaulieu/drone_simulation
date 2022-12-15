@@ -10,7 +10,6 @@ private:
     double charge = 100;
     Drone* drone = NULL;
     bool charging = false;
-    bool emergency;
     Vector3 position;
     Vector3 rechargeDest;
     IEntity* nearestRecharge = NULL;
@@ -30,7 +29,6 @@ public:
     void Recharge(double amount); // called by recharge stations
     
     // getters
-    bool GetEmergency() const { return emergency; }
     Drone* GetDrone() const { return drone; }
     double GetCharge() const { return charge; }
     int GetId() const { return drone->GetId(); }
@@ -42,6 +40,7 @@ public:
 	bool GetAvailability() const { return drone->GetAvailability(); }
 	bool GetCharging() const { return charging; }
 	std::string GetStrategyName(){ return drone->GetStrategyName(); }
+    bool GetEmergency() const { return emergency; }
 	
 	// setters
 	void SetEntities(std::vector<IEntity*>* entities) { this->entities = entities; }
@@ -53,7 +52,6 @@ public:
 	void SetStrategyName(std::string strategyName_) { drone->SetStrategyName(strategyName_); }
 	void Rotate(double angle) { drone->Rotate(angle); }
 	void Jump(double height) { drone->Jump(height); }
-    bool GetEmergency() const { return emergency; }
 	
 	// removing assignment operator and copy constructor to mirror drones
 	BatteryDecorator(const BatteryDecorator& btry) = delete;

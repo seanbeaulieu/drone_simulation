@@ -40,11 +40,11 @@ class EmergencyPickup : public IEntity {
   Vector3 destination;
   Vector3 direction;
   float speed;
-  bool pickup;
+  bool pickup = false;
   std::string strategyName;
   IStrategy* toTargetPosStrategy = NULL;
   IStrategy* toTargetDestStrategy = NULL;
-  bool available;
+  bool available = true;
   std::vector<IEntity*>* entities = NULL;
   
 };

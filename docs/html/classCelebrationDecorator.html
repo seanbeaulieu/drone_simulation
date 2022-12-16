@@ -95,11 +95,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af1ea3e7a231fe372c9fec0f7175dc724"><td class="memItemLeft" align="right" valign="top"><a id="af1ea3e7a231fe372c9fec0f7175dc724"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CelebrationDecorator</b> (<a class="el" href="classIStrategy.html">IStrategy</a> *strategy_)</td></tr>
 <tr class="separator:af1ea3e7a231fe372c9fec0f7175dc724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaea8fd11f7d0e12dd79ccdc63ab1bbf6"><td class="memItemLeft" align="right" valign="top"><a id="aaea8fd11f7d0e12dd79ccdc63ab1bbf6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Move</b> (<a class="el" href="classIEntity.html">IEntity</a> *entity, double dt)</td></tr>
+<tr class="memitem:aaea8fd11f7d0e12dd79ccdc63ab1bbf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCelebrationDecorator.html#aaea8fd11f7d0e12dd79ccdc63ab1bbf6">Move</a> (<a class="el" href="classIEntity.html">IEntity</a> *entity, double dt)</td></tr>
+<tr class="memdesc:aaea8fd11f7d0e12dd79ccdc63ab1bbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the provided entity.  <a href="classCelebrationDecorator.html#aaea8fd11f7d0e12dd79ccdc63ab1bbf6">More...</a><br /></td></tr>
 <tr class="separator:aaea8fd11f7d0e12dd79ccdc63ab1bbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ce83ef692d22773bf40e8733e20329a"><td class="memItemLeft" align="right" valign="top"><a id="a7ce83ef692d22773bf40e8733e20329a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsCompleted</b> ()</td></tr>
+<tr class="memitem:a7ce83ef692d22773bf40e8733e20329a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCelebrationDecorator.html#a7ce83ef692d22773bf40e8733e20329a">IsCompleted</a> ()</td></tr>
+<tr class="memdesc:a7ce83ef692d22773bf40e8733e20329a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if the route is completed and does a celebration if so.  <a href="classCelebrationDecorator.html#a7ce83ef692d22773bf40e8733e20329a">More...</a><br /></td></tr>
 <tr class="separator:a7ce83ef692d22773bf40e8733e20329a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -115,9 +115,92 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>time</b></td></tr>
 const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></td></tr>
 <tr class="separator:abdcb4741836a0bb72017f52752962ba2 inherit pro_attribs_classIStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7ce83ef692d22773bf40e8733e20329a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce83ef692d22773bf40e8733e20329a">&#9670;&nbsp;</a></span>IsCompleted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CelebrationDecorator::IsCompleted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks to see if the route is completed and does a celebration if so. </p>
+<dl class="section return"><dt>Returns</dt><dd>IsCompleted, a true or false boolean value </dd></dl>
+
+<p>Implements <a class="el" href="classIStrategy.html#a13c6048efd232b696db5f35000d5b106">IStrategy</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classJumpDecorator.html#a94b32bed5b764df15980356aa8763abe">JumpDecorator</a>, and <a class="el" href="classSpinDecorator.html#a0887a816731d9ff8ee8161034a03c4aa">SpinDecorator</a>.</p>
+
+</div>
+</div>
+<a id="aaea8fd11f7d0e12dd79ccdc63ab1bbf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea8fd11f7d0e12dd79ccdc63ab1bbf6">&#9670;&nbsp;</a></span>Move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CelebrationDecorator::Move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves the provided entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity,a</td><td>pointer to an <a class="el" href="classIEntity.html">IEntity</a> object to be moved </td></tr>
+    <tr><td class="paramname">dt,a</td><td>double value to be moved by </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+<p>Implements <a class="el" href="classIStrategy.html#a69254389f4ef9a851dc5d40c4cc9aacd">IStrategy</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classJumpDecorator.html#a6d46675428916bbe6acd10fb25d51f86">JumpDecorator</a>, and <a class="el" href="classSpinDecorator.html#a766735ae467d0bb3a80169e109951804">SpinDecorator</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/<a class="el" href="CelebrationDecorator_8h_source.html">CelebrationDecorator.h</a></li>
-<li>/home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/src/CelebrationDecorator.cc</li>
+<li>/home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/<a class="el" href="CelebrationDecorator_8h_source.html">CelebrationDecorator.h</a></li>
+<li>/home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/src/CelebrationDecorator.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/DfsStrategy.h Source File</title>
+<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/DfsStrategy.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,19 +80,23 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classDfsStrategy.html">DfsStrategy</a>(<a class="code" href="classVector3.html">Vector3</a> position, <a class="code" href="classVector3.html">Vector3</a> destination, <span class="keyword">const</span> IGraph* graph);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ~<a class="code" href="classDfsStrategy.html">DfsStrategy</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> Move(<a class="code" href="classIEntity.html">IEntity</a>* entity, <span class="keywordtype">double</span> dt);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">bool</span> IsCompleted();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::vector&lt;std::vector&lt;float&gt;&gt; path;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> currentIndex;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> maxIndex;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}; <span class="comment">//end class</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // DFS_STRATEGY_H_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDfsStrategy.html#aab5a0a5c97f710075634b81a3e00ecf9">Move</a>(<a class="code" href="classIEntity.html">IEntity</a>* entity, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDfsStrategy.html#a30fb7b230d0244cd87de51a13a8d8c5b">IsCompleted</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;std::vector&lt;float&gt;&gt; path;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> currentIndex;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> maxIndex;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}; <span class="comment">//end class</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // DFS_STRATEGY_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassDfsStrategy_html"><div class="ttname"><a href="classDfsStrategy.html">DfsStrategy</a></div><div class="ttdoc">this class inhertis from the IStrategy class and is responsible for generating the beeline that the d...</div><div class="ttdef"><b>Definition:</b> DfsStrategy.h:14</div></div>
+<div class="ttc" id="aclassDfsStrategy_html_a30fb7b230d0244cd87de51a13a8d8c5b"><div class="ttname"><a href="classDfsStrategy.html#a30fb7b230d0244cd87de51a13a8d8c5b">DfsStrategy::IsCompleted</a></div><div class="ttdeci">bool IsCompleted()</div><div class="ttdoc">Checks to see if the route is completed.</div><div class="ttdef"><b>Definition:</b> DfsStrategy.cc:28</div></div>
 <div class="ttc" id="aclassIStrategy_html"><div class="ttname"><a href="classIStrategy.html">IStrategy</a></div><div class="ttdef"><b>Definition:</b> IStrategy.h:10</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
+<div class="ttc" id="aclassDfsStrategy_html_aab5a0a5c97f710075634b81a3e00ecf9"><div class="ttname"><a href="classDfsStrategy.html#aab5a0a5c97f710075634b81a3e00ecf9">DfsStrategy::Move</a></div><div class="ttdeci">void Move(IEntity *entity, double dt)</div><div class="ttdoc">Moves the provided entity using the Depth First Search strategy.</div><div class="ttdef"><b>Definition:</b> DfsStrategy.cc:32</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

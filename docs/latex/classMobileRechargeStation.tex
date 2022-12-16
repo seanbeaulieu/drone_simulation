@@ -1,0 +1,204 @@
+\hypertarget{classMobileRechargeStation}{}\doxysection{Mobile\+Recharge\+Station Class Reference}
+\label{classMobileRechargeStation}\index{MobileRechargeStation@{MobileRechargeStation}}
+
+
+Inheritance diagram for Mobile\+Recharge\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classMobileRechargeStation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mobile\+Recharge\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classMobileRechargeStation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMobileRechargeStation_a871a7f166154b3d4d4bc4d57d2a987c5}\label{classMobileRechargeStation_a871a7f166154b3d4d4bc4d57d2a987c5}} 
+{\bfseries Mobile\+Recharge\+Station} (Json\+Object \&obj)
+\item 
+void \mbox{\hyperlink{classMobileRechargeStation_ac55ea314ffab6bde115dd7ba5076d8f6}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the position of the \mbox{\hyperlink{classMobileRechargeStation}{Mobile\+Recharge\+Station}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMobileRechargeStation_a19f69673c4dabd486b6a40ddd583a475}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the position of the Mobile Recharge Station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMobileRechargeStation_af625649a9bbce300591904f43d651fc8}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the direction of the Mobile Recharge Station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMobileRechargeStation_a503828748736763db0b265b3b0739675}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the destination of the Mobile Recharge Station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMobileRechargeStation_ab21e75d1aa74fa554bb7396fdd8bc407}{Set\+Strategy\+Name}} (std\+::string strategy\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the Strategy Name of the Mobile Recharge Station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMobileRechargeStation_aa1400f68e46660dfb69f51f067a46c55}{Set\+Strategy}} (\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$strategy)
+\begin{DoxyCompactList}\small\item\em Sets the Strategy of the Mobile Recharge Station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMobileRechargeStation_aaf51565bc813f33fd7c2e4a5f7555cfb}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the Mobile Recharge Station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMobileRechargeStation_aaf51565bc813f33fd7c2e4a5f7555cfb}\label{classMobileRechargeStation_aaf51565bc813f33fd7c2e4a5f7555cfb}} 
+\index{MobileRechargeStation@{MobileRechargeStation}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!MobileRechargeStation@{MobileRechargeStation}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Mobile\+Recharge\+Station\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates the Mobile Recharge Station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle,a} & double value representing the angle to rotate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classMobileRechargeStation_a503828748736763db0b265b3b0739675}\label{classMobileRechargeStation_a503828748736763db0b265b3b0739675}} 
+\index{MobileRechargeStation@{MobileRechargeStation}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!MobileRechargeStation@{MobileRechargeStation}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Mobile\+Recharge\+Station\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the destination of the Mobile Recharge Station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+,a} & \mbox{\hyperlink{classVector3}{Vector3}} representing the intended destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classMobileRechargeStation_af625649a9bbce300591904f43d651fc8}\label{classMobileRechargeStation_af625649a9bbce300591904f43d651fc8}} 
+\index{MobileRechargeStation@{MobileRechargeStation}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!MobileRechargeStation@{MobileRechargeStation}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Mobile\+Recharge\+Station\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the direction of the Mobile Recharge Station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+,a} & \mbox{\hyperlink{classVector3}{Vector3}} representing the intended direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classMobileRechargeStation_a19f69673c4dabd486b6a40ddd583a475}\label{classMobileRechargeStation_a19f69673c4dabd486b6a40ddd583a475}} 
+\index{MobileRechargeStation@{MobileRechargeStation}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!MobileRechargeStation@{MobileRechargeStation}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Mobile\+Recharge\+Station\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the position of the Mobile Recharge Station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+,a} & \mbox{\hyperlink{classVector3}{Vector3}} representing the intended position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classMobileRechargeStation_aa1400f68e46660dfb69f51f067a46c55}\label{classMobileRechargeStation_aa1400f68e46660dfb69f51f067a46c55}} 
+\index{MobileRechargeStation@{MobileRechargeStation}!SetStrategy@{SetStrategy}}
+\index{SetStrategy@{SetStrategy}!MobileRechargeStation@{MobileRechargeStation}}
+\doxysubsubsection{\texorpdfstring{SetStrategy()}{SetStrategy()}}
+{\footnotesize\ttfamily void Mobile\+Recharge\+Station\+::\+Set\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$}]{strategy }\end{DoxyParamCaption})}
+
+
+
+Sets the Strategy of the Mobile Recharge Station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy,a} & \mbox{\hyperlink{classIStrategy}{I\+Strategy}} pointer representing a strategy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMobileRechargeStation_ab21e75d1aa74fa554bb7396fdd8bc407}\label{classMobileRechargeStation_ab21e75d1aa74fa554bb7396fdd8bc407}} 
+\index{MobileRechargeStation@{MobileRechargeStation}!SetStrategyName@{SetStrategyName}}
+\index{SetStrategyName@{SetStrategyName}!MobileRechargeStation@{MobileRechargeStation}}
+\doxysubsubsection{\texorpdfstring{SetStrategyName()}{SetStrategyName()}}
+{\footnotesize\ttfamily void Mobile\+Recharge\+Station\+::\+Set\+Strategy\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{strategy\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the Strategy Name of the Mobile Recharge Station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy\+Name,a} & String value of a Strategy Name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a933def05f85783fddbf05e8257cc8880}{I\+Entity}}.
+
+\mbox{\Hypertarget{classMobileRechargeStation_ac55ea314ffab6bde115dd7ba5076d8f6}\label{classMobileRechargeStation_ac55ea314ffab6bde115dd7ba5076d8f6}} 
+\index{MobileRechargeStation@{MobileRechargeStation}!Update@{Update}}
+\index{Update@{Update}!MobileRechargeStation@{MobileRechargeStation}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Mobile\+Recharge\+Station\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the position of the \mbox{\hyperlink{classMobileRechargeStation}{Mobile\+Recharge\+Station}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt,a} & double delta value \\
+\hline
+{\em scheduler,a} & vector array of \mbox{\hyperlink{classIEntity}{I\+Entity}} ptrs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classRechargeStation_abf2319116a20d1f4cafcb4716fb04069}{Recharge\+Station}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/include/Mobile\+Recharge\+Station.\+h\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/src/Mobile\+Recharge\+Station.\+cc\end{DoxyCompactItemize}

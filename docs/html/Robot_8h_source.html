@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/Robot.h Source File</title>
+<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/Robot.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,47 +84,60 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  ~<a class="code" href="classRobot.html">Robot</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> GetPosition()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> GetDirection()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> direction; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> GetDestination()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> destination; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">bool</span> GetAvailability()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> available; }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  JsonObject GetDetails() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">float</span> GetSpeed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> speed; }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  std::string GetStrategyName() {<span class="keywordflow">return</span> strategyName;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classRobot.html#a0505da0b08d679a828c005879da63b16">   21</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRobot.html#a0505da0b08d679a828c005879da63b16">GetPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classRobot.html#a2d6dd7a322d2d2c0bc1c44566253b9f1">   28</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRobot.html#a2d6dd7a322d2d2c0bc1c44566253b9f1">GetDirection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> direction; }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> SetAvailability(<span class="keywordtype">bool</span> choice);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> SetPosition(<a class="code" href="classVector3.html">Vector3</a> pos_) { position = pos_; }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> SetDirection(<a class="code" href="classVector3.html">Vector3</a> dir_) { direction = dir_; }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> SetDestination(<a class="code" href="classVector3.html">Vector3</a> des_) { destination = des_; }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> SetStrategyName(std::string strategyName_) { strategyName = strategyName_;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> Rotate(<span class="keywordtype">double</span> angle);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  JsonObject details;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> position;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> direction;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> destination;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">float</span> speed;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">bool</span> available;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  std::string strategyName;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif  // ROBOT_H</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classRobot.html#abe629d465798403a706f574b33284659">   35</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRobot.html#abe629d465798403a706f574b33284659">GetDestination</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> destination; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classRobot.html#a2b56c4d4cf7b0ef07ce6713ffae6e490">   42</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRobot.html#a2b56c4d4cf7b0ef07ce6713ffae6e490">GetAvailability</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> available; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  JsonObject <a class="code" href="classRobot.html#a0ac023c6fb5d7ad58b180903010d2924">GetDetails</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classRobot.html#ad199885470ae6e1109153526c21473c5">   56</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classRobot.html#ad199885470ae6e1109153526c21473c5">GetSpeed</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> speed; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classRobot.html#af3e8590ef2a275caf25363079f7b4273">   63</a></span>&#160;  std::string <a class="code" href="classRobot.html#af3e8590ef2a275caf25363079f7b4273">GetStrategyName</a>() {<span class="keywordflow">return</span> strategyName;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRobot.html#a2ef6424fa88e43973ade3fddb4ec649b">SetAvailability</a>(<span class="keywordtype">bool</span> choice);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classRobot.html#a35ce73ea17f6cfbcbfe272c6bff038ba">   79</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRobot.html#a35ce73ea17f6cfbcbfe272c6bff038ba">SetPosition</a>(<a class="code" href="classVector3.html">Vector3</a> pos_) { position = pos_; }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classRobot.html#aaa0e41dbf57cb4040c0319b93c5a008c">   87</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRobot.html#aaa0e41dbf57cb4040c0319b93c5a008c">SetDirection</a>(<a class="code" href="classVector3.html">Vector3</a> dir_) { direction = dir_; }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classRobot.html#a557af09ca03132837bc6574bca6fbe05">   95</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRobot.html#a557af09ca03132837bc6574bca6fbe05">SetDestination</a>(<a class="code" href="classVector3.html">Vector3</a> des_) { destination = des_; }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classRobot.html#a59c7dbc7346f86df3941c5dad9b12507">  103</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRobot.html#a59c7dbc7346f86df3941c5dad9b12507">SetStrategyName</a>(std::string strategyName_) { strategyName = strategyName_;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRobot.html#a1cb405ec49d47c46f3aa87fde1415b59">Rotate</a>(<span class="keywordtype">double</span> angle);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  JsonObject details;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> position;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> direction;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> destination;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">float</span> speed;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">bool</span> available;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  std::string strategyName;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif  // ROBOT_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassRobot_html_a35ce73ea17f6cfbcbfe272c6bff038ba"><div class="ttname"><a href="classRobot.html#a35ce73ea17f6cfbcbfe272c6bff038ba">Robot::SetPosition</a></div><div class="ttdeci">void SetPosition(Vector3 pos_)</div><div class="ttdoc">Sets the position of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:79</div></div>
+<div class="ttc" id="aclassRobot_html_a557af09ca03132837bc6574bca6fbe05"><div class="ttname"><a href="classRobot.html#a557af09ca03132837bc6574bca6fbe05">Robot::SetDestination</a></div><div class="ttdeci">void SetDestination(Vector3 des_)</div><div class="ttdoc">Sets the destination of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:95</div></div>
+<div class="ttc" id="aclassRobot_html_a0ac023c6fb5d7ad58b180903010d2924"><div class="ttname"><a href="classRobot.html#a0ac023c6fb5d7ad58b180903010d2924">Robot::GetDetails</a></div><div class="ttdeci">JsonObject GetDetails() const override</div><div class="ttdoc">Gets the details of the Robot as a JsonObject.</div><div class="ttdef"><b>Definition:</b> Robot.cc:14</div></div>
+<div class="ttc" id="aclassRobot_html_a1cb405ec49d47c46f3aa87fde1415b59"><div class="ttname"><a href="classRobot.html#a1cb405ec49d47c46f3aa87fde1415b59">Robot::Rotate</a></div><div class="ttdeci">void Rotate(double angle)</div><div class="ttdoc">Rotates the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.cc:18</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
+<div class="ttc" id="aclassRobot_html_aaa0e41dbf57cb4040c0319b93c5a008c"><div class="ttname"><a href="classRobot.html#aaa0e41dbf57cb4040c0319b93c5a008c">Robot::SetDirection</a></div><div class="ttdeci">void SetDirection(Vector3 dir_)</div><div class="ttdoc">Sets the direction of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:87</div></div>
 <div class="ttc" id="aclassRobot_html"><div class="ttname"><a href="classRobot.html">Robot</a></div><div class="ttdef"><b>Definition:</b> Robot.h:10</div></div>
+<div class="ttc" id="aclassRobot_html_abe629d465798403a706f574b33284659"><div class="ttname"><a href="classRobot.html#abe629d465798403a706f574b33284659">Robot::GetDestination</a></div><div class="ttdeci">Vector3 GetDestination() const</div><div class="ttdoc">Gets the current destination of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:35</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
+<div class="ttc" id="aclassRobot_html_a2b56c4d4cf7b0ef07ce6713ffae6e490"><div class="ttname"><a href="classRobot.html#a2b56c4d4cf7b0ef07ce6713ffae6e490">Robot::GetAvailability</a></div><div class="ttdeci">bool GetAvailability() const</div><div class="ttdoc">Gets the current availabilty of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:42</div></div>
+<div class="ttc" id="aclassRobot_html_a59c7dbc7346f86df3941c5dad9b12507"><div class="ttname"><a href="classRobot.html#a59c7dbc7346f86df3941c5dad9b12507">Robot::SetStrategyName</a></div><div class="ttdeci">void SetStrategyName(std::string strategyName_)</div><div class="ttdoc">Sets the strategy name of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:103</div></div>
+<div class="ttc" id="aclassRobot_html_a2d6dd7a322d2d2c0bc1c44566253b9f1"><div class="ttname"><a href="classRobot.html#a2d6dd7a322d2d2c0bc1c44566253b9f1">Robot::GetDirection</a></div><div class="ttdeci">Vector3 GetDirection() const</div><div class="ttdoc">Gets the current direction of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:28</div></div>
+<div class="ttc" id="aclassRobot_html_af3e8590ef2a275caf25363079f7b4273"><div class="ttname"><a href="classRobot.html#af3e8590ef2a275caf25363079f7b4273">Robot::GetStrategyName</a></div><div class="ttdeci">std::string GetStrategyName()</div><div class="ttdoc">Gets the current strategy name of the Robot as a string.</div><div class="ttdef"><b>Definition:</b> Robot.h:63</div></div>
+<div class="ttc" id="aclassRobot_html_a2ef6424fa88e43973ade3fddb4ec649b"><div class="ttname"><a href="classRobot.html#a2ef6424fa88e43973ade3fddb4ec649b">Robot::SetAvailability</a></div><div class="ttdeci">void SetAvailability(bool choice)</div><div class="ttdoc">Sets the availabilty of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.cc:16</div></div>
+<div class="ttc" id="aclassRobot_html_a0505da0b08d679a828c005879da63b16"><div class="ttname"><a href="classRobot.html#a0505da0b08d679a828c005879da63b16">Robot::GetPosition</a></div><div class="ttdeci">Vector3 GetPosition() const</div><div class="ttdoc">Gets the current position of the Robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:21</div></div>
+<div class="ttc" id="aclassRobot_html_ad199885470ae6e1109153526c21473c5"><div class="ttname"><a href="classRobot.html#ad199885470ae6e1109153526c21473c5">Robot::GetSpeed</a></div><div class="ttdeci">float GetSpeed() const</div><div class="ttdoc">Gets the current speed of the robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:56</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

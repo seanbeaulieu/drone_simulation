@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['icontroller_62',['IController',['../classIController.html',1,'']]],
-  ['ientity_63',['IEntity',['../classIEntity.html',1,'']]],
-  ['ientityfactory_64',['IEntityFactory',['../classIEntityFactory.html',1,'']]],
-  ['istrategy_65',['IStrategy',['../classIStrategy.html',1,'']]]
+  ['helicopter_95',['Helicopter',['../classHelicopter.html',1,'']]],
+  ['helicopterfactory_96',['HelicopterFactory',['../classHelicopterFactory.html',1,'']]]
 ];

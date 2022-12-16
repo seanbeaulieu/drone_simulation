@@ -2,8 +2,7 @@
 \label{classSpinDecorator}\index{SpinDecorator@{SpinDecorator}}
 
 
-Inheritance diagram for Spin\+Decorator\+:
-\nopagebreak
+Inheritance diagram for Spin\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Spin\+Decorator\+:
 \end{figure}
 
 
-Collaboration diagram for Spin\+Decorator\+:
-\nopagebreak
+Collaboration diagram for Spin\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,16 +24,58 @@ Collaboration diagram for Spin\+Decorator\+:
 \mbox{\Hypertarget{classSpinDecorator_a2d9b8054970b50d567344c20dd6bde1f}\label{classSpinDecorator_a2d9b8054970b50d567344c20dd6bde1f}} 
 {\bfseries Spin\+Decorator} (\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$strategy\+\_\+)
 \item 
-\mbox{\Hypertarget{classSpinDecorator_a0887a816731d9ff8ee8161034a03c4aa}\label{classSpinDecorator_a0887a816731d9ff8ee8161034a03c4aa}} 
-bool {\bfseries Is\+Completed} ()
-\item 
-\mbox{\Hypertarget{classSpinDecorator_a766735ae467d0bb3a80169e109951804}\label{classSpinDecorator_a766735ae467d0bb3a80169e109951804}} 
-void {\bfseries Move} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classSpinDecorator_a0887a816731d9ff8ee8161034a03c4aa}{Is\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Checks to see if the route is completed and spins if so. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSpinDecorator_a766735ae467d0bb3a80169e109951804}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
+\begin{DoxyCompactList}\small\item\em Moves the provided entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSpinDecorator_a0887a816731d9ff8ee8161034a03c4aa}\label{classSpinDecorator_a0887a816731d9ff8ee8161034a03c4aa}} 
+\index{SpinDecorator@{SpinDecorator}!IsCompleted@{IsCompleted}}
+\index{IsCompleted@{IsCompleted}!SpinDecorator@{SpinDecorator}}
+\doxysubsubsection{\texorpdfstring{IsCompleted()}{IsCompleted()}}
+{\footnotesize\ttfamily bool Spin\+Decorator\+::\+Is\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks to see if the route is completed and spins if so. 
+
+\begin{DoxyReturn}{Returns}
+Is\+Completed, a boolean true or false value 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCelebrationDecorator_a7ce83ef692d22773bf40e8733e20329a}{Celebration\+Decorator}}.
+
+\mbox{\Hypertarget{classSpinDecorator_a766735ae467d0bb3a80169e109951804}\label{classSpinDecorator_a766735ae467d0bb3a80169e109951804}} 
+\index{SpinDecorator@{SpinDecorator}!Move@{Move}}
+\index{Move@{Move}!SpinDecorator@{SpinDecorator}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Spin\+Decorator\+::\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the provided entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity,a} & pointer to an \mbox{\hyperlink{classIEntity}{I\+Entity}} object \\
+\hline
+{\em dt,a} & double value to move by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCelebrationDecorator_aaea8fd11f7d0e12dd79ccdc63ab1bbf6}{Celebration\+Decorator}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/include/Spin\+Decorator.\+h\item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/src/Spin\+Decorator.\+cc\end{DoxyCompactItemize}
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/include/Spin\+Decorator.\+h\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/src/Spin\+Decorator.\+cc\end{DoxyCompactItemize}

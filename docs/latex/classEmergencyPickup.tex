@@ -1,0 +1,376 @@
+\hypertarget{classEmergencyPickup}{}\doxysection{Emergency\+Pickup Class Reference}
+\label{classEmergencyPickup}\index{EmergencyPickup@{EmergencyPickup}}
+
+
+Inheritance diagram for Emergency\+Pickup\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classEmergencyPickup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Emergency\+Pickup\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classEmergencyPickup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEmergencyPickup_a4fbf76819bac1dbe505f8dca36f3c214}\label{classEmergencyPickup_a4fbf76819bac1dbe505f8dca36f3c214}} 
+{\bfseries Emergency\+Pickup} (Json\+Object \&obj)
+\item 
+void \mbox{\hyperlink{classEmergencyPickup_acd427984d472da1112dd2e2516463d4e}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the emergency pickup drone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classEmergencyPickup_ac51e19ab6ac8c1d6444295cc5991e1d0}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current position of the emergency pickup drone as a \mbox{\hyperlink{classVector3}{Vector3}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classEmergencyPickup_a07324992a77aead29515fb30e44551ba}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current direction of the emergency pickup drone as a \mbox{\hyperlink{classVector3}{Vector3}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classEmergencyPickup_a7ee16e98fd9c586b5ee280ff025af4c1}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current destination of the emergency pickup drone as a \mbox{\hyperlink{classVector3}{Vector3}} Object. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classEmergencyPickup_ac5ac66b7fbc5ba1e927a83d4688b3443}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Returns the details of the emergency pickup drone. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classEmergencyPickup_aa6ebd43eef6874bfd3a4552f3965822e}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current speed of the emergency pickup drone. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEmergencyPickup_ad93e08926d38fe42728948449b31bd86}{Get\+Availability}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current availability of the emergency pickup drone. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEmergencyPickup_ac80508f2bdc9508b5533ae578b88f19b}{Get\+Strategy\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current strategy name of the emergency pickup drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_a850944fcf1cc350e04ea570fd9d2b082}{Set\+Availability}} (bool choice)
+\begin{DoxyCompactList}\small\item\em Sets the current availability of the emergency pickup drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_a18e78f12c2321b86f1af03dbcdf4fdf9}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current position of the emergency pickup drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_a1e32a6bfcbd113a663d711f10fd5df40}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current direction of the emergency pickup drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_ab94db97eb232a77a07f57aa7af063a49}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current destination of the emergency pickup drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_a3c12158300ece8548c9803ce907e4621}{Set\+Strategy\+Name}} (std\+::string strategy\+Name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the strategy name of the emergency pickup drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_a92cc1d29754e582f1d9736ec54c3ce60}{Set\+Entities}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$entities)
+\begin{DoxyCompactList}\small\item\em Sets the entities in the vector array entities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_af662a044ab554732b80034cc3f71636e}{Search\+Drone}} ()
+\begin{DoxyCompactList}\small\item\em Searches for the first drone in the entities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmergencyPickup_a2c05b61fa0529aba0583241d9d476d1d}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the emergency pickup drone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEmergencyPickup_ad93e08926d38fe42728948449b31bd86}\label{classEmergencyPickup_ad93e08926d38fe42728948449b31bd86}} 
+\index{EmergencyPickup@{EmergencyPickup}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily bool Emergency\+Pickup\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current availability of the emergency pickup drone. 
+
+\begin{DoxyReturn}{Returns}
+available, a boolean value true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEmergencyPickup_a7ee16e98fd9c586b5ee280ff025af4c1}\label{classEmergencyPickup_a7ee16e98fd9c586b5ee280ff025af4c1}} 
+\index{EmergencyPickup@{EmergencyPickup}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Emergency\+Pickup\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current destination of the emergency pickup drone as a \mbox{\hyperlink{classVector3}{Vector3}} Object. 
+
+\begin{DoxyReturn}{Returns}
+destination, a \mbox{\hyperlink{classVector3}{Vector3}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_ac5ac66b7fbc5ba1e927a83d4688b3443}\label{classEmergencyPickup_ac5ac66b7fbc5ba1e927a83d4688b3443}} 
+\index{EmergencyPickup@{EmergencyPickup}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Emergency\+Pickup\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the details of the emergency pickup drone. 
+
+\begin{DoxyReturn}{Returns}
+details, a Json\+Object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_a07324992a77aead29515fb30e44551ba}\label{classEmergencyPickup_a07324992a77aead29515fb30e44551ba}} 
+\index{EmergencyPickup@{EmergencyPickup}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Emergency\+Pickup\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current direction of the emergency pickup drone as a \mbox{\hyperlink{classVector3}{Vector3}} object. 
+
+\begin{DoxyReturn}{Returns}
+direction, a \mbox{\hyperlink{classVector3}{Vector3}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_ac51e19ab6ac8c1d6444295cc5991e1d0}\label{classEmergencyPickup_ac51e19ab6ac8c1d6444295cc5991e1d0}} 
+\index{EmergencyPickup@{EmergencyPickup}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Emergency\+Pickup\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current position of the emergency pickup drone as a \mbox{\hyperlink{classVector3}{Vector3}} object. 
+
+\begin{DoxyReturn}{Returns}
+position, a \mbox{\hyperlink{classVector3}{Vector3}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_aa6ebd43eef6874bfd3a4552f3965822e}\label{classEmergencyPickup_aa6ebd43eef6874bfd3a4552f3965822e}} 
+\index{EmergencyPickup@{EmergencyPickup}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Emergency\+Pickup\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current speed of the emergency pickup drone. 
+
+\begin{DoxyReturn}{Returns}
+speed, a float value representing the current speed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_ac80508f2bdc9508b5533ae578b88f19b}\label{classEmergencyPickup_ac80508f2bdc9508b5533ae578b88f19b}} 
+\index{EmergencyPickup@{EmergencyPickup}!GetStrategyName@{GetStrategyName}}
+\index{GetStrategyName@{GetStrategyName}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{GetStrategyName()}{GetStrategyName()}}
+{\footnotesize\ttfamily std\+::string Emergency\+Pickup\+::\+Get\+Strategy\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current strategy name of the emergency pickup drone. 
+
+\begin{DoxyReturn}{Returns}
+strategy\+Name, a String representing the strategies name 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9b4a238a04f5cd56db89e50292355005}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_a2c05b61fa0529aba0583241d9d476d1d}\label{classEmergencyPickup_a2c05b61fa0529aba0583241d9d476d1d}} 
+\index{EmergencyPickup@{EmergencyPickup}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates the emergency pickup drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle,a} & double amount to rotate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_af662a044ab554732b80034cc3f71636e}\label{classEmergencyPickup_af662a044ab554732b80034cc3f71636e}} 
+\index{EmergencyPickup@{EmergencyPickup}!SearchDrone@{SearchDrone}}
+\index{SearchDrone@{SearchDrone}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{SearchDrone()}{SearchDrone()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Search\+Drone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Searches for the first drone in the entities. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEmergencyPickup_a850944fcf1cc350e04ea570fd9d2b082}\label{classEmergencyPickup_a850944fcf1cc350e04ea570fd9d2b082}} 
+\index{EmergencyPickup@{EmergencyPickup}!SetAvailability@{SetAvailability}}
+\index{SetAvailability@{SetAvailability}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{SetAvailability()}{SetAvailability()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Set\+Availability (\begin{DoxyParamCaption}\item[{bool}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current availability of the emergency pickup drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice,a} & boolean value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_ab94db97eb232a77a07f57aa7af063a49}\label{classEmergencyPickup_ab94db97eb232a77a07f57aa7af063a49}} 
+\index{EmergencyPickup@{EmergencyPickup}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current destination of the emergency pickup drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des,a} & \mbox{\hyperlink{classVector3}{Vector3}} value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_a1e32a6bfcbd113a663d711f10fd5df40}\label{classEmergencyPickup_a1e32a6bfcbd113a663d711f10fd5df40}} 
+\index{EmergencyPickup@{EmergencyPickup}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current direction of the emergency pickup drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir,a} & \mbox{\hyperlink{classVector3}{Vector3}} value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_a92cc1d29754e582f1d9736ec54c3ce60}\label{classEmergencyPickup_a92cc1d29754e582f1d9736ec54c3ce60}} 
+\index{EmergencyPickup@{EmergencyPickup}!SetEntities@{SetEntities}}
+\index{SetEntities@{SetEntities}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{SetEntities()}{SetEntities()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Set\+Entities (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$}]{entities }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the entities in the vector array entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entities,a} & vector3 array of \mbox{\hyperlink{classIEntity}{I\+Entity}} ptrs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a33dd9191fc111bedaeb6735f40ba4d15}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_a18e78f12c2321b86f1af03dbcdf4fdf9}\label{classEmergencyPickup_a18e78f12c2321b86f1af03dbcdf4fdf9}} 
+\index{EmergencyPickup@{EmergencyPickup}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current position of the emergency pickup drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos,a} & \mbox{\hyperlink{classVector3}{Vector3}} value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_a3c12158300ece8548c9803ce907e4621}\label{classEmergencyPickup_a3c12158300ece8548c9803ce907e4621}} 
+\index{EmergencyPickup@{EmergencyPickup}!SetStrategyName@{SetStrategyName}}
+\index{SetStrategyName@{SetStrategyName}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{SetStrategyName()}{SetStrategyName()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Set\+Strategy\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{strategy\+Name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the strategy name of the emergency pickup drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy\+Name,the} & string name of the strategy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a933def05f85783fddbf05e8257cc8880}{I\+Entity}}.
+
+\mbox{\Hypertarget{classEmergencyPickup_acd427984d472da1112dd2e2516463d4e}\label{classEmergencyPickup_acd427984d472da1112dd2e2516463d4e}} 
+\index{EmergencyPickup@{EmergencyPickup}!Update@{Update}}
+\index{Update@{Update}!EmergencyPickup@{EmergencyPickup}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Emergency\+Pickup\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the emergency pickup drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt,a} & double delta value \\
+\hline
+{\em scheduler,a} & vector array of \mbox{\hyperlink{classIEntity}{I\+Entity}} ptrs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/include/Emergency\+Pickup.\+h\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/src/Emergency\+Pickup.\+cc\end{DoxyCompactItemize}

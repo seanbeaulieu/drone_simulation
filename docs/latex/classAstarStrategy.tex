@@ -11,8 +11,7 @@ this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} clas
 
 
 
-Inheritance diagram for Astar\+Strategy\+:
-\nopagebreak
+Inheritance diagram for Astar\+Strategy\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Astar\+Strategy\+:
 \end{figure}
 
 
-Collaboration diagram for Astar\+Strategy\+:
-\nopagebreak
+Collaboration diagram for Astar\+Strategy\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,12 +33,10 @@ Collaboration diagram for Astar\+Strategy\+:
 \mbox{\Hypertarget{classAstarStrategy_aed2438fdb571dbe3974ee5ee29c8a7be}\label{classAstarStrategy_aed2438fdb571dbe3974ee5ee29c8a7be}} 
 {\bfseries Astar\+Strategy} (\mbox{\hyperlink{classVector3}{Vector3}} position, \mbox{\hyperlink{classVector3}{Vector3}} destination, const I\+Graph $\ast$graph)
 \item 
-\mbox{\Hypertarget{classAstarStrategy_afd13e7ed2b1872f01aa2a2f4b07b41c3}\label{classAstarStrategy_afd13e7ed2b1872f01aa2a2f4b07b41c3}} 
-void {\bfseries Move} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
-\item 
-\mbox{\Hypertarget{classAstarStrategy_a65ae8d490fe820fa152a379da6845103}\label{classAstarStrategy_a65ae8d490fe820fa152a379da6845103}} 
-bool {\bfseries Is\+Completed} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classAstarStrategy_afd13e7ed2b1872f01aa2a2f4b07b41c3}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
+\begin{DoxyCompactList}\small\item\em Moves an entity using the A\+Star strategy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAstarStrategy_a65ae8d490fe820fa152a379da6845103}{Is\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Checks to see if a route is completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -49,7 +45,51 @@ this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} clas
 
 include 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAstarStrategy_a65ae8d490fe820fa152a379da6845103}\label{classAstarStrategy_a65ae8d490fe820fa152a379da6845103}} 
+\index{AstarStrategy@{AstarStrategy}!IsCompleted@{IsCompleted}}
+\index{IsCompleted@{IsCompleted}!AstarStrategy@{AstarStrategy}}
+\doxysubsubsection{\texorpdfstring{IsCompleted()}{IsCompleted()}}
+{\footnotesize\ttfamily bool Astar\+Strategy\+::\+Is\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks to see if a route is completed. 
+
+\begin{DoxyReturn}{Returns}
+Is\+Completed, a true or false boolean value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a13c6048efd232b696db5f35000d5b106}{I\+Strategy}}.
+
+\mbox{\Hypertarget{classAstarStrategy_afd13e7ed2b1872f01aa2a2f4b07b41c3}\label{classAstarStrategy_afd13e7ed2b1872f01aa2a2f4b07b41c3}} 
+\index{AstarStrategy@{AstarStrategy}!Move@{Move}}
+\index{Move@{Move}!AstarStrategy@{AstarStrategy}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Astar\+Strategy\+::\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves an entity using the A\+Star strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity,a} & pointer to an \mbox{\hyperlink{classIEntity}{I\+Entity}} object to be moved \\
+\hline
+{\em dt,a} & double value amount to move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a69254389f4ef9a851dc5d40c4cc9aacd}{I\+Strategy}}.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/include/Astar\+Strategy.\+h\item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/src/Astar\+Strategy.\+cc\end{DoxyCompactItemize}
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/include/Astar\+Strategy.\+h\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/src/Astar\+Strategy.\+cc\end{DoxyCompactItemize}

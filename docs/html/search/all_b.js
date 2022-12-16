@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['removeentity_32',['RemoveEntity',['../classIController.html#a35b431eb8e01216df8b33fa3f4c2b25c',1,'IController']]],
-  ['removepath_33',['RemovePath',['../classIController.html#a23bf74a0e1672c6daba1674137759f55',1,'IController']]],
-  ['robot_34',['Robot',['../classRobot.html',1,'']]],
-  ['robotfactory_35',['RobotFactory',['../classRobotFactory.html',1,'']]],
-  ['rotate_36',['Rotate',['../classHelicopter.html#ad1211b18d9db476bfa2c61afead9ffb8',1,'Helicopter::Rotate()'],['../classLost__Duck.html#ada2ee96650c6f8886d42c8d9511c3c37',1,'Lost_Duck::Rotate()']]]
+  ['operator_2a_46',['operator*',['../classVector3.html#a4968b100aa24e624d7926cee91498496',1,'Vector3']]],
+  ['operator_2b_47',['operator+',['../classVector3.html#a9228f34c33c47c753442a5402aaaf0ba',1,'Vector3']]],
+  ['operator_2d_48',['operator-',['../classVector3.html#a99f85da3057603ccb39f6eb763034f04',1,'Vector3']]],
+  ['operator_2f_49',['operator/',['../classVector3.html#a212b45ab1cd8d9a7f9b37d596d19544d',1,'Vector3']]]
 ];

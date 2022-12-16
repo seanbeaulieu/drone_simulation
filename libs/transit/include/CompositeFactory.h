@@ -3,6 +3,9 @@
 
 #include "IEntityFactory.h"
 
+  /**
+  * @brief A compositefactory for all other Factory
+  **/
 class CompositeFactory : public IEntityFactory {
   public:
 

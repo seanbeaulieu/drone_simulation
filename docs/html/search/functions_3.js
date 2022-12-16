@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['operator_2a_82',['operator*',['../classVector3.html#a4968b100aa24e624d7926cee91498496',1,'Vector3']]],
-  ['operator_2b_83',['operator+',['../classVector3.html#a9228f34c33c47c753442a5402aaaf0ba',1,'Vector3']]],
-  ['operator_2d_84',['operator-',['../classVector3.html#a99f85da3057603ccb39f6eb763034f04',1,'Vector3']]],
-  ['operator_2f_85',['operator/',['../classVector3.html#a212b45ab1cd8d9a7f9b37d596d19544d',1,'Vector3']]]
+  ['iscompleted_132',['IsCompleted',['../classAstarStrategy.html#a65ae8d490fe820fa152a379da6845103',1,'AstarStrategy::IsCompleted()'],['../classBeelineStrategy.html#a648eae389f7844f210ac267313ef6233',1,'BeelineStrategy::IsCompleted()'],['../classCelebrationDecorator.html#a7ce83ef692d22773bf40e8733e20329a',1,'CelebrationDecorator::IsCompleted()'],['../classDfsStrategy.html#a30fb7b230d0244cd87de51a13a8d8c5b',1,'DfsStrategy::IsCompleted()'],['../classDijkstraStrategy.html#a409569a22f38028431ce25522d355ee2',1,'DijkstraStrategy::IsCompleted()'],['../classIStrategy.html#a13c6048efd232b696db5f35000d5b106',1,'IStrategy::IsCompleted()'],['../classJumpDecorator.html#a94b32bed5b764df15980356aa8763abe',1,'JumpDecorator::IsCompleted()'],['../classSpinDecorator.html#a0887a816731d9ff8ee8161034a03c4aa',1,'SpinDecorator::IsCompleted()']]]
 ];

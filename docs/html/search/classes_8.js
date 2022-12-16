@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['robot_69',['Robot',['../classRobot.html',1,'']]],
-  ['robotfactory_70',['RobotFactory',['../classRobotFactory.html',1,'']]]
+  ['lost_5fduck_102',['Lost_Duck',['../classLost__Duck.html',1,'']]],
+  ['lostduckfactory_103',['LostDuckFactory',['../classLostDuckFactory.html',1,'']]]
 ];

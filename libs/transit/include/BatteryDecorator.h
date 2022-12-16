@@ -9,6 +9,9 @@
  // 300 is roughly enough to cover one worst-case trip from full
 #define MAX_CHARGE 300
 
+/**
+* @brief A Battery Decorator for the drone, it give and battery.
+**/
 class BatteryDecorator : public IEntity
 {
 private:

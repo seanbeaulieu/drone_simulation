@@ -13,6 +13,11 @@ using namespace routing;
 
 /// Abstract controller class used in the Transit Service.  Uses the Model View
 /// Controller Pattern
+
+/**
+ * @brief all object int he simulation model
+ */
+
 class IEntity {
  public:
   IEntity() {

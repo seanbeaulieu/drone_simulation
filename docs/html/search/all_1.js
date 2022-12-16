@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['beelinestrategy_3',['BeelineStrategy',['../classBeelineStrategy.html',1,'']]]
+  ['batterydecorator_4',['BatteryDecorator',['../classBatteryDecorator.html',1,'']]],
+  ['beelinestrategy_5',['BeelineStrategy',['../classBeelineStrategy.html',1,'']]]
 ];

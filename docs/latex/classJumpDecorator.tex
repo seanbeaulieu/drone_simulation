@@ -2,8 +2,7 @@
 \label{classJumpDecorator}\index{JumpDecorator@{JumpDecorator}}
 
 
-Inheritance diagram for Jump\+Decorator\+:
-\nopagebreak
+Inheritance diagram for Jump\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Jump\+Decorator\+:
 \end{figure}
 
 
-Collaboration diagram for Jump\+Decorator\+:
-\nopagebreak
+Collaboration diagram for Jump\+Decorator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,16 +24,58 @@ Collaboration diagram for Jump\+Decorator\+:
 \mbox{\Hypertarget{classJumpDecorator_a0e488a121d506f294d2ed4b90108e10f}\label{classJumpDecorator_a0e488a121d506f294d2ed4b90108e10f}} 
 {\bfseries Jump\+Decorator} (\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$strategy\+\_\+)
 \item 
-\mbox{\Hypertarget{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}\label{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}} 
-bool {\bfseries Is\+Completed} ()
-\item 
-\mbox{\Hypertarget{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}\label{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}} 
-void {\bfseries Move} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}{Is\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Checks to see if the route is completed and does a jump celebration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
+\begin{DoxyCompactList}\small\item\em Moves the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}\label{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}} 
+\index{JumpDecorator@{JumpDecorator}!IsCompleted@{IsCompleted}}
+\index{IsCompleted@{IsCompleted}!JumpDecorator@{JumpDecorator}}
+\doxysubsubsection{\texorpdfstring{IsCompleted()}{IsCompleted()}}
+{\footnotesize\ttfamily bool Jump\+Decorator\+::\+Is\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks to see if the route is completed and does a jump celebration. 
+
+\begin{DoxyReturn}{Returns}
+Is\+Completed, a true or false boolean value 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCelebrationDecorator_a7ce83ef692d22773bf40e8733e20329a}{Celebration\+Decorator}}.
+
+\mbox{\Hypertarget{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}\label{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}} 
+\index{JumpDecorator@{JumpDecorator}!Move@{Move}}
+\index{Move@{Move}!JumpDecorator@{JumpDecorator}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Jump\+Decorator\+::\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity,a} & pointer to an \mbox{\hyperlink{classIEntity}{I\+Entity}} object to be moved \\
+\hline
+{\em dt,a} & double value to be moved by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCelebrationDecorator_aaea8fd11f7d0e12dd79ccdc63ab1bbf6}{Celebration\+Decorator}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/include/Jump\+Decorator.\+h\item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/src/Jump\+Decorator.\+cc\end{DoxyCompactItemize}
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/include/Jump\+Decorator.\+h\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/src/Jump\+Decorator.\+cc\end{DoxyCompactItemize}

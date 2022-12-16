@@ -5,6 +5,10 @@
 
 #include "IStrategy.h"
 
+/**
+  * @brief Celebration Decorator for the IStrategy. 
+  **/
+
 class CelebrationDecorator : public IStrategy {
  public:
   CelebrationDecorator(IStrategy *strategy_) {
@@ -14,10 +18,9 @@ class CelebrationDecorator : public IStrategy {
   void Move(IEntity *entity, double dt);
 
   /**
-     * @brief Checks to see if the route is completed and does a celebration if so
-     * 
-     * @return IsCompleted, a true or false boolean value
-     **/
+  * @brief Checks to see if the route is completed and does a celebration if so
+  * @return IsCompleted, a true or false boolean value
+  **/
   bool IsCompleted();
 
  protected:

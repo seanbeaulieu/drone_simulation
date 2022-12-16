@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/Lost_Duck.h Source File</title>
+<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/Lost_Duck.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,76 +72,74 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LOST_DUCK_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LOST_DUCK_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;IStrategy.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;DijkstraStrategy.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;AstarStrategy.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classLost__Duck.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLost__Duck.html">Lost_Duck</a> : <span class="keyword">public</span> <a class="code" href="classIEntity.html">IEntity</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    JsonObject details;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> position;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> direction;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> destination;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string strategyName;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> speed;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> available;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classIStrategy.html">IStrategy</a>* strategy = NULL;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classIStrategy.html">IStrategy</a>* strat2 = NULL;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> time;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classLost__Duck.html">Lost_Duck</a>(JsonObject&amp; obj);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="classLost__Duck.html">Lost_Duck</a>();</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;AstarStrategy.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;DijkstraStrategy.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;IStrategy.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classLost__Duck.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLost__Duck.html">Lost_Duck</a> : <span class="keyword">public</span> <a class="code" href="classIEntity.html">IEntity</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  JsonObject details;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> position;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> direction;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> destination;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  std::string strategyName;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">float</span> speed;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">bool</span> available;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classIStrategy.html">IStrategy</a>* strategy = NULL;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classIStrategy.html">IStrategy</a>* strat2 = NULL;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">float</span> time;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classLost__Duck.html">Lost_Duck</a>(JsonObject&amp; obj);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  ~<a class="code" href="classLost__Duck.html">Lost_Duck</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classLost__Duck.html#a559ce890eec3a36a5f7743444801339c">   43</a></span>&#160;    <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classLost__Duck.html#a559ce890eec3a36a5f7743444801339c">GetPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ad85c8faaa3643a84f04dd0f931af1942">   51</a></span>&#160;    <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classLost__Duck.html#ad85c8faaa3643a84f04dd0f931af1942">GetDirection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> direction; }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ad6a0263c2661cd257693f5eecb758338">   59</a></span>&#160;    <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classLost__Duck.html#ad6a0263c2661cd257693f5eecb758338">GetDestination</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> destination; }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ae550a8a3a155301947185058d9750661">   67</a></span>&#160;    JsonObject <a class="code" href="classLost__Duck.html#ae550a8a3a155301947185058d9750661">GetDetails</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> details; }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classLost__Duck.html#aeeea58f486ee6404493244cb9193d7c3">   75</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classLost__Duck.html#aeeea58f486ee6404493244cb9193d7c3">GetSpeed</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> speed; }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#a8d974c98bc57866b12d8e68e18cb74cd">Update</a>(<span class="keywordtype">double</span> dt,  std::vector&lt;IEntity*&gt; scheduler);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ae79cf2268356505bc4e42852f7749a65">   92</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#ae79cf2268356505bc4e42852f7749a65">SetPosition</a>(<a class="code" href="classVector3.html">Vector3</a> pos_) { position = pos_; }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ad3684a940b754abdc4745f8cbf3d84ec">  100</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#ad3684a940b754abdc4745f8cbf3d84ec">SetDirection</a>(<a class="code" href="classVector3.html">Vector3</a> dir_) { direction = dir_; }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classLost__Duck.html#a6a91e2b4f33cf127885bf210b3820c77">  108</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#a6a91e2b4f33cf127885bf210b3820c77">SetDestination</a>(<a class="code" href="classVector3.html">Vector3</a> des_) { destination = des_; }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="classLost__Duck.html">Lost_Duck</a>(<span class="keyword">const</span> <a class="code" href="classLost__Duck.html">Lost_Duck</a>&amp; duck) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classLost__Duck.html">Lost_Duck</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classLost__Duck.html">Lost_Duck</a>&amp; duck) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#ada2ee96650c6f8886d42c8d9511c3c37">Rotate</a>(<span class="keywordtype">double</span> angle);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classLost__Duck.html#a559ce890eec3a36a5f7743444801339c">   42</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classLost__Duck.html#a559ce890eec3a36a5f7743444801339c">GetPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ad85c8faaa3643a84f04dd0f931af1942">   49</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classLost__Duck.html#ad85c8faaa3643a84f04dd0f931af1942">GetDirection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> direction; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ad6a0263c2661cd257693f5eecb758338">   56</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classLost__Duck.html#ad6a0263c2661cd257693f5eecb758338">GetDestination</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> destination; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ae550a8a3a155301947185058d9750661">   63</a></span>&#160;  JsonObject <a class="code" href="classLost__Duck.html#ae550a8a3a155301947185058d9750661">GetDetails</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> details; }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classLost__Duck.html#aeeea58f486ee6404493244cb9193d7c3">   70</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classLost__Duck.html#aeeea58f486ee6404493244cb9193d7c3">GetSpeed</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> speed; }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#a8d974c98bc57866b12d8e68e18cb74cd">Update</a>(<span class="keywordtype">double</span> dt, std::vector&lt;IEntity*&gt; scheduler);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ae79cf2268356505bc4e42852f7749a65">   87</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#ae79cf2268356505bc4e42852f7749a65">SetPosition</a>(<a class="code" href="classVector3.html">Vector3</a> pos_) { position = pos_; }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classLost__Duck.html#ad3684a940b754abdc4745f8cbf3d84ec">   95</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#ad3684a940b754abdc4745f8cbf3d84ec">SetDirection</a>(<a class="code" href="classVector3.html">Vector3</a> dir_) { direction = dir_; }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classLost__Duck.html#a6a91e2b4f33cf127885bf210b3820c77">  103</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#a6a91e2b4f33cf127885bf210b3820c77">SetDestination</a>(<a class="code" href="classVector3.html">Vector3</a> des_) { destination = des_; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classLost__Duck.html">Lost_Duck</a>(<span class="keyword">const</span> <a class="code" href="classLost__Duck.html">Lost_Duck</a>&amp; duck) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classLost__Duck.html">Lost_Duck</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classLost__Duck.html">Lost_Duck</a>&amp; duck) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLost__Duck.html#ada2ee96650c6f8886d42c8d9511c3c37">Rotate</a>(<span class="keywordtype">double</span> angle);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIStrategy_html"><div class="ttname"><a href="classIStrategy.html">IStrategy</a></div><div class="ttdef"><b>Definition:</b> IStrategy.h:10</div></div>
-<div class="ttc" id="aclassLost__Duck_html_ae550a8a3a155301947185058d9750661"><div class="ttname"><a href="classLost__Duck.html#ae550a8a3a155301947185058d9750661">Lost_Duck::GetDetails</a></div><div class="ttdeci">JsonObject GetDetails() const</div><div class="ttdoc">Gets the details about the Lost_Duck object.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:67</div></div>
-<div class="ttc" id="aclassLost__Duck_html_a6a91e2b4f33cf127885bf210b3820c77"><div class="ttname"><a href="classLost__Duck.html#a6a91e2b4f33cf127885bf210b3820c77">Lost_Duck::SetDestination</a></div><div class="ttdeci">void SetDestination(Vector3 des_)</div><div class="ttdoc">Sets the current destination of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:108</div></div>
-<div class="ttc" id="aclassLost__Duck_html_a8d974c98bc57866b12d8e68e18cb74cd"><div class="ttname"><a href="classLost__Duck.html#a8d974c98bc57866b12d8e68e18cb74cd">Lost_Duck::Update</a></div><div class="ttdeci">void Update(double dt, std::vector&lt; IEntity * &gt; scheduler)</div><div class="ttdoc">Update the Lost_ducks position on using Dijk strategy.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.cc:21</div></div>
-<div class="ttc" id="aclassLost__Duck_html_ad6a0263c2661cd257693f5eecb758338"><div class="ttname"><a href="classLost__Duck.html#ad6a0263c2661cd257693f5eecb758338">Lost_Duck::GetDestination</a></div><div class="ttdeci">Vector3 GetDestination() const</div><div class="ttdoc">Gets the current Destination of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:59</div></div>
-<div class="ttc" id="aclassLost__Duck_html_ada2ee96650c6f8886d42c8d9511c3c37"><div class="ttname"><a href="classLost__Duck.html#ada2ee96650c6f8886d42c8d9511c3c37">Lost_Duck::Rotate</a></div><div class="ttdeci">void Rotate(double angle)</div><div class="ttdoc">Rotate the Lost_ducks towards its destination.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.cc:71</div></div>
+<div class="ttc" id="aclassLost__Duck_html_ae550a8a3a155301947185058d9750661"><div class="ttname"><a href="classLost__Duck.html#ae550a8a3a155301947185058d9750661">Lost_Duck::GetDetails</a></div><div class="ttdeci">JsonObject GetDetails() const</div><div class="ttdoc">Gets the details about the Lost_Duck object.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:63</div></div>
+<div class="ttc" id="aclassLost__Duck_html_a6a91e2b4f33cf127885bf210b3820c77"><div class="ttname"><a href="classLost__Duck.html#a6a91e2b4f33cf127885bf210b3820c77">Lost_Duck::SetDestination</a></div><div class="ttdeci">void SetDestination(Vector3 des_)</div><div class="ttdoc">Sets the current destination of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:103</div></div>
+<div class="ttc" id="aclassLost__Duck_html_a8d974c98bc57866b12d8e68e18cb74cd"><div class="ttname"><a href="classLost__Duck.html#a8d974c98bc57866b12d8e68e18cb74cd">Lost_Duck::Update</a></div><div class="ttdeci">void Update(double dt, std::vector&lt; IEntity * &gt; scheduler)</div><div class="ttdoc">Update the Lost_ducks position on using Dijk strategy.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.cc:19</div></div>
+<div class="ttc" id="aclassLost__Duck_html_ad6a0263c2661cd257693f5eecb758338"><div class="ttname"><a href="classLost__Duck.html#ad6a0263c2661cd257693f5eecb758338">Lost_Duck::GetDestination</a></div><div class="ttdeci">Vector3 GetDestination() const</div><div class="ttdoc">Gets the current Destination of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:56</div></div>
+<div class="ttc" id="aclassLost__Duck_html_ada2ee96650c6f8886d42c8d9511c3c37"><div class="ttname"><a href="classLost__Duck.html#ada2ee96650c6f8886d42c8d9511c3c37">Lost_Duck::Rotate</a></div><div class="ttdeci">void Rotate(double angle)</div><div class="ttdoc">Rotate the Lost_ducks towards its destination.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.cc:69</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
-<div class="ttc" id="aclassLost__Duck_html_ae79cf2268356505bc4e42852f7749a65"><div class="ttname"><a href="classLost__Duck.html#ae79cf2268356505bc4e42852f7749a65">Lost_Duck::SetPosition</a></div><div class="ttdeci">void SetPosition(Vector3 pos_)</div><div class="ttdoc">Sets the current position of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:92</div></div>
-<div class="ttc" id="aclassLost__Duck_html_a559ce890eec3a36a5f7743444801339c"><div class="ttname"><a href="classLost__Duck.html#a559ce890eec3a36a5f7743444801339c">Lost_Duck::GetPosition</a></div><div class="ttdeci">Vector3 GetPosition() const</div><div class="ttdoc">Gets the current position of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:43</div></div>
-<div class="ttc" id="aclassLost__Duck_html_ad85c8faaa3643a84f04dd0f931af1942"><div class="ttname"><a href="classLost__Duck.html#ad85c8faaa3643a84f04dd0f931af1942">Lost_Duck::GetDirection</a></div><div class="ttdeci">Vector3 GetDirection() const</div><div class="ttdoc">Gets the current direction of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:51</div></div>
+<div class="ttc" id="aclassLost__Duck_html_ae79cf2268356505bc4e42852f7749a65"><div class="ttname"><a href="classLost__Duck.html#ae79cf2268356505bc4e42852f7749a65">Lost_Duck::SetPosition</a></div><div class="ttdeci">void SetPosition(Vector3 pos_)</div><div class="ttdoc">Sets the current position of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:87</div></div>
+<div class="ttc" id="aclassLost__Duck_html_a559ce890eec3a36a5f7743444801339c"><div class="ttname"><a href="classLost__Duck.html#a559ce890eec3a36a5f7743444801339c">Lost_Duck::GetPosition</a></div><div class="ttdeci">Vector3 GetPosition() const</div><div class="ttdoc">Gets the current position of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:42</div></div>
+<div class="ttc" id="aclassLost__Duck_html_ad85c8faaa3643a84f04dd0f931af1942"><div class="ttname"><a href="classLost__Duck.html#ad85c8faaa3643a84f04dd0f931af1942">Lost_Duck::GetDirection</a></div><div class="ttdeci">Vector3 GetDirection() const</div><div class="ttdoc">Gets the current direction of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:49</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
-<div class="ttc" id="aclassLost__Duck_html_ad3684a940b754abdc4745f8cbf3d84ec"><div class="ttname"><a href="classLost__Duck.html#ad3684a940b754abdc4745f8cbf3d84ec">Lost_Duck::SetDirection</a></div><div class="ttdeci">void SetDirection(Vector3 dir_)</div><div class="ttdoc">Sets the current direction of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:100</div></div>
-<div class="ttc" id="aclassLost__Duck_html"><div class="ttname"><a href="classLost__Duck.html">Lost_Duck</a></div><div class="ttdoc">the Lost_Duck entity class. It Creates a Lost_Duck entity</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:18</div></div>
-<div class="ttc" id="aclassLost__Duck_html_aeeea58f486ee6404493244cb9193d7c3"><div class="ttname"><a href="classLost__Duck.html#aeeea58f486ee6404493244cb9193d7c3">Lost_Duck::GetSpeed</a></div><div class="ttdeci">float GetSpeed() const</div><div class="ttdoc">Gets the current speed of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:75</div></div>
+<div class="ttc" id="aclassLost__Duck_html_ad3684a940b754abdc4745f8cbf3d84ec"><div class="ttname"><a href="classLost__Duck.html#ad3684a940b754abdc4745f8cbf3d84ec">Lost_Duck::SetDirection</a></div><div class="ttdeci">void SetDirection(Vector3 dir_)</div><div class="ttdoc">Sets the current direction of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:95</div></div>
+<div class="ttc" id="aclassLost__Duck_html"><div class="ttname"><a href="classLost__Duck.html">Lost_Duck</a></div><div class="ttdoc">the Lost_Duck entity class. It Creates a Lost_Duck entity</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:19</div></div>
+<div class="ttc" id="aclassLost__Duck_html_aeeea58f486ee6404493244cb9193d7c3"><div class="ttname"><a href="classLost__Duck.html#aeeea58f486ee6404493244cb9193d7c3">Lost_Duck::GetSpeed</a></div><div class="ttdeci">float GetSpeed() const</div><div class="ttdoc">Gets the current speed of the Lost_Duck.</div><div class="ttdef"><b>Definition:</b> Lost_Duck.h:70</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

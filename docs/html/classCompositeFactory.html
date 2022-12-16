@@ -89,16 +89,81 @@ Collaboration diagram for CompositeFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a46a24b2fa2e5c077bd140b7075f61ff9"><td class="memItemLeft" align="right" valign="top"><a id="a46a24b2fa2e5c077bd140b7075f61ff9"></a>
-<a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>CreateEntity</b> (JsonObject &amp;entity)</td></tr>
+<tr class="memitem:a46a24b2fa2e5c077bd140b7075f61ff9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompositeFactory.html#a46a24b2fa2e5c077bd140b7075f61ff9">CreateEntity</a> (JsonObject &amp;entity)</td></tr>
+<tr class="memdesc:a46a24b2fa2e5c077bd140b7075f61ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new entity.  <a href="classCompositeFactory.html#a46a24b2fa2e5c077bd140b7075f61ff9">More...</a><br /></td></tr>
 <tr class="separator:a46a24b2fa2e5c077bd140b7075f61ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e9833480826a2661f293d7e2d6358d5"><td class="memItemLeft" align="right" valign="top"><a id="a1e9833480826a2661f293d7e2d6358d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddFactory</b> (<a class="el" href="classIEntityFactory.html">IEntityFactory</a> *factoryEntity)</td></tr>
+<tr class="memitem:a1e9833480826a2661f293d7e2d6358d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompositeFactory.html#a1e9833480826a2661f293d7e2d6358d5">AddFactory</a> (<a class="el" href="classIEntityFactory.html">IEntityFactory</a> *factoryEntity)</td></tr>
+<tr class="memdesc:a1e9833480826a2661f293d7e2d6358d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new type of factory to the simulation.  <a href="classCompositeFactory.html#a1e9833480826a2661f293d7e2d6358d5">More...</a><br /></td></tr>
 <tr class="separator:a1e9833480826a2661f293d7e2d6358d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1e9833480826a2661f293d7e2d6358d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9833480826a2661f293d7e2d6358d5">&#9670;&nbsp;</a></span>AddFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CompositeFactory::AddFactory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIEntityFactory.html">IEntityFactory</a> *&#160;</td>
+          <td class="paramname"><em>factoryEntity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new type of factory to the simulation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factoryEnitity,a</td><td>pointer to an <a class="el" href="classIEntityFactory.html">IEntityFactory</a> type object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="a46a24b2fa2e5c077bd140b7075f61ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a24b2fa2e5c077bd140b7075f61ff9">&#9670;&nbsp;</a></span>CreateEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIEntity.html">IEntity</a> * CompositeFactory::CreateEntity </td>
+          <td>(</td>
+          <td class="paramtype">JsonObject &amp;&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity,a</td><td>memory address to a JsonObject </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+<p>Implements <a class="el" href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">IEntityFactory</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/<a class="el" href="CompositeFactory_8h_source.html">CompositeFactory.h</a></li>
-<li>/home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/src/CompositeFactory.cc</li>
+<li>/home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/<a class="el" href="CompositeFactory_8h_source.html">CompositeFactory.h</a></li>
+<li>/home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/src/CompositeFactory.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

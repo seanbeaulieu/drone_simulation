@@ -6,7 +6,9 @@
 #include "IEntity.h"
 #include "BatteryDecorator.h"
 
-
+/**
+* @brief A new entity called EmergencyPick is responsible for picking up the drone if it runs out of battery.
+**/
 class EmergencyPickup : public IEntity {
  public:
   // start of .cc implemented

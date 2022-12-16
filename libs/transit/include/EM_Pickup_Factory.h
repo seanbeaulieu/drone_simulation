@@ -6,6 +6,10 @@
 #include "EmergencyPickup.h"
 #include "BatteryDecorator.h"
 
+/**
+* @brief Creates a New EmergencyPickup Entity object if the text in provided JsonObject parameter is "EmergencyPickup"
+**/
+
 class EM_Pickup_Factory : public IEntityFactory {
   public:
     virtual ~EM_Pickup_Factory() {}

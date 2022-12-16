@@ -17,56 +17,53 @@ Inheritance diagram for I\+Entity\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classIEntity_a2bfa9ab304ff33b252fbd5a707e42995}\label{classIEntity_a2bfa9ab304ff33b252fbd5a707e42995}} 
-virtual int {\bfseries Get\+Id} () const
+virtual int \mbox{\hyperlink{classIEntity_a2bfa9ab304ff33b252fbd5a707e42995}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the ID of the entity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{Get\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current position of the entity as a \mbox{\hyperlink{classVector3}{Vector3}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{Get\+Direction}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current direction of the entity as a \mbox{\hyperlink{classVector3}{Vector3}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{Get\+Destination}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current destination of the entity as a \mbox{\hyperlink{classVector3}{Vector3}} Object. \end{DoxyCompactList}\item 
+virtual Json\+Object \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{Get\+Details}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the details of the entity. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{Get\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current speed of the entity. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463b1}{Get\+Availability}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current availability of the entity. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classIEntity_a9b4a238a04f5cd56db89e50292355005}{Get\+Strategy\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current strategy name of the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}{Set\+Availability}} (bool choice)
+\begin{DoxyCompactList}\small\item\em Sets the current availability of the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_a50b01c5c4fab1632c0289e30aa77faf2}{Set\+Graph}} (const I\+Graph $\ast$graph)
+\begin{DoxyCompactList}\small\item\em Sets the graph of the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current position of the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current direction of the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the current destination of the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_a933def05f85783fddbf05e8257cc8880}{Set\+Strategy\+Name}} (std\+::string strategy\+Name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the strategy of the Entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_a4e8eb64a324e1196be039c5e2a293b7a}{Jump}} (double height)
+\begin{DoxyCompactList}\small\item\em Jumps the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIEntity_a33dd9191fc111bedaeb6735f40ba4d15}{Set\+Entities}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$entities)
+\begin{DoxyCompactList}\small\item\em Sets the entities into a vector array of I\+Entitys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIEntity_acd59e60260c45302ff1afde598c27c96}\label{classIEntity_acd59e60260c45302ff1afde598c27c96}} 
+virtual bool {\bfseries Get\+Emergency} () const
 \item 
-\mbox{\Hypertarget{classIEntity_a9bc32587aab91761fc0e718612498199}\label{classIEntity_a9bc32587aab91761fc0e718612498199}} 
-virtual \mbox{\hyperlink{classVector3}{Vector3}} {\bfseries Get\+Position} () const =0
+\mbox{\Hypertarget{classIEntity_a5c0d815ed0e501ae88e6566d6f9346e0}\label{classIEntity_a5c0d815ed0e501ae88e6566d6f9346e0}} 
+virtual void {\bfseries Set\+Emergency} (bool choice)
 \item 
-\mbox{\Hypertarget{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}\label{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}} 
-virtual \mbox{\hyperlink{classVector3}{Vector3}} {\bfseries Get\+Direction} () const =0
+\mbox{\Hypertarget{classIEntity_a1fc1c77ed9c3bc885eaf1e328a50bf31}\label{classIEntity_a1fc1c77ed9c3bc885eaf1e328a50bf31}} 
+virtual \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries Get\+Nearest\+Recharge} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ search)
 \item 
-\mbox{\Hypertarget{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}\label{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}} 
-virtual \mbox{\hyperlink{classVector3}{Vector3}} {\bfseries Get\+Destination} () const =0
-\item 
-\mbox{\Hypertarget{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}\label{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}} 
-virtual Json\+Object {\bfseries Get\+Details} () const =0
-\item 
-\mbox{\Hypertarget{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}\label{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}} 
-virtual float {\bfseries Get\+Speed} () const =0
-\item 
-\mbox{\Hypertarget{classIEntity_a90348881691a37d5c3d63265ed3463b1}\label{classIEntity_a90348881691a37d5c3d63265ed3463b1}} 
-virtual bool {\bfseries Get\+Availability} () const
-\item 
-\mbox{\Hypertarget{classIEntity_a9b4a238a04f5cd56db89e50292355005}\label{classIEntity_a9b4a238a04f5cd56db89e50292355005}} 
-virtual std\+::string {\bfseries Get\+Strategy\+Name} ()
-\item 
-\mbox{\Hypertarget{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}\label{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}} 
-virtual void {\bfseries Set\+Availability} (bool choice)
-\item 
-\mbox{\Hypertarget{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}\label{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}} 
-virtual void {\bfseries Update} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
-\item 
-\mbox{\Hypertarget{classIEntity_a6b8b8eb627e8945fdc997f7a9d457df0}\label{classIEntity_a6b8b8eb627e8945fdc997f7a9d457df0}} 
-void {\bfseries Set\+Graph} (const I\+Graph $\ast$graph)
-\item 
-\mbox{\Hypertarget{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}\label{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}} 
-virtual void {\bfseries Set\+Position} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
-\item 
-\mbox{\Hypertarget{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}\label{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}} 
-virtual void {\bfseries Set\+Direction} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
-\item 
-\mbox{\Hypertarget{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}\label{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}} 
-virtual void {\bfseries Set\+Destination} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
-\item 
-\mbox{\Hypertarget{classIEntity_a933def05f85783fddbf05e8257cc8880}\label{classIEntity_a933def05f85783fddbf05e8257cc8880}} 
-virtual void {\bfseries Set\+Strategy\+Name} (std\+::string strategy\+Name\+\_\+)
-\item 
-\mbox{\Hypertarget{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}\label{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}} 
-virtual void {\bfseries Rotate} (double angle)
-\item 
-\mbox{\Hypertarget{classIEntity_a4e8eb64a324e1196be039c5e2a293b7a}\label{classIEntity_a4e8eb64a324e1196be039c5e2a293b7a}} 
-virtual void {\bfseries Jump} (double height)
+\mbox{\Hypertarget{classIEntity_add524c5726653144949f95c2e348c5bc}\label{classIEntity_add524c5726653144949f95c2e348c5bc}} 
+virtual void {\bfseries Add\+Battery} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$battery)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -82,6 +79,367 @@ const I\+Graph $\ast$ {\bfseries graph}
 \doxysubsection{Detailed Description}
 Abstract controller class used in the Transit Service. Uses the Model View Controller Pattern 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIEntity_a90348881691a37d5c3d63265ed3463b1}\label{classIEntity_a90348881691a37d5c3d63265ed3463b1}} 
+\index{IEntity@{IEntity}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily virtual bool I\+Entity\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current availability of the entity. 
+
+\begin{DoxyReturn}{Returns}
+boolean value true or false 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_a7975d254f8762b49a9ac7bc826eb21f3}{Battery\+Decorator}}, \mbox{\hyperlink{classDrone_a479442805072af27a7ee628ed59d621e}{Drone}}, \mbox{\hyperlink{classRechargeStation_a817e0b4b96c52f0aebef2f9ad9c5e2f1}{Recharge\+Station}}, and \mbox{\hyperlink{classRobot_a2b56c4d4cf7b0ef07ce6713ffae6e490}{Robot}}.
+
+\mbox{\Hypertarget{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}\label{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}} 
+\index{IEntity@{IEntity}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classVector3}{Vector3}} I\+Entity\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the current destination of the entity as a \mbox{\hyperlink{classVector3}{Vector3}} Object. 
+
+\begin{DoxyReturn}{Returns}
+Vector 3 object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBatteryDecorator_a30d49a5e5efb93fad2ab4e5d77d26870}{Battery\+Decorator}}, \mbox{\hyperlink{classCar_aac2af3568b3baa238a55f9142598c24d}{Car}}, \mbox{\hyperlink{classLost__Duck_ad6a0263c2661cd257693f5eecb758338}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classHelicopter_adc65020147c682911cc8f15ab6bb11d6}{Helicopter}}, \mbox{\hyperlink{classEmergencyPickup_a7ee16e98fd9c586b5ee280ff025af4c1}{Emergency\+Pickup}}, \mbox{\hyperlink{classDrone_adaf61822f659e8ab22fb633569288752}{Drone}}, \mbox{\hyperlink{classRechargeStation_ab744525e8427d31959da678bbbd7d84a}{Recharge\+Station}}, and \mbox{\hyperlink{classRobot_abe629d465798403a706f574b33284659}{Robot}}.
+
+\mbox{\Hypertarget{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}\label{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}} 
+\index{IEntity@{IEntity}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily virtual Json\+Object I\+Entity\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the details of the entity. 
+
+\begin{DoxyReturn}{Returns}
+details as a Json\+Object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classRechargeStation_a9ee1f44274402c473ea2ee7a8b68a459}{Recharge\+Station}}, \mbox{\hyperlink{classRobot_a0ac023c6fb5d7ad58b180903010d2924}{Robot}}, \mbox{\hyperlink{classBatteryDecorator_a1334400df4041ca471b35ede6e978721}{Battery\+Decorator}}, \mbox{\hyperlink{classCar_a86b73d3cd225d9d28e8c33e42e572a5d}{Car}}, \mbox{\hyperlink{classLost__Duck_ae550a8a3a155301947185058d9750661}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classHelicopter_ae2d381f2ea007904fd7a5f5e6418cb83}{Helicopter}}, \mbox{\hyperlink{classEmergencyPickup_ac5ac66b7fbc5ba1e927a83d4688b3443}{Emergency\+Pickup}}, and \mbox{\hyperlink{classDrone_aa038e4cb9540e6a4101ea70f311c8308}{Drone}}.
+
+\mbox{\Hypertarget{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}\label{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}} 
+\index{IEntity@{IEntity}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classVector3}{Vector3}} I\+Entity\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the current direction of the entity as a \mbox{\hyperlink{classVector3}{Vector3}} object. 
+
+\begin{DoxyReturn}{Returns}
+Vector 3 object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBatteryDecorator_a8487174df54456fe29406927f0542720}{Battery\+Decorator}}, \mbox{\hyperlink{classCar_ab75977e98e1265cd6dd391dfe3203886}{Car}}, \mbox{\hyperlink{classLost__Duck_ad85c8faaa3643a84f04dd0f931af1942}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classHelicopter_aef5fe3c3a5029d6da923f123ed308898}{Helicopter}}, \mbox{\hyperlink{classEmergencyPickup_a07324992a77aead29515fb30e44551ba}{Emergency\+Pickup}}, \mbox{\hyperlink{classDrone_aaf51e8007322a36d481ce9a546099e44}{Drone}}, \mbox{\hyperlink{classRechargeStation_a201bdc3dca7dd08f4076eef999cee13f}{Recharge\+Station}}, and \mbox{\hyperlink{classRobot_a2d6dd7a322d2d2c0bc1c44566253b9f1}{Robot}}.
+
+\mbox{\Hypertarget{classIEntity_a2bfa9ab304ff33b252fbd5a707e42995}\label{classIEntity_a2bfa9ab304ff33b252fbd5a707e42995}} 
+\index{IEntity@{IEntity}!GetId@{GetId}}
+\index{GetId@{GetId}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily virtual int I\+Entity\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the ID of the entity. 
+
+\begin{DoxyReturn}{Returns}
+an integer ID 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_a33cd07c0ce8cdd326596a3f0609fb07f}{Battery\+Decorator}}.
+
+\mbox{\Hypertarget{classIEntity_a9bc32587aab91761fc0e718612498199}\label{classIEntity_a9bc32587aab91761fc0e718612498199}} 
+\index{IEntity@{IEntity}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classVector3}{Vector3}} I\+Entity\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the current position of the entity as a \mbox{\hyperlink{classVector3}{Vector3}} object. 
+
+\begin{DoxyReturn}{Returns}
+Vector 3 object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBatteryDecorator_aaf2487adf2d58e855268877427cf5ba9}{Battery\+Decorator}}, \mbox{\hyperlink{classCar_a15bfb55a579f0a11f18fa339680baece}{Car}}, \mbox{\hyperlink{classLost__Duck_a559ce890eec3a36a5f7743444801339c}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classHelicopter_a8db916733a82877fa98f9223854cdd54}{Helicopter}}, \mbox{\hyperlink{classEmergencyPickup_ac51e19ab6ac8c1d6444295cc5991e1d0}{Emergency\+Pickup}}, \mbox{\hyperlink{classDrone_a3d86b956f8722735b1d7e791dea703bc}{Drone}}, \mbox{\hyperlink{classRechargeStation_afbd5a155a5284672c4c211758712feb9}{Recharge\+Station}}, and \mbox{\hyperlink{classRobot_a0505da0b08d679a828c005879da63b16}{Robot}}.
+
+\mbox{\Hypertarget{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}\label{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}} 
+\index{IEntity@{IEntity}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily virtual float I\+Entity\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the current speed of the entity. 
+
+\begin{DoxyReturn}{Returns}
+a float value representing the current speed 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBatteryDecorator_a4ba88b753b061fcafe7b4891e375b199}{Battery\+Decorator}}, \mbox{\hyperlink{classCar_a4fb5c6e642d6a70d3a9fcc1012d4e561}{Car}}, \mbox{\hyperlink{classRechargeStation_a09d33832aca70b16e75162ce6d646470}{Recharge\+Station}}, \mbox{\hyperlink{classLost__Duck_aeeea58f486ee6404493244cb9193d7c3}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classHelicopter_aff4570a488480c2cf70a6f96cec52d37}{Helicopter}}, \mbox{\hyperlink{classEmergencyPickup_aa6ebd43eef6874bfd3a4552f3965822e}{Emergency\+Pickup}}, \mbox{\hyperlink{classRobot_ad199885470ae6e1109153526c21473c5}{Robot}}, and \mbox{\hyperlink{classDrone_a33d05f853306e480ab97049eb6408ef7}{Drone}}.
+
+\mbox{\Hypertarget{classIEntity_a9b4a238a04f5cd56db89e50292355005}\label{classIEntity_a9b4a238a04f5cd56db89e50292355005}} 
+\index{IEntity@{IEntity}!GetStrategyName@{GetStrategyName}}
+\index{GetStrategyName@{GetStrategyName}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{GetStrategyName()}{GetStrategyName()}}
+{\footnotesize\ttfamily virtual std\+::string I\+Entity\+::\+Get\+Strategy\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current strategy name of the entity. 
+
+\begin{DoxyReturn}{Returns}
+String representing the strategies name 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_ad9ba3273ef6c1ceb8db803468761d250}{Battery\+Decorator}}, \mbox{\hyperlink{classEmergencyPickup_ac80508f2bdc9508b5533ae578b88f19b}{Emergency\+Pickup}}, and \mbox{\hyperlink{classRobot_af3e8590ef2a275caf25363079f7b4273}{Robot}}.
+
+\mbox{\Hypertarget{classIEntity_a4e8eb64a324e1196be039c5e2a293b7a}\label{classIEntity_a4e8eb64a324e1196be039c5e2a293b7a}} 
+\index{IEntity@{IEntity}!Jump@{Jump}}
+\index{Jump@{Jump}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{Jump()}{Jump()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Jump (\begin{DoxyParamCaption}\item[{double}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Jumps the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height,a} & double amount to elevate into the air \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_a20bfca93b023c5a8343ec3e07405c1ca}{Battery\+Decorator}}, and \mbox{\hyperlink{classDrone_a1559fe24a5792ac72ba9d8a4a13a9ec8}{Drone}}.
+
+\mbox{\Hypertarget{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}\label{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}} 
+\index{IEntity@{IEntity}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Rotates the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle,a} & double amount to rotate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_aaef0fa7060b5a5850f7abc7c2372b8c3}{Battery\+Decorator}}, \mbox{\hyperlink{classEmergencyPickup_a2c05b61fa0529aba0583241d9d476d1d}{Emergency\+Pickup}}, \mbox{\hyperlink{classDrone_ad698b0fac61fecdd01dffea6762a3710}{Drone}}, \mbox{\hyperlink{classLost__Duck_ada2ee96650c6f8886d42c8d9511c3c37}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classHelicopter_ad1211b18d9db476bfa2c61afead9ffb8}{Helicopter}}, \mbox{\hyperlink{classRobot_a1cb405ec49d47c46f3aa87fde1415b59}{Robot}}, and \mbox{\hyperlink{classMobileRechargeStation_aaf51565bc813f33fd7c2e4a5f7555cfb}{Mobile\+Recharge\+Station}}.
+
+\mbox{\Hypertarget{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}\label{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}} 
+\index{IEntity@{IEntity}!SetAvailability@{SetAvailability}}
+\index{SetAvailability@{SetAvailability}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{SetAvailability()}{SetAvailability()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Set\+Availability (\begin{DoxyParamCaption}\item[{bool}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current availability of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice,a} & boolean value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_af036c6ad491998c850737992c37ee006}{Battery\+Decorator}}, \mbox{\hyperlink{classDrone_afbe764fc606f5193d17393ddee170c79}{Drone}}, \mbox{\hyperlink{classEmergencyPickup_a850944fcf1cc350e04ea570fd9d2b082}{Emergency\+Pickup}}, \mbox{\hyperlink{classRobot_a2ef6424fa88e43973ade3fddb4ec649b}{Robot}}, and \mbox{\hyperlink{classRechargeStation_a6cb12ec5aeecc543461cd033f3581ecc}{Recharge\+Station}}.
+
+\mbox{\Hypertarget{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}\label{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}} 
+\index{IEntity@{IEntity}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current destination of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des,a} & vector3 value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_a42dffed50affd0b77a099a5a3c893e44}{Battery\+Decorator}}, \mbox{\hyperlink{classEmergencyPickup_ab94db97eb232a77a07f57aa7af063a49}{Emergency\+Pickup}}, \mbox{\hyperlink{classLost__Duck_a6a91e2b4f33cf127885bf210b3820c77}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classDrone_a2dfb158a784d354d13740a40151fb312}{Drone}}, \mbox{\hyperlink{classHelicopter_a2ed1e8574f7b4d2dcf4f521008cf7286}{Helicopter}}, \mbox{\hyperlink{classRobot_a557af09ca03132837bc6574bca6fbe05}{Robot}}, \mbox{\hyperlink{classMobileRechargeStation_a503828748736763db0b265b3b0739675}{Mobile\+Recharge\+Station}}, and \mbox{\hyperlink{classCar_ac3f99ecb6c9ff631414987032320446d}{Car}}.
+
+\mbox{\Hypertarget{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}\label{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}} 
+\index{IEntity@{IEntity}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current direction of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir,a} & vector3 value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_a154b16708fa5be477b315097da426a4d}{Battery\+Decorator}}, \mbox{\hyperlink{classEmergencyPickup_a1e32a6bfcbd113a663d711f10fd5df40}{Emergency\+Pickup}}, \mbox{\hyperlink{classLost__Duck_ad3684a940b754abdc4745f8cbf3d84ec}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classDrone_a102651f93957b1dbe8199cbd30a9e26f}{Drone}}, \mbox{\hyperlink{classHelicopter_a00794cb2f624ca1b3d01c5920377afaf}{Helicopter}}, \mbox{\hyperlink{classRobot_aaa0e41dbf57cb4040c0319b93c5a008c}{Robot}}, \mbox{\hyperlink{classMobileRechargeStation_af625649a9bbce300591904f43d651fc8}{Mobile\+Recharge\+Station}}, and \mbox{\hyperlink{classCar_ad50dda9150d3e00185be0997277e940b}{Car}}.
+
+\mbox{\Hypertarget{classIEntity_a33dd9191fc111bedaeb6735f40ba4d15}\label{classIEntity_a33dd9191fc111bedaeb6735f40ba4d15}} 
+\index{IEntity@{IEntity}!SetEntities@{SetEntities}}
+\index{SetEntities@{SetEntities}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{SetEntities()}{SetEntities()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Set\+Entities (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ $\ast$}]{entities }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the entities into a vector array of I\+Entitys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entities,a} & vector array of \mbox{\hyperlink{classIEntity}{I\+Entity}} ptrs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_a3889bffe36d6434de6f0afff619d4d6d}{Battery\+Decorator}}, and \mbox{\hyperlink{classEmergencyPickup_a92cc1d29754e582f1d9736ec54c3ce60}{Emergency\+Pickup}}.
+
+\mbox{\Hypertarget{classIEntity_a50b01c5c4fab1632c0289e30aa77faf2}\label{classIEntity_a50b01c5c4fab1632c0289e30aa77faf2}} 
+\index{IEntity@{IEntity}!SetGraph@{SetGraph}}
+\index{SetGraph@{SetGraph}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{SetGraph()}{SetGraph()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Set\+Graph (\begin{DoxyParamCaption}\item[{const I\+Graph $\ast$}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the graph of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+Graph} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_aa176f84c6ec8957f1446da0c8ca1edc5}{Battery\+Decorator}}.
+
+\mbox{\Hypertarget{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}\label{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}} 
+\index{IEntity@{IEntity}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current position of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+,a} & vector3 value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_aa9983f260bc3f8759cb82246faf63554}{Battery\+Decorator}}, \mbox{\hyperlink{classEmergencyPickup_a18e78f12c2321b86f1af03dbcdf4fdf9}{Emergency\+Pickup}}, \mbox{\hyperlink{classLost__Duck_ae79cf2268356505bc4e42852f7749a65}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classDrone_a00150938e8dbfceaf81c9fb59994f6ef}{Drone}}, \mbox{\hyperlink{classHelicopter_a0a7386badb41e8f39b14095ffbfd4efd}{Helicopter}}, \mbox{\hyperlink{classRobot_a35ce73ea17f6cfbcbfe272c6bff038ba}{Robot}}, \mbox{\hyperlink{classMobileRechargeStation_a19f69673c4dabd486b6a40ddd583a475}{Mobile\+Recharge\+Station}}, and \mbox{\hyperlink{classCar_a73dfbd1e8575d4bcae8581b7abfdd99a}{Car}}.
+
+\mbox{\Hypertarget{classIEntity_a933def05f85783fddbf05e8257cc8880}\label{classIEntity_a933def05f85783fddbf05e8257cc8880}} 
+\index{IEntity@{IEntity}!SetStrategyName@{SetStrategyName}}
+\index{SetStrategyName@{SetStrategyName}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{SetStrategyName()}{SetStrategyName()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Set\+Strategy\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{strategy\+Name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the strategy of the Entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy\+Name,string} & name of the strategy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBatteryDecorator_a6e7d67be9b433b0761c8f130542904ba}{Battery\+Decorator}}, \mbox{\hyperlink{classEmergencyPickup_a3c12158300ece8548c9803ce907e4621}{Emergency\+Pickup}}, \mbox{\hyperlink{classRobot_a59c7dbc7346f86df3941c5dad9b12507}{Robot}}, and \mbox{\hyperlink{classMobileRechargeStation_ab21e75d1aa74fa554bb7396fdd8bc407}{Mobile\+Recharge\+Station}}.
+
+\mbox{\Hypertarget{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}\label{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}} 
+\index{IEntity@{IEntity}!Update@{Update}}
+\index{Update@{Update}!IEntity@{IEntity}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void I\+Entity\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Updates the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt,a} & double delta value \\
+\hline
+{\em scheduler,a} & vector array of \mbox{\hyperlink{classIEntity}{I\+Entity}} ptrs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classRechargeStation_abf2319116a20d1f4cafcb4716fb04069}{Recharge\+Station}}, \mbox{\hyperlink{classLost__Duck_a8d974c98bc57866b12d8e68e18cb74cd}{Lost\+\_\+\+Duck}}, \mbox{\hyperlink{classDrone_a6798b0bd297ca7a930016cd2dda0b7ff}{Drone}}, \mbox{\hyperlink{classHelicopter_a40a86f3aee09c2825dfe27851072791c}{Helicopter}}, \mbox{\hyperlink{classBatteryDecorator_a9169f6180a73457ef5a593be987c09b4}{Battery\+Decorator}}, \mbox{\hyperlink{classMobileRechargeStation_ac55ea314ffab6bde115dd7ba5076d8f6}{Mobile\+Recharge\+Station}}, \mbox{\hyperlink{classEmergencyPickup_acd427984d472da1112dd2e2516463d4e}{Emergency\+Pickup}}, and \mbox{\hyperlink{classCar_aa9dde801228bdec170224a31f4b66b34}{Car}}.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/include/I\+Entity.\+h\end{DoxyCompactItemize}
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/include/I\+Entity.\+h\end{DoxyCompactItemize}

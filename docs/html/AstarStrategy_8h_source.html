@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/AstarStrategy.h Source File</title>
+<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/AstarStrategy.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,20 +80,24 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classAstarStrategy.html">AstarStrategy</a>(<a class="code" href="classVector3.html">Vector3</a> position, <a class="code" href="classVector3.html">Vector3</a> destination, <span class="keyword">const</span> IGraph* graph);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ~<a class="code" href="classAstarStrategy.html">AstarStrategy</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> Move(<a class="code" href="classIEntity.html">IEntity</a>* entity, <span class="keywordtype">double</span> dt);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">bool</span> IsCompleted();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::vector&lt;std::vector&lt;float&gt;&gt; path;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> currentIndex;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> maxIndex;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}; <span class="comment">//end class</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // ASTAR_STRATEGY_H_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAstarStrategy.html#afd13e7ed2b1872f01aa2a2f4b07b41c3">Move</a>(<a class="code" href="classIEntity.html">IEntity</a>* entity, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classAstarStrategy.html#a65ae8d490fe820fa152a379da6845103">IsCompleted</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;std::vector&lt;float&gt;&gt; path;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> currentIndex;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> maxIndex;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}; <span class="comment">//end class</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // ASTAR_STRATEGY_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIStrategy_html"><div class="ttname"><a href="classIStrategy.html">IStrategy</a></div><div class="ttdef"><b>Definition:</b> IStrategy.h:10</div></div>
+<div class="ttc" id="aclassAstarStrategy_html_afd13e7ed2b1872f01aa2a2f4b07b41c3"><div class="ttname"><a href="classAstarStrategy.html#afd13e7ed2b1872f01aa2a2f4b07b41c3">AstarStrategy::Move</a></div><div class="ttdeci">void Move(IEntity *entity, double dt)</div><div class="ttdoc">Moves an entity using the AStar strategy.</div><div class="ttdef"><b>Definition:</b> AstarStrategy.cc:32</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
 <div class="ttc" id="aclassAstarStrategy_html"><div class="ttname"><a href="classAstarStrategy.html">AstarStrategy</a></div><div class="ttdoc">this class inhertis from the IStrategy class and is responsible for generating the beeline that the d...</div><div class="ttdef"><b>Definition:</b> AstarStrategy.h:14</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
+<div class="ttc" id="aclassAstarStrategy_html_a65ae8d490fe820fa152a379da6845103"><div class="ttname"><a href="classAstarStrategy.html#a65ae8d490fe820fa152a379da6845103">AstarStrategy::IsCompleted</a></div><div class="ttdeci">bool IsCompleted()</div><div class="ttdoc">Checks to see if a route is completed.</div><div class="ttdef"><b>Definition:</b> AstarStrategy.cc:28</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

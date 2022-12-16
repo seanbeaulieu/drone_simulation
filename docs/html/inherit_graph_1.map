@@ -1,8 +1,12 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classIEntity.html" title=" " alt="" coords="5,107,69,133"/>
-<area shape="rect" id="node2" href="$classCar.html" title="the car entity class. It Creates a Car entity" alt="" coords="140,5,184,32"/>
-<area shape="rect" id="node3" href="$classDrone.html" title=" " alt="" coords="131,56,193,83"/>
-<area shape="rect" id="node4" href="$classHelicopter.html" title="the Helicopter entity class. It Creates a Helicopter entity" alt="" coords="117,107,207,133"/>
-<area shape="rect" id="node5" href="$classLost__Duck.html" title="the Lost_Duck entity class. It Creates a Lost_Duck entity" alt="" coords="117,157,207,184"/>
-<area shape="rect" id="node6" href="$classRobot.html" title=" " alt="" coords="132,208,192,235"/>
+<area shape="rect" id="node1" href="$classIEntity.html" title=" " alt="" coords="5,183,69,209"/>
+<area shape="rect" id="node2" href="$classBatteryDecorator.html" title=" " alt="" coords="119,5,254,32"/>
+<area shape="rect" id="node3" href="$classCar.html" title="the car entity class. It Creates a Car entity" alt="" coords="165,56,209,83"/>
+<area shape="rect" id="node4" href="$classDrone.html" title=" " alt="" coords="156,107,217,133"/>
+<area shape="rect" id="node5" href="$classEmergencyPickup.html" title=" " alt="" coords="117,157,256,184"/>
+<area shape="rect" id="node6" href="$classHelicopter.html" title="the Helicopter entity class. It Creates a Helicopter entity" alt="" coords="142,208,231,235"/>
+<area shape="rect" id="node7" href="$classLost__Duck.html" title="the Lost_Duck entity class. It Creates a Lost_Duck entity" alt="" coords="142,259,231,285"/>
+<area shape="rect" id="node8" href="$classRechargeStation.html" title=" " alt="" coords="122,309,251,336"/>
+<area shape="rect" id="node10" href="$classRobot.html" title=" " alt="" coords="157,360,217,387"/>
+<area shape="rect" id="node9" href="$classMobileRechargeStation.html" title=" " alt="" coords="304,309,477,336"/>
 </map>

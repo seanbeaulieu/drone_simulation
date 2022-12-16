@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/DroneFactory.h Source File</title>
+<title>My Project: /home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/DroneFactory.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,18 +75,20 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;IEntityFactory.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Drone.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;BatteryDecorator.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classDroneFactory.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDroneFactory.html">DroneFactory</a> : <span class="keyword">public</span> <a class="code" href="classIEntityFactory.html">IEntityFactory</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classDroneFactory.html">DroneFactory</a>() {}</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classIEntity.html">IEntity</a>* CreateEntity(JsonObject&amp; entity);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classIEntity.html">IEntity</a>* <a class="code" href="classDroneFactory.html#ad0d77279eacf09e49c990b7d2a86e74e">CreateEntity</a>(JsonObject&amp; entity);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassDroneFactory_html"><div class="ttname"><a href="classDroneFactory.html">DroneFactory</a></div><div class="ttdef"><b>Definition:</b> DroneFactory.h:10</div></div>
+<div class="ttc" id="aclassDroneFactory_html_ad0d77279eacf09e49c990b7d2a86e74e"><div class="ttname"><a href="classDroneFactory.html#ad0d77279eacf09e49c990b7d2a86e74e">DroneFactory::CreateEntity</a></div><div class="ttdeci">IEntity * CreateEntity(JsonObject &amp;entity)</div><div class="ttdoc">Creates a new entity as a Drone.</div><div class="ttdef"><b>Definition:</b> DroneFactory.cc:3</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
 <div class="ttc" id="aclassIEntityFactory_html"><div class="ttname"><a href="classIEntityFactory.html">IEntityFactory</a></div><div class="ttdef"><b>Definition:</b> IEntityFactory.h:10</div></div>
 <!-- start footer part -->

@@ -2,8 +2,7 @@
 \label{classRobotFactory}\index{RobotFactory@{RobotFactory}}
 
 
-Inheritance diagram for Robot\+Factory\+:
-\nopagebreak
+Inheritance diagram for Robot\+Factory\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Robot\+Factory\+:
 \end{figure}
 
 
-Collaboration diagram for Robot\+Factory\+:
-\nopagebreak
+Collaboration diagram for Robot\+Factory\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,12 +21,36 @@ Collaboration diagram for Robot\+Factory\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classRobotFactory_ad2ceb080af7357b641332a237ae74959}{Create\+Entity}} (Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{classRobot}{Robot}} entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classRobotFactory_ad2ceb080af7357b641332a237ae74959}\label{classRobotFactory_ad2ceb080af7357b641332a237ae74959}} 
-\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries Create\+Entity} (Json\+Object \&entity)
-\end{DoxyCompactItemize}
+\index{RobotFactory@{RobotFactory}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!RobotFactory@{RobotFactory}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Robot\+Factory\+::\+Create\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a new \mbox{\hyperlink{classRobot}{Robot}} entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity,a} & memory address to a Json\+Object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the newly created \mbox{\hyperlink{classRobot}{Robot}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{I\+Entity\+Factory}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/include/Robot\+Factory.\+h\item 
-/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/lab10/libs/transit/src/Robot\+Factory.\+cc\end{DoxyCompactItemize}
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/include/Robot\+Factory.\+h\item 
+/home/xiao0261/csci-\/3081w-\/f22/\+Team-\/010-\/39-\/homework04/libs/transit/src/Robot\+Factory.\+cc\end{DoxyCompactItemize}

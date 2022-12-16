@@ -97,11 +97,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aed2438fdb571dbe3974ee5ee29c8a7be"><td class="memItemLeft" align="right" valign="top"><a id="aed2438fdb571dbe3974ee5ee29c8a7be"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AstarStrategy</b> (<a class="el" href="classVector3.html">Vector3</a> position, <a class="el" href="classVector3.html">Vector3</a> destination, const IGraph *graph)</td></tr>
 <tr class="separator:aed2438fdb571dbe3974ee5ee29c8a7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd13e7ed2b1872f01aa2a2f4b07b41c3"><td class="memItemLeft" align="right" valign="top"><a id="afd13e7ed2b1872f01aa2a2f4b07b41c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Move</b> (<a class="el" href="classIEntity.html">IEntity</a> *entity, double dt)</td></tr>
+<tr class="memitem:afd13e7ed2b1872f01aa2a2f4b07b41c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAstarStrategy.html#afd13e7ed2b1872f01aa2a2f4b07b41c3">Move</a> (<a class="el" href="classIEntity.html">IEntity</a> *entity, double dt)</td></tr>
+<tr class="memdesc:afd13e7ed2b1872f01aa2a2f4b07b41c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves an entity using the AStar strategy.  <a href="classAstarStrategy.html#afd13e7ed2b1872f01aa2a2f4b07b41c3">More...</a><br /></td></tr>
 <tr class="separator:afd13e7ed2b1872f01aa2a2f4b07b41c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ae8d490fe820fa152a379da6845103"><td class="memItemLeft" align="right" valign="top"><a id="a65ae8d490fe820fa152a379da6845103"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsCompleted</b> ()</td></tr>
+<tr class="memitem:a65ae8d490fe820fa152a379da6845103"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAstarStrategy.html#a65ae8d490fe820fa152a379da6845103">IsCompleted</a> ()</td></tr>
+<tr class="memdesc:a65ae8d490fe820fa152a379da6845103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if a route is completed.  <a href="classAstarStrategy.html#a65ae8d490fe820fa152a379da6845103">More...</a><br /></td></tr>
 <tr class="separator:a65ae8d490fe820fa152a379da6845103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -114,9 +114,88 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>this class inhertis from the <a class="el" href="classIStrategy.html">IStrategy</a> class and is responsible for generating the beeline that the drone will take. </p>
 <p>include </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/include/<a class="el" href="AstarStrategy_8h_source.html">AstarStrategy.h</a></li>
-<li>/home/xiao0261/csci-3081w-f22/Team-010-39-lab10/libs/transit/src/AstarStrategy.cc</li>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a65ae8d490fe820fa152a379da6845103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ae8d490fe820fa152a379da6845103">&#9670;&nbsp;</a></span>IsCompleted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AstarStrategy::IsCompleted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks to see if a route is completed. </p>
+<dl class="section return"><dt>Returns</dt><dd>IsCompleted, a true or false boolean value </dd></dl>
+
+<p>Implements <a class="el" href="classIStrategy.html#a13c6048efd232b696db5f35000d5b106">IStrategy</a>.</p>
+
+</div>
+</div>
+<a id="afd13e7ed2b1872f01aa2a2f4b07b41c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd13e7ed2b1872f01aa2a2f4b07b41c3">&#9670;&nbsp;</a></span>Move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AstarStrategy::Move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves an entity using the AStar strategy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity,a</td><td>pointer to an <a class="el" href="classIEntity.html">IEntity</a> object to be moved </td></tr>
+    <tr><td class="paramname">dt,a</td><td>double value amount to move </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+<p>Implements <a class="el" href="classIStrategy.html#a69254389f4ef9a851dc5d40c4cc9aacd">IStrategy</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/include/<a class="el" href="AstarStrategy_8h_source.html">AstarStrategy.h</a></li>
+<li>/home/xiao0261/csci-3081w-f22/Team-010-39-homework04/libs/transit/src/AstarStrategy.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

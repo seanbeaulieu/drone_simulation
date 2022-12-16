@@ -37,7 +37,6 @@ class Lost_Duck : public IEntity {
   /**
    * @brief Gets the current position of the Lost_Duck
    *
-   * @param None
    * @return position, a Vector3 value
    **/
   Vector3 GetPosition() const { return position; }
@@ -45,7 +44,6 @@ class Lost_Duck : public IEntity {
   /**
    * @brief Gets the current direction of the Lost_Duck
    *
-   * @param None
    * @return direction, a Vector3 value
    **/
   Vector3 GetDirection() const { return direction; }
@@ -53,7 +51,6 @@ class Lost_Duck : public IEntity {
   /**
    * @brief Gets the current Destination of the Lost_Duck
    *
-   * @param None
    * @return direction, a Vector3 value
    **/
   Vector3 GetDestination() const { return destination; }
@@ -61,7 +58,6 @@ class Lost_Duck : public IEntity {
   /**
    * @brief Gets the details about the Lost_Duck object
    *
-   * @param None
    * @return details, a JsonObject filled with details about the Car
    **/
   JsonObject GetDetails() const { return details; }
@@ -69,7 +65,6 @@ class Lost_Duck : public IEntity {
   /**
    * @brief Gets the current speed of the Lost_Duck
    *
-   * @param None
    * @return speed, a float value
    **/
   float GetSpeed() const { return speed; }

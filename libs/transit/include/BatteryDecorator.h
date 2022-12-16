@@ -30,6 +30,7 @@ public:
     
     // getters
     Drone* GetDrone() const { return drone; }
+    Vector3 GetRechargeDest() const { return rechargeDest; }
     double GetCharge() const { return charge; }
     int GetId() const { return drone->GetId(); }
     float GetSpeed() const { return drone->GetSpeed(); }

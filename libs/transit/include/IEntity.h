@@ -166,13 +166,7 @@ class IEntity {
  * @return None
  **/
   virtual void SetEntities(std::vector<IEntity*>* entities) {}
-  
-/**
- * @brief 
- * 
- * @return None
- **/
-  virtual bool GetEmergency() {};
+  virtual bool GetEmergency() { return false; };
  protected:
   int id;
   const IGraph* graph;

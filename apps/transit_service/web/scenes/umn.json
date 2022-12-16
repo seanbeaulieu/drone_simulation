@@ -64,7 +64,7 @@
             "type": "rechargestation",
             "name": "RechargeStation",
             "mesh": "assets/model/retro_gas_station.glb",
-            "position": [200, 270, 400],
+            "position": [460, 270, 400],
             "scale": [0.1, 0.1, 0.1],
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],

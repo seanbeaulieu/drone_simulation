@@ -129,6 +129,7 @@ class EmergencyPickup : public IEntity {
  * @return None
  **/
   void SearchDrone();
+  void Rotate(double angle);
 
  private:
   IEntity* droneBattery = NULL;

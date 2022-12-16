@@ -103,7 +103,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		if (rechargeStrategy->IsCompleted()) { // reached recharge, start charging
 			delete rechargeStrategy;
 			rechargeStrategy = NULL;
-			// nearestRecharge->addBattery(this); // TODO
+			nearestRecharge->AddBattery(this);
 			charging = true;
 			nearIsMobile = true;
 		}
@@ -120,6 +120,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 void BatteryDecorator::Recharge(double amount) {
 	charge += amount;
 	if (charge >= 100) {
+		std::cout << "done charging!" << std::endl;
 		charge = 100;
 		charging = false;
 		this->SetAvailability(true);

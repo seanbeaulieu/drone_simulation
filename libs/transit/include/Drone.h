@@ -17,36 +17,111 @@ class Drone : public IEntity {
   // Destructor
   ~Drone();
 
+/**
+ * @brief Returns the current speed of the drone
+ * 
+ * @return speed, a float value representing the current speed
+ **/
   float GetSpeed() const { return speed; }
 
-  // Gets the drone position
+/**
+ * @brief Returns the current position of the drone as a Vector3 object
+ * 
+ * @return position, Vector 3 object
+ **/
   Vector3 GetPosition() const { return position; }
 
+/**
+ * @brief Returns the current direction of the drone as a Vector3 object
+ * 
+ * @return direction, Vector 3 object
+ **/
   Vector3 GetDirection() const { return direction; }
 
+/**
+ * @brief Returns the current destination of the drone as a Vector3 Object
+ * 
+ * @return destination, a Vector3 object
+ **/
   Vector3 GetDestination() const { return destination; }
 
+/**
+ * @brief Returns the details of the drone
+ * 
+ * @return details, a JsonObject
+ **/
   JsonObject GetDetails() const { return details; }
 
+/**
+ * @brief Returns the current availability of the drone
+ * 
+ * @return available, a boolean value true or false 
+ **/
   bool GetAvailability() const { return available; }
 
+/**
+ * @brief Sets the nearest entity to the drone 
+ * 
+ * @param scheduler, a vector array of IEntity ptrs
+ * @return None
+ **/
   void GetNearestEntity(std::vector<IEntity*> scheduler);
 
-  // Updates the drone's position
+/**
+ * @brief Updates the drones position
+ * 
+ * @param dt, a double delta value 
+ * @param scheduler, a vector array of IEntity ptrs
+ * @return None
+ **/
   void Update(double dt, std::vector<IEntity*> scheduler);
 
+/**
+ * @brief Sets the current position of the drone
+ * 
+ * @param pos, a Vector3 
+ * @return None
+ **/
   void SetPosition(Vector3 pos_) { position = pos_; }
 
-  // Sets the drone's direction
+/**
+ * @brief Sets the current direction of the drone
+ * 
+ * @param dir, a Vector3
+ * @return None
+ **/
   void SetDirection(Vector3 dir_) { direction = dir_; }
 
+/**
+ * @brief Sets the current destination of the drone
+ * 
+ * @param des, a Vector3 
+ * @return None
+ **/
   void SetDestination(Vector3 des_) { destination = des_; }
+
+/**
+ * @brief Returns the nearest entity to the drone
+ * 
+ * @return nearestEntity, the closest entity to the drone
+ **/
 
   IEntity* ReturnNearestEntity() {return nearestEntity;}
 
-  // Rotates a drone
+/**
+ * @brief Rotates the drone
+ * 
+ * @param angle, a double value amount to rotate
+ * @return None
+ **/
   void Rotate(double angle);
 
+/**
+ * @brief Jumps the drone
+ * 
+ * @param height, the double value amount to elevate into the air
+ * @return None
+ **/
   void Jump(double height);
 
   // Removing the copy constructor and assignment operator

@@ -21,32 +21,41 @@ void MobileRechargeStation :: SetStrategyName(std::string strategyName){
 }
 
 void MobileRechargeStation :: SetStrategy(IStrategy* strategy){
-    //FIXME later
+    if (this->strategy) {
+		delete this->strategy;
+	}
     this->strategy = strategy;
     return;
 }
 
 void MobileRechargeStation:: Update(double dt, std::vector<IEntity*> scheduler){
-    //FIXME:why is this not moving?
-    if (strategy) {
-      strategy->Move(this, dt);
+  if (strategy) { // moving
+    strategy->Move(this, dt);
     if (strategy->IsCompleted()) {
       delete strategy;
       strategy = NULL;
     }
-  } else {
+  } 
+  else {
     Vector3 random;
-    //double angle = dt * 2 * pi / period;
-    float x = -1400 + static_cast<float>(rand()) *
-                          static_cast<float>(1500 - -1400) / RAND_MAX;
-    float y = 300;
-    float z = -800 + static_cast<float>(rand()) *
-                         static_cast<float>(800 - -800) / RAND_MAX;
+    float x = -1400 + static_cast<float>(rand()) * static_cast<float>(1500 - -1400) / RAND_MAX;
+    float y = 300; // + static_cast<float>(rand()) * static_cast<float>(1000 - 240) / RAND_MAX;
+    float z = -800 + static_cast<float>(rand()) * static_cast<float>(800 - -800) / RAND_MAX;
     random.x = x;
     random.y = y;
     random.z = z;
     SetDestination(random);
     SetStrategy(new BeelineStrategy(this->position, this->destination));
+  }
+  
+  for (int i = 0; i < recharging.size(); i++) { // move and recharge carried batteries
+	  recharging[i]->SetPosition(this->position);
+	  recharging[i]->SetDirection(this->direction);
+	  recharging[i]->Recharge(dt);
+	  if (!(recharging[i]->GetCharging())) { // remove if done
+		  recharging.erase(recharging.begin() + i);
+		  i--; // since this shrinks the vector
+	  }
   }
 }
 

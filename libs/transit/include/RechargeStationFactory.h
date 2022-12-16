@@ -5,6 +5,9 @@
 #include "IEntity.h"
 #include "IEntityFactory.h"
 
+/**
+ * @brief Recharge Station Factory class to build new RechargeStations
+ **/
 class RechargeStationFactory : public IEntityFactory{
  public:
   virtual ~RechargeStationFactory() {}

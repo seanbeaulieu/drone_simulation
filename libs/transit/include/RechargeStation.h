@@ -4,6 +4,11 @@
 #include "IEntity.h"
 #include <vector>
 #include "BatteryDecorator.h"
+
+/**
+ * @brief Recharge Station which allows Drones to charge their batteries and continue flying
+ * @param obj, a memory address for a JsonObject
+ **/ 
 class RechargeStation : public IEntity{
     protected: // since Mobile inherits these
      std::vector<BatteryDecorator*> recharging;

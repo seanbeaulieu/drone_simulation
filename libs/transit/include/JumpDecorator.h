@@ -6,6 +6,10 @@
 #include "CelebrationDecorator.h"
 #include "IStrategy.h"
 
+/**
+ * @brief Jump Decorator class. This class applies the jump animation to Celebration
+ * @param strategy_, a strategy check will determine which celebration to use
+ **/
 class JumpDecorator : public CelebrationDecorator {
  public:
   JumpDecorator(IStrategy* strategy_) : CelebrationDecorator(strategy_) {}

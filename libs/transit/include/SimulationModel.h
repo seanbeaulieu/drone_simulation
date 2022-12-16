@@ -11,6 +11,10 @@ using namespace routing;
 
 /// Simulation Model handling the transit simulation.  The model can communicate
 /// with the controller.
+/**
+ * @brief Simulation Model class handling the transit simulation. The model can communicate with the controller.
+ * @param controller, a memory address for an IController 
+ **/
 class SimulationModel {
  public:
   SimulationModel(IController& controller);

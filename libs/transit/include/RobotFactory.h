@@ -7,6 +7,13 @@
 
 #include <vector>
 
+/**
+ * @brief Robot Factory class that creates Robot class if the provided text
+ * is "robot"
+ * @param entity, a memory address for a JsonObject
+ * 
+ * @return A new Robot filled with information from entity
+ **/
 class RobotFactory : public IEntityFactory {
   public:
 

@@ -6,6 +6,10 @@
 #include "CelebrationDecorator.h"
 #include "IStrategy.h"
 
+/**
+ * @brief The SpinDecorator class. This class applies the spin animation to Celebration
+ * @param strategy_, a strategy check that will determine what celebration to use
+ **/
 class SpinDecorator : public CelebrationDecorator {
  public:
   SpinDecorator(IStrategy* strategy_) : CelebrationDecorator(strategy_) {}

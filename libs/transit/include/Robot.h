@@ -7,6 +7,11 @@
 #include "math/vector3.h"
 #include "util/json.h"
 
+
+/**
+ * @brief Robot class to represent a user to be picked up and transported
+ * @param obj, a memory address for a JsonObject
+ **/
 class Robot : public IEntity {
  public:
   Robot(JsonObject& obj);

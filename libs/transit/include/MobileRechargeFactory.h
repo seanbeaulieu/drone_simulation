@@ -5,6 +5,10 @@
 #include "IEntity.h"
 #include "IEntityFactory.h"
 
+/**
+ * @brief A class for a Mobile Recharge Factory which
+ * creates new Mobile Recharge Stations
+ **/
 class MobileRechargeFactory : public IEntityFactory{
  public:
   virtual ~MobileRechargeFactory() {}

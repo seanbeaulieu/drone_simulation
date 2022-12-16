@@ -7,6 +7,9 @@
 
 using namespace routing;
 
+/**
+ * @brief Strategy class to host AStar, DFS, Dijkstra, and Beeline 
+ **/
 class IStrategy {
     public:
 

@@ -7,6 +7,10 @@
 #include "IEntityFactory.h"
 #include "Drone.h"
 
+/**
+ * @brief IEntityFactory class to make new IEntitys
+ * @param entity, a memory address for a JsonObject
+ **/
 class IEntityFactory {
   public:
     virtual ~IEntityFactory() {}

@@ -7,6 +7,12 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+
+/**
+ * @brief Class for a Mobile Recharge Station which traverses the map 
+ * and allows Drones to charge their batteries
+ * @param obj, a memory address for a JsonObject
+ **/
 class MobileRechargeStation : public RechargeStation{
     private:
      std::string strategyName;

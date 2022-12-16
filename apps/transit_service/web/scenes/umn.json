@@ -62,13 +62,41 @@
         "command": "CreateEntity",
         "params": {
             "type": "rechargestation",
-            "name": "RechargeStation",
+            "name": "RechargeStation1",
             "mesh": "assets/model/retro_gas_station.glb",
-            "position": [460, 270, 400],
+            "position": [460, 260, 400],
             "scale": [0.1, 0.1, 0.1],
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],
-            "speed": 20.0,
+            "speed": 0.0,
+            "offset": [0, -0.5, 0]
+        }
+    },
+    {   
+        "command": "CreateEntity",
+        "params": {
+            "type": "rechargestation",
+            "name": "RechargeStation2",
+            "mesh": "assets/model/retro_gas_station.glb",
+            "position": [460, 270, -400],
+            "scale": [0.1, 0.1, 0.1],
+            "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 0.0,
+            "offset": [0, -0.5, 0]
+        }
+    },
+    {   
+        "command": "CreateEntity",
+        "params": {
+            "type": "rechargestation",
+            "name": "RechargeStation3",
+            "mesh": "assets/model/retro_gas_station.glb",
+            "position": [-1000, 284, 400],
+            "scale": [0.1, 0.1, 0.1],
+            "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 0.0,
             "offset": [0, -0.5, 0]
         }
     },

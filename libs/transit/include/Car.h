@@ -44,7 +44,6 @@ class Car : public IEntity {
   /**
    * @brief Gets the current position of the Car
    *
-   * @param None
    * @return position, a Vector3 value
    **/
   Vector3 GetPosition() const;
@@ -52,7 +51,6 @@ class Car : public IEntity {
   /**
    * @brief Gets the current direction of the Car
    *
-   * @param None
    * @return direction, a Vector3 value
    **/
   Vector3 GetDirection() const;
@@ -60,7 +58,6 @@ class Car : public IEntity {
   /**
    * @brief Gets the current destination of the Car
    *
-   * @param None
    * @return destination, a Vector 3 value
    **/
   Vector3 GetDestination() const;
@@ -68,7 +65,6 @@ class Car : public IEntity {
   /**
    * @brief Gets the details about the Car object
    *
-   * @param None
    * @return details, a JsonObject filled with details about the Car
    **/
   JsonObject GetDetails() const;
@@ -76,7 +72,6 @@ class Car : public IEntity {
   /**
    * @brief Gets the current speed of the Car
    *
-   * @param None
    * @return speed, a float value
    **/
   float GetSpeed() const;

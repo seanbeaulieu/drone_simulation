@@ -129,6 +129,13 @@ class EmergencyPickup : public IEntity {
  * @return None
  **/
   void SearchDrone();
+
+/**
+ * @brief Rotates the emergency pickup drone
+ * 
+ * @param angle, a double amount to rotate
+ * @return None
+ **/
   void Rotate(double angle);
 
  private:

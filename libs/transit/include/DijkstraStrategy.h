@@ -15,7 +15,21 @@ class DijkstraStrategy : public IStrategy {
 public:
     DijkstraStrategy(Vector3 position, Vector3 destination, const IGraph* graph);
     ~DijkstraStrategy();
+
+    /**
+     * @brief Moves the provided entity using the Dijkstra strategy
+     * 
+     * @param entity, a pointer to an IEntity object to be moved
+     * @param dt, a double value to be moved by
+     * @return None
+     **/
     void Move(IEntity* entity, double dt);
+
+    /**
+     * @brief Checks to see if the route has been completed
+     * 
+     * @return IsCompleted, a true or false boolean value
+     **/
     bool IsCompleted();
 
 private:

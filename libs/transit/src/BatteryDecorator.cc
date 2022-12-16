@@ -15,13 +15,9 @@ BatteryDecorator :: ~BatteryDecorator(){
 }
 
 IEntity* BatteryDecorator::GetNearestRecharge(std::vector<IEntity*> search) {
+	nearestRecharge = NULL; // reset in case stations are removed
 	if (entities == NULL) { // no entities = no stations
-		nearestRecharge = NULL;
 		return NULL;
-	}
-	if (nearestRecharge) { // in case all recharge stations get removed
-		delete nearestRecharge;
-		nearestRecharge = NULL;
 	}
 	double minDist = -1;
 	for (IEntity* entity : search) {
@@ -30,10 +26,7 @@ IEntity* BatteryDecorator::GetNearestRecharge(std::vector<IEntity*> search) {
 			double curDist = entity->GetPosition().Distance(GetPosition());
 			if (curDist < minDist || minDist == -1) { // distance check
 				minDist = curDist;
-				if (nearestRecharge) { // prevent leaks
-					delete nearestRecharge;
-					nearestRecharge = entity;
-				}
+				nearestRecharge = entity;
 			}
 		}
 	}
@@ -49,7 +42,7 @@ double BatteryDecorator::TripDistance(IEntity* passenger) {
 	totalDist += this->GetPosition().Distance(this->GetDestination());
 	totalDist += this->GetDestination().Distance(passenger->GetDestination());
 	totalDist += passenger->GetDestination().Distance(nearestRecharge->GetPosition());
-	return totalDist;
+	return totalDist * sqrt(2);
 }
 
 void BatteryDecorator::GetNearestEntity(std::vector<IEntity*> scheduler){
@@ -66,13 +59,19 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 // 2. straight-line distance calculation for route length
 // which is both less difficult on us and can actually showcase the pickup
 	
-	if (charge <= 0 || charging) { // dead or charging, do nothing
+	
+	if (charging || emergency || charge == 0) { // do nothing
+		return;
+	}
+	if (charge < 0) { // dead
+		charge = 0;
+		emergency = true;
+		std::cout << "emergency\n" << std::endl;
 		return;
 	}
 	
 	if (nearestRecharge == NULL) {
 		GetNearestRecharge(*entities);
-		//std::cout<<"good GetNearestRecharge"<<std::endl;
 	}
 	
 	if (this->GetAvailability()) { // no target, no moving

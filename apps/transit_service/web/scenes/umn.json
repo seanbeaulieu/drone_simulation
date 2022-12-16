@@ -103,8 +103,8 @@
     {   
         "command": "CreateEntity",
         "params": {
-            "type": "moblierecharge",
-            "name": "MoblieRecharge",
+            "type": "mobilerecharge",
+            "name": "MobileRecharge",
             "mesh": "assets/model/billy_meier_ufo.glb",
             "position": [200, 300, -100],
             "scale": [0.5, 0.5, 0.5],

@@ -5,7 +5,7 @@
 #include "CarFactory.h"
 #include "LostDuckFactory.h"
 #include "RechargeStationFactory.h"
-#include "MoblieRechargeFactory.h"
+#include "MobileRechargeFactory.h"
 #include "EM_Pickup_Factory.h"
 
 SimulationModel::SimulationModel(IController& controller)
@@ -17,7 +17,7 @@ SimulationModel::SimulationModel(IController& controller)
   AddFactory(new CarFactory());
   AddFactory(new LostDuckFactory());
   AddFactory(new RechargeStationFactory());
-  AddFactory(new MoblieRechargeFactory());
+  AddFactory(new MobileRechargeFactory());
   AddFactory(new EM_Pickup_Factory());
 }
 
@@ -33,7 +33,8 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
-
+  
+  // needed to search for stations or dead drones, respectively
   if(type.compare("drone") == 0  || type.compare("emergencypickup") == 0){
       myNewEntity->SetEntities(&entities);
   }
@@ -50,7 +51,6 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
     JsonObject detailsTemp = entity->GetDetails();
     std::string nameTemp = detailsTemp["name"];
     std::string typeTemp = detailsTemp["type"];
-    //FIXME: pick, drone, moblibe recharge station, other??
     if (name.compare(nameTemp) == 0 && typeTemp.compare("robot") == 0 && entity->GetAvailability()) { 
       std::string strategyName = details["search"];
       entity->SetStrategyName(strategyName);

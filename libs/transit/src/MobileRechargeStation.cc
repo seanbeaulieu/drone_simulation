@@ -51,7 +51,7 @@ void MobileRechargeStation:: Update(double dt, std::vector<IEntity*> scheduler){
   for (int i = 0; i < recharging.size(); i++) { // move and recharge carried batteries
 	  recharging[i]->SetPosition(this->position);
 	  recharging[i]->SetDirection(this->direction);
-	  recharging[i]->Recharge(dt);
+	  recharging[i]->Recharge(dt*2);
 	  if (!(recharging[i]->GetCharging())) { // remove if done
 		  recharging.erase(recharging.begin() + i);
 		  i--; // since this shrinks the vector

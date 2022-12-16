@@ -5,9 +5,9 @@
 #include "IEntity.h"
 #include "IEntityFactory.h"
 
-class MoblieRechargeFactory : public IEntityFactory{
+class MobileRechargeFactory : public IEntityFactory{
  public:
-  virtual ~MoblieRechargeFactory() {}
+  virtual ~MobileRechargeFactory() {}
 
   /**
      * @brief Creates a new Mobile Recharge Factory entity

@@ -2,10 +2,12 @@
 #define BATTERY_DECORATOR_H_
 
 #include "Drone.h"
-#include "IEntity.h"//fixme: drone of IEntity
+#include "IEntity.h"
 #include "BeelineStrategy.h"
 
-#define MAX_CHARGE 150 // battery capacity
+ // battery capacity
+ // 300 is roughly enough to cover one worst-case trip from full
+#define MAX_CHARGE 300
 
 class BatteryDecorator : public IEntity
 {
@@ -26,14 +28,21 @@ public:
     BatteryDecorator(JsonObject& obj);
     ~BatteryDecorator();
     /**
-    * @brief Returns the nearest recharge station
+    * @brief SETS and returns the nearest recharge station to this BatteryDecorator
     * 
     * @param search, a vector array of IEntity ptrs
     * @return nearestRecharge, the closest recharge station to the drone
     **/
-    IEntity* GetNearestRecharge(std::vector<IEntity*> search); // find recharge station, set and return it
+    IEntity* GetNearestRecharge(std::vector<IEntity*> search);
     
-    IEntity* GetNearestRecharge(std::vector<IEntity*> search, Vector3 pos); // find closest station to pos, ONLY return it
+    /**
+    * @brief Returns the nearest recharge station to a given position
+    * 
+    * @param search, a vector array of IEntity ptrs
+    * @param pos, the position to search from
+    * @return nearestRecharge, the closest recharge station to the drone
+    **/
+    IEntity* GetNearestRecharge(std::vector<IEntity*> search, Vector3 pos);
 
     /**
     * @brief Calculates the trip distance for a passenger ride
@@ -41,10 +50,10 @@ public:
     * @param passenger, a pointer to an IEntity object
     * @return a double trip distance value
     **/
-    double TripDistance(IEntity* passenger); // calculate trip distance
+    double TripDistance(IEntity* passenger);
 
     /**
-    * @brief Finds the neartest entity 
+    * @brief Finds the nearest entity 
     * 
     * @param scheduler, a vector array of IEntity ptrs
     * @return None
@@ -68,8 +77,6 @@ public:
      **/
     void Recharge(double amount); // called by recharge stations
     
-    // getters
-
     /**
      * @brief Returns the current drone
      * 
@@ -160,8 +167,6 @@ public:
      * @return emergency, a boolean value representing whether the Drone is in a state of emergency or not
      **/
     bool GetEmergency() const { return emergency; }
-	
-	// setters
 
     /**
      * @brief Sets the entities in the provided vector array

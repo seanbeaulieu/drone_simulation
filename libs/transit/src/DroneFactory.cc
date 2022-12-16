@@ -6,8 +6,7 @@ IEntity* DroneFactory::CreateEntity(JsonObject& entity){
     std::cout << "Drone Created" << std::endl;
      BatteryDecorator* dr = new BatteryDecorator(entity);
      return dr;
-    //return new Drone(entity);
-
+    //return new Drone(entity); // pre-hw4 call
   }
   return nullptr;
 }

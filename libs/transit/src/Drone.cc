@@ -24,6 +24,12 @@ Drone::Drone(JsonObject& obj) : details(obj) {
 
 Drone::~Drone() {
   // Delete dynamically allocated variables
+  if (toTargetPosStrategy) {
+	  delete toTargetPosStrategy;
+  }
+  if (toTargetDestStrategy) {
+	  delete toTargetDestStrategy;
+  }
 }
 
 void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
@@ -62,21 +68,17 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
 }
 
 void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
-  //std::cout<<"works1"<<std::endl;
   if (available) {
     GetNearestEntity(scheduler);
   }
-  //std::cout<<"works"<<std::endl;
   if(toTargetPosStrategy){
     toTargetPosStrategy->Move(this, dt);
     if(toTargetPosStrategy->IsCompleted()){
       delete toTargetPosStrategy;
       toTargetPosStrategy = NULL;
     }
-    //std::cout<<"works2"<<std::endl;
   } else if (toTargetDestStrategy) {
     toTargetDestStrategy->Move(this, dt);
-    //std::cout<<"works3"<<std::endl;
     // Moving the robot
     nearestEntity->SetPosition(this->GetPosition());
     nearestEntity->SetDirection(this->GetDirection());

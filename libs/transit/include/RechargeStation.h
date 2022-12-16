@@ -5,7 +5,7 @@
 #include <vector>
 #include "BatteryDecorator.h"
 class RechargeStation : public IEntity{
-    protected:
+    protected: // since Mobile inherits these
      std::vector<BatteryDecorator*> recharging;
      JsonObject details;
      Vector3 position;

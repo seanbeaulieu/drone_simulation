@@ -24,7 +24,6 @@ void EmergencyPickup :: SearchDrone(){
     JsonObject detailsTemp = temp->GetDetails();
     std::string typeTemp = detailsTemp["type"];
     if(typeTemp.compare("drone") == 0){
-      //FIXME if have error.
       if (temp->GetEmergency()) {
 		  droneBattery = temp;
 		  break;
@@ -35,8 +34,6 @@ void EmergencyPickup :: SearchDrone(){
 
 
 void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
-    //FIXME:
-    
     if (available) {
 		this->SearchDrone();
 		if (droneBattery) {

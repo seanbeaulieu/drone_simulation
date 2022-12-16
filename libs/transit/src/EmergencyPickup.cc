@@ -73,3 +73,9 @@ void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     }
 }
 
+void EmergencyPickup::Rotate(double angle) {
+  Vector3 dirTmp = direction;
+  direction.x = dirTmp.x * std::cos(angle) - dirTmp.z * std::sin(angle);
+  direction.z = dirTmp.x * std::sin(angle) + dirTmp.z * std::cos(angle);
+}
+

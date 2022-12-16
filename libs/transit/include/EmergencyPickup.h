@@ -32,6 +32,7 @@ class EmergencyPickup : public IEntity {
   void SetStrategyName(std::string strategyName_) { this->strategyName = strategyName; }
   void SetEntities(std::vector<IEntity*>* entities) { this->entities = entities; }
   void SearchDrone();
+  void Rotate(double angle);
 
  private:
   IEntity* droneBattery = NULL;

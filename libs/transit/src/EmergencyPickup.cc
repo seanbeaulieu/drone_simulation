@@ -10,6 +10,8 @@ EmergencyPickup :: EmergencyPickup(JsonObject &obj) : details(obj){
     speed = obj["speed"];
 
     available = true;
+
+    //this->SearchDrone();
 }
 
 EmergencyPickup :: ~EmergencyPickup(){}
@@ -21,7 +23,7 @@ void EmergencyPickup :: SearchDrone(){
     std::string typeTemp = detailsTemp["type"];
     if(typeTemp.compare("drone") == 0){
       //FIXME if have error.
-      droneBattery = dynamic_cast<BatteryDecorator*>((*entities)[i]);
+      droneBattery = ((*entities)[i]);
       break;
     }
   }
@@ -30,6 +32,8 @@ void EmergencyPickup :: SearchDrone(){
 
 void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:
+
+    //std::cout<<"enter Update"<<std::endl;
     if(toTargetPosStrategy){
       toTargetPosStrategy->Move(this, dt);
 
@@ -50,7 +54,10 @@ void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     }
     else{
       if(pickup == false){
+        //std::cout<<"may be droneBattery error"<<std::endl;
+        this->SearchDrone();
         if(droneBattery -> GetEmergency()){
+          //std::cout<<"droneBattery no error"<<std::endl;
           destination = droneBattery->GetPosition();
           toTargetPosStrategy = new BeelineStrategy(this->position, this->destination);
           pickup = true;

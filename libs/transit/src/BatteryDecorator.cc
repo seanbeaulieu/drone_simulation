@@ -72,6 +72,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 	
 	if (nearestRecharge == NULL) {
 		GetNearestRecharge(*entities);
+		//std::cout<<"good GetNearestRecharge"<<std::endl;
 	}
 	
 	if (this->GetAvailability()) { // no target, no moving

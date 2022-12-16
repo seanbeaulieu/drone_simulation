@@ -34,7 +34,7 @@ class EmergencyPickup : public IEntity {
   void SearchDrone();
 
  private:
-  BatteryDecorator* droneBattery = NULL;
+  IEntity* droneBattery = NULL;
   JsonObject details;
   Vector3 position;
   Vector3 destination;

@@ -39,7 +39,7 @@ class IEntity {
   virtual void Rotate(double angle) {}
   virtual void Jump(double height) {}
   virtual void SetEntities(std::vector<IEntity*>* entities) {}
-
+  virtual bool GetEmergency() {};
  protected:
   int id;
   const IGraph* graph;

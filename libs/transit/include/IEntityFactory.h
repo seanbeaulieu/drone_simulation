@@ -10,6 +10,13 @@
 class IEntityFactory {
   public:
     virtual ~IEntityFactory() {}
+
+    /**
+     * @brief Creates a new IEntity object
+     * 
+     * @param entity, a memory address for a JsonObject
+     * @return a pointer to the IEntity that was created
+     **/
     virtual IEntity* CreateEntity(JsonObject& entity) = 0;
 };
 

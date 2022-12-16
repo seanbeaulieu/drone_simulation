@@ -25,7 +25,6 @@ class IEntity {
 /**
  * @brief Returns the ID of the entity
  * 
- * @param None
  * @return an integer ID
  **/
   virtual int GetId() const { return id; }
@@ -33,15 +32,13 @@ class IEntity {
 /**
  * @brief Returns the current position of the entity as a Vector3 object
  * 
- * @param None
  * @return Vector 3 object
  **/
   virtual Vector3 GetPosition() const = 0;
 
 /**
  * @brief Returns the current direction of the entity as a Vector3 object
- * 
- * @param None	
+ * 	
  * @return Vector 3 object
  **/
   virtual Vector3 GetDirection() const = 0;
@@ -49,7 +46,6 @@ class IEntity {
 /**
  * @brief Returns the current destination of the entity as a Vector3 Object
  * 
- * @param None
  * @return Vector 3 object
  **/
   virtual Vector3 GetDestination() const = 0;
@@ -57,7 +53,6 @@ class IEntity {
 /**
  * @brief Returns the details of the entity
  * 
- * @param None
  * @return details as a JsonObject
  **/
   virtual JsonObject GetDetails() const = 0;
@@ -65,7 +60,6 @@ class IEntity {
 /**
  * @brief Returns the current speed of the entity
  * 
- * @param None
  * @return a float value representing the current speed
  **/
   virtual float GetSpeed() const = 0;
@@ -73,7 +67,6 @@ class IEntity {
 /**
  * @brief Returns the current availability of the entity
  * 
- * @param None
  * @return boolean value true or false 
  **/
   virtual bool GetAvailability() const {};
@@ -81,7 +74,6 @@ class IEntity {
 /**
  * @brief Returns the current strategy name of the entity
  * 
- * @param None
  * @return String representing the strategies name
  **/
   virtual std::string GetStrategyName(){}

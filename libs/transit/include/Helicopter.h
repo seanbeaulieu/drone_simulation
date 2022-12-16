@@ -34,7 +34,6 @@ class Helicopter : public IEntity {
   /**
    * @brief Gets the current position of the Helicopter
    *
-   * @param None
    * @return position, a Vector3 value
    **/
   Vector3 GetPosition() const { return position; }
@@ -42,7 +41,6 @@ class Helicopter : public IEntity {
   /**
    * @brief Gets the current direction of the Helicopter
    *
-   * @param None
    * @return direction, a Vector3 value
    **/
   Vector3 GetDirection() const { return direction; }
@@ -50,7 +48,6 @@ class Helicopter : public IEntity {
   /**
    * @brief Gets the current Destination of the Helicopter
    *
-   * @param None
    * @return direction, a Vector3 value
    **/
   Vector3 GetDestination() const { return destination; }
@@ -58,7 +55,6 @@ class Helicopter : public IEntity {
   /**
    * @brief Gets the details about the Helicopter object
    *
-   * @param None
    * @return details, a JsonObject filled with details about the Car
    **/
   JsonObject GetDetails() const { return details; }
@@ -66,7 +62,6 @@ class Helicopter : public IEntity {
   /**
    * @brief Gets the current speed of the Helicopter
    *
-   * @param None
    * @return speed, a float value
    **/
   float GetSpeed() const { return speed; }

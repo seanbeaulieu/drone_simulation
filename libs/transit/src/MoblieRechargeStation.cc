@@ -36,10 +36,10 @@ void MobileRechargeStation:: Update(double dt, std::vector<IEntity*> scheduler){
     }
   } else {
     Vector3 random;
+    //double angle = dt * 2 * pi / period;
     float x = -1400 + static_cast<float>(rand()) *
                           static_cast<float>(1500 - -1400) / RAND_MAX;
-    float y = 240 + static_cast<float>(rand()) *
-                        static_cast<float>(1000 - 240) / RAND_MAX;
+    float y = 300;
     float z = -800 + static_cast<float>(rand()) *
                          static_cast<float>(800 - -800) / RAND_MAX;
     random.x = x;

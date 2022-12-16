@@ -40,6 +40,7 @@ class IEntity {
   virtual void Jump(double height) {}
   virtual void SetEntities(std::vector<IEntity*>* entities) {}
   virtual bool GetEmergency() { return false; };
+  virtual IEntity* GetNearestRecharge(std::vector<IEntity*> search) {return nullptr;};
  protected:
   int id;
   const IGraph* graph;

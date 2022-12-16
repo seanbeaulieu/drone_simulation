@@ -65,10 +65,11 @@ void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
         }
       }
       else{
-        destination = droneBattery->GetDestination();
+        IEntity* RechargeSt = droneBattery->GetNearestRecharge(*entities);
+        destination = RechargeSt->GetPosition();
         toTargetDestStrategy = new BeelineStrategy(this->position, this->destination);
-          pickup = false;
-          available = true;
+        pickup = false;
+        available = true;
       }
     }
 }

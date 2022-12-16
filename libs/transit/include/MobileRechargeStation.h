@@ -6,11 +6,16 @@
 #include "BeelineStrategy.h"
 #include <iostream>
 #include <string>
+#include <cmath>
 class MobileRechargeStation : public RechargeStation{
     private:
      std::string strategyName;
      IStrategy* strategy = NULL;
-
+    //  float radius = 1000;
+    //  float center_x = 0;
+    //  float center_y = 0;
+    //  float period = 5.0;
+    //  float pi = M_PI;
     public:
      MobileRechargeStation(JsonObject &obj);
      ~MobileRechargeStation();

@@ -145,7 +145,6 @@ class EmergencyPickup : public IEntity {
   Vector3 destination;
   Vector3 direction;
   float speed;
-  bool pickup = false;
   std::string strategyName;
   IStrategy* toTargetPosStrategy = NULL;
   IStrategy* toTargetDestStrategy = NULL;

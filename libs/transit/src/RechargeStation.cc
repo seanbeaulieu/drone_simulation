@@ -27,7 +27,9 @@ void RechargeStation :: Update(double dt, std::vector<IEntity*> scheduler){
 }
 
 void RechargeStation :: AddBattery(IEntity* battery) {
-	recharging.push_back(static_cast<BatteryDecorator*>(battery));
+	BatteryDecorator* temp = static_cast<BatteryDecorator*>(battery);
+	temp->SetCharging(true);
+	recharging.push_back(temp);
 }
 
 void RechargeStation::SetAvailability(bool choice) { available = choice; }

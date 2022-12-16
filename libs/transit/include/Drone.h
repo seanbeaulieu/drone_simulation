@@ -99,13 +99,20 @@ class Drone : public IEntity {
  * @return None
  **/
   void SetDestination(Vector3 des_) { destination = des_; }
+  
+/**
+ * @brief Sets the current availability of the drone
+ * 
+ * @param choice, a bool
+ * @return None
+ **/  
+  void SetAvailability(bool choice) { available = choice; }
 
 /**
  * @brief Returns the nearest entity to the drone
  * 
  * @return nearestEntity, the closest entity to the drone
  **/
-
   IEntity* ReturnNearestEntity() {return nearestEntity;}
 
 /**

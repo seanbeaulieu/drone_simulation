@@ -10,21 +10,25 @@ EmergencyPickup :: EmergencyPickup(JsonObject &obj) : details(obj){
     speed = obj["speed"];
 
     available = true;
-
-    //this->SearchDrone();
 }
 
 EmergencyPickup :: ~EmergencyPickup(){}
 
 
 void EmergencyPickup :: SearchDrone(){
-  for(int i = 0; i<(*entities).size(); i++){
-    JsonObject detailsTemp = (*entities)[i]->GetDetails();
+  if (entities == NULL) {
+	  droneBattery = NULL;
+	  return;
+  }
+  for(IEntity* temp : (*entities) ) {
+    JsonObject detailsTemp = temp->GetDetails();
     std::string typeTemp = detailsTemp["type"];
     if(typeTemp.compare("drone") == 0){
       //FIXME if have error.
-      droneBattery = ((*entities)[i]);
-      break;
+      if (temp->GetEmergency()) {
+		  droneBattery = temp;
+		  break;
+	  }
     }
   }
 }
@@ -32,45 +36,52 @@ void EmergencyPickup :: SearchDrone(){
 
 void EmergencyPickup :: Update(double dt, std::vector<IEntity*> scheduler){
     //FIXME:
-
-    //std::cout<<"enter Update"<<std::endl;
-    if(toTargetPosStrategy){
+    
+    if (available) {
+		this->SearchDrone();
+		if (droneBattery) {
+			std::cout << "Emergency spotted, pickup on its way" << std::endl;
+			// found dead battery
+			available = false;
+			destination = droneBattery->GetPosition();
+			toTargetPosStrategy = new BeelineStrategy(this->position, this->destination);
+			droneBattery->SetEmergency(false);
+		}
+	}
+    // pathing to drone
+    if(toTargetPosStrategy) {
       toTargetPosStrategy->Move(this, dt);
-
       if(toTargetPosStrategy->IsCompleted()){
+		// pick up drone and start path to station
         delete toTargetPosStrategy;
         toTargetPosStrategy = NULL;
+        IEntity* nearTemp = droneBattery->GetNearestRecharge(*entities);
+		if (nearTemp) {
+			destination = nearTemp->GetPosition();
+			toTargetDestStrategy = new BeelineStrategy(this->position, destination);
+		}
       }  
     }
-    else if (toTargetDestStrategy){
-        //FIXME:check if it need to pick up the drone
-        toTargetDestStrategy->Move(this, dt);
-        droneBattery->SetPosition(this->GetPosition());
-        droneBattery->SetDirection(this->GetDirection());
-        if(toTargetDestStrategy->IsCompleted()){
-          delete toTargetDestStrategy;
-          toTargetDestStrategy = NULL;
-        }
-    }
-    else{
-      if(pickup == false){
-        //std::cout<<"may be droneBattery error"<<std::endl;
-        this->SearchDrone();
-        if(droneBattery -> GetEmergency()){
-          //std::cout<<"droneBattery no error"<<std::endl;
-          destination = droneBattery->GetPosition();
-          toTargetPosStrategy = new BeelineStrategy(this->position, this->destination);
-          pickup = true;
-          available = false;
-        }
-      }
-      else{
-        IEntity* RechargeSt = droneBattery->GetNearestRecharge(*entities);
-        destination = RechargeSt->GetPosition();
-        toTargetDestStrategy = new BeelineStrategy(this->position, this->destination);
-        pickup = false;
-        available = true;
-      }
+    // carrying drone to station
+    else if (toTargetDestStrategy) {
+		// recalc in case of mobile station
+		delete toTargetDestStrategy;
+		IEntity* nearTemp = droneBattery->GetNearestRecharge(*entities);
+		if (nearTemp) {
+			destination = nearTemp->GetPosition();
+			toTargetDestStrategy = new BeelineStrategy(this->position, this->destination);
+			// move and carry drone
+			toTargetDestStrategy->Move(this, dt);
+			droneBattery->SetPosition(this->position);
+			droneBattery->SetDirection(this->direction);
+			if(toTargetDestStrategy->IsCompleted()){
+				nearTemp->AddBattery(droneBattery);
+				delete toTargetDestStrategy;
+				toTargetDestStrategy = NULL;
+				available = true;
+				droneBattery = NULL;
+			}
+		}
     }
 }
 

@@ -166,8 +166,9 @@ class IEntity {
  * @return None
  **/
   virtual void SetEntities(std::vector<IEntity*>* entities) {}
-  virtual bool GetEmergency() { return false; };
-  virtual IEntity* GetNearestRecharge(std::vector<IEntity*> search) {return nullptr;};
+  virtual bool GetEmergency() const { return false; }
+  virtual void SetEmergency(bool choice) {}
+  virtual IEntity* GetNearestRecharge(std::vector<IEntity*> search) {return nullptr;}
   virtual void AddBattery(IEntity* battery) {}
  protected:
   int id;

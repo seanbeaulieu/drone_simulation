@@ -23,7 +23,7 @@ IEntity* BatteryDecorator::GetNearestRecharge(std::vector<IEntity*> search) {
 	for (IEntity* entity : search) {
 		std::string type = (entity->GetDetails())["type"]; // type check
 		if (type.compare("rechargestation") == 0 || type.compare("moblierechargestation") == 0) {
-			double curDist = entity->GetPosition().Distance(GetPosition());
+			double curDist = entity->GetPosition().Distance(this->GetPosition());
 			if (curDist < minDist || minDist == -1) { // distance check
 				minDist = curDist;
 				nearestRecharge = entity;
@@ -37,12 +37,39 @@ IEntity* BatteryDecorator::GetNearestRecharge(std::vector<IEntity*> search) {
 	return nearestRecharge;
 }
 
+IEntity* BatteryDecorator::GetNearestRecharge(std::vector<IEntity*> search, Vector3 pos) {
+	if (entities == NULL) {
+		return NULL;
+	}
+	IEntity* temp = NULL;
+	double minDist = -1;
+	for (IEntity* entity : search) {
+		std::string type = (entity->GetDetails())["type"]; // type check
+		if (type.compare("rechargestation") == 0 || type.compare("moblierechargestation") == 0) {
+			double curDist = entity->GetPosition().Distance(pos);
+			if (curDist < minDist || minDist == -1) { // distance check
+				minDist = curDist;
+				temp = entity;
+			}
+		}
+	}
+	return temp;
+}
+
 double BatteryDecorator::TripDistance(IEntity* passenger) {
 	double totalDist = 0;
-	totalDist += this->GetPosition().Distance(this->GetDestination());
-	totalDist += this->GetDestination().Distance(passenger->GetDestination());
-	totalDist += passenger->GetDestination().Distance(nearestRecharge->GetPosition());
-	return totalDist * sqrt(2);
+	if (passenger == NULL) {
+		return 0;
+	}
+	if (passenger->GetPosition().Distance(passenger->GetDestination()) < 1.0) {
+		return 0;
+	}
+	IEntity* temp = GetNearestRecharge(*entities, passenger->GetDestination());
+	totalDist += this->GetPosition().Distance(passenger->GetPosition()); // drone to passenger
+	totalDist += passenger->GetPosition().Distance(passenger->GetDestination()); // passenger to destination
+	totalDist += passenger->GetDestination().Distance(temp->GetPosition()); // destination to recharge (nearest to destination)
+	totalDist *= sqrt(2); // should roughly account for non-beeline pathing
+	return totalDist;
 }
 
 void BatteryDecorator::GetNearestEntity(std::vector<IEntity*> scheduler){
@@ -59,34 +86,34 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 // 2. straight-line distance calculation for route length
 // which is both less difficult on us and can actually showcase the pickup
 	
-	
 	if (charging || emergency || charge == 0) { // do nothing
 		return;
 	}
 	if (charge < 0) { // dead
 		charge = 0;
 		emergency = true;
-		std::cout << "emergency\n" << std::endl;
+		std::cout << "emergency! drone died." << std::endl;
 		return;
 	}
 	
-	if (nearestRecharge == NULL) {
-		GetNearestRecharge(*entities);
-	}
-	
-	if (this->GetAvailability()) { // no target, no moving
+	if (this->GetAvailability()) { // no route
 		drone->Update(dt, scheduler); // try to initialize drone route
 		if (!(this->GetAvailability())) { // if successful (results in 1 move)
 			charge -= dt; // only drain when moving
-			if (nearestRecharge) { // if no recharge stations, attempt trip anyways
-				IEntity* passenger = drone->ReturnNearestEntity();
-				if (passenger) { // mulithread error? idk
-					double dist = TripDistance(passenger);
-					if ((dist / this->GetSpeed()) > (charge)) { // trip too long for battery
-						passenger->SetAvailability(true);
-						rechargeDest = nearestRecharge->GetPosition();
-						rechargeStrategy = new BeelineStrategy(this->GetPosition(), rechargeDest);
+			if (GetNearestRecharge(*entities)) { // only look for path to station if they exist
+				IEntity* temp = drone->ReturnNearestEntity();
+				double dist = TripDistance(temp);
+				if ((dist / this->GetSpeed()) > charge) { // full trip too long for battery
+					// temp->SetAvailability(true); // errors
+					temp = GetNearestRecharge(*entities, temp->GetPosition());
+					dist = temp->GetPosition().Distance(this->GetPosition()) * sqrt(2);
+					if ((dist / this->GetSpeed()) < charge) { // if it can make it to the "better" station, do so
+						rechargeDest = temp->GetPosition();
 					}
+					else {
+						rechargeDest = nearestRecharge->GetPosition();
+					}
+					rechargeStrategy = new BeelineStrategy(this->GetPosition(), rechargeDest);
 				}
 			}
 		}
@@ -105,27 +132,27 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 		if (rechargeStrategy->IsCompleted()) { // reached recharge, start charging
 			delete rechargeStrategy;
 			rechargeStrategy = NULL;
-			nearestRecharge->AddBattery(this);
-			charging = true;
-			nearIsMobile = true;
+			nearestRecharge->AddBattery(this); // sets charging to true
 		}
 	}
 	else { // proceed trip as normal
 		drone->Update(dt, scheduler);
 		charge -= dt;
 		if (this->GetAvailability()) {
-			GetNearestRecharge(*entities);
+			std::cout << "trip finished." << std::endl;
+			nearestRecharge = NULL;
 		}
 	}
 }
 
 void BatteryDecorator::Recharge(double amount) {
 	charge += amount;
-	if (charge >= 100) {
-		std::cout << "done charging!" << std::endl;
-		charge = 100;
+	if (charge >= MAX_CHARGE) {
+		std::cout << "done charging." << std::endl;
+		charge = MAX_CHARGE;
 		charging = false;
-		this->SetAvailability(true);
+		emergency = false;
+		// this->SetAvailability(true); // results in infinite loop
 	}
 }
 	

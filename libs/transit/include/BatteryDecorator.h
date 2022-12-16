@@ -4,10 +4,13 @@
 #include "Drone.h"
 #include "IEntity.h"//fixme: drone of IEntity
 #include "BeelineStrategy.h"
+
+#define MAX_CHARGE 150 // battery capacity
+
 class BatteryDecorator : public IEntity
 {
 private:
-    double charge = 100;
+    double charge = MAX_CHARGE;
     Drone* drone = NULL;
     bool charging = false;
     Vector3 position;
@@ -15,7 +18,7 @@ private:
     IEntity* nearestRecharge = NULL;
     bool nearIsMobile = true;
     IStrategy* rechargeStrategy = NULL;
-    std::vector<IEntity*>* entities = NULL; // POINTER to find nearest recharge
+    std::vector<IEntity*>* entities = NULL; // POINTER for finding nearest recharge
     bool emergency = false;
     
 public:
@@ -28,7 +31,9 @@ public:
     * @param search, a vector array of IEntity ptrs
     * @return nearestRecharge, the closest recharge station to the drone
     **/
-    IEntity* GetNearestRecharge(std::vector<IEntity*> search); // find recharge station
+    IEntity* GetNearestRecharge(std::vector<IEntity*> search); // find recharge station, set and return it
+    
+    IEntity* GetNearestRecharge(std::vector<IEntity*> search, Vector3 pos); // find closest station to pos, ONLY return it
 
     /**
     * @brief Calculates the trip distance for a passenger ride
@@ -220,6 +225,24 @@ public:
      * @return None
      **/
 	void SetStrategyName(std::string strategyName_) { drone->SetStrategyName(strategyName_); }
+	
+	/**
+     * @brief Sets the emergency state to help the EmergencyPickup(s)
+     * 
+     * @param choice, the emergency state as a Bool
+     * 
+     * @return None
+     **/
+	void SetEmergency(bool choice) { this->emergency = choice; }
+	
+	/**
+     * @brief Sets the charging state to help the EmergencyPickup(s)
+     * 
+     * @param choice, the charging state as a Bool
+     * 
+     * @return None
+     **/
+	void SetCharging(bool choice) { this->charging = choice; }
 
     /**
      * @brief Rotates the drone

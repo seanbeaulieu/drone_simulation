@@ -17,16 +17,17 @@ JsonObject RechargeStation::GetDetails() const { return details; }
 
 
 void RechargeStation :: Update(double dt, std::vector<IEntity*> scheduler){
-    for(int i = 0; i<recharging.size(); i++){
-        // check if the drone need to charge, make sure that drone before it reach the recharge station, set the charging to false.
-        if(recharging[i]->GetCharging())
-        {
-            recharging.erase(recharging.begin() + i);
-        }
-        else{
-            recharging[i]->Recharge(dt*2);
-        }
-    }
+	for (int i = 0; i < recharging.size(); i++) { // recharge carried batteries
+		recharging[i]->Recharge(dt*3);
+		if (!(recharging[i]->GetCharging())) { // remove if done
+			recharging.erase(recharging.begin() + i);
+			i--; // since this shrinks the vector, need to check same index
+		}
+	}
+}
+
+void RechargeStation :: AddBattery(IEntity* battery) {
+	recharging.push_back(static_cast<BatteryDecorator*>(battery));
 }
 
 void RechargeStation::SetAvailability(bool choice) { available = choice; }

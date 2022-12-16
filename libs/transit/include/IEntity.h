@@ -167,6 +167,7 @@ class IEntity {
  **/
   virtual void SetEntities(std::vector<IEntity*>* entities) {}
   virtual bool GetEmergency() { return false; };
+  virtual void AddBattery(IEntity* battery) {}
  protected:
   int id;
   const IGraph* graph;

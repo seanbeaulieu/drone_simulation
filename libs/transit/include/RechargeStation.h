@@ -85,6 +85,8 @@ class RechargeStation : public IEntity{
      * @return None
      **/
      virtual void Update(double dt, std::vector<IEntity*> scheduler);  
+     
+     void AddBattery(IEntity* battery);
 };
 
 #endif

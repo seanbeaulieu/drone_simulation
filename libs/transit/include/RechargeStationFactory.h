@@ -4,7 +4,7 @@
 #include "RechargeStation.h"
 #include "IEntity.h"
 #include "IEntityFactory.h"
-    
+
 class RechargeStationFactory : public IEntityFactory{
  public:
   virtual ~RechargeStationFactory() {}

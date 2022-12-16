@@ -15,7 +15,20 @@ class AstarStrategy : public IStrategy {
 public:
     AstarStrategy(Vector3 position, Vector3 destination, const IGraph* graph);
     ~AstarStrategy();
+
+    /**
+     * @brief Moves an entity using the AStar strategy
+     * 
+     * @param entity, a pointer to an IEntity object to be moved
+     * @return None
+     **/
     void Move(IEntity* entity, double dt);
+
+    /**
+     * @brief Checks to see if a route is completed
+     * 
+     * @return IsCompleted, a true or false boolean value
+     **/
     bool IsCompleted();
 
 private:

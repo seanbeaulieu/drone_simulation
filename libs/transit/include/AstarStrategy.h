@@ -20,6 +20,7 @@ public:
      * @brief Moves an entity using the AStar strategy
      * 
      * @param entity, a pointer to an IEntity object to be moved
+     * @param dt, a double value amount to move
      * @return None
      **/
     void Move(IEntity* entity, double dt);

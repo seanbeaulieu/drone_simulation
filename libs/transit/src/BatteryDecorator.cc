@@ -80,11 +80,13 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 			charge -= dt; // only drain when moving
 			if (nearestRecharge) { // if no recharge stations, attempt trip anyways
 				IEntity* passenger = drone->ReturnNearestEntity();
-				double dist = TripDistance(passenger);
-				if ((dist / this->GetSpeed()) > (charge)) { // trip too long for battery
-					passenger->SetAvailability(true);
-					rechargeDest = nearestRecharge->GetPosition();
-					rechargeStrategy = new BeelineStrategy(this->GetPosition(), rechargeDest);
+				if (passenger) { // mulithread error? idk
+					double dist = TripDistance(passenger);
+					if ((dist / this->GetSpeed()) > (charge)) { // trip too long for battery
+						passenger->SetAvailability(true);
+						rechargeDest = nearestRecharge->GetPosition();
+						rechargeStrategy = new BeelineStrategy(this->GetPosition(), rechargeDest);
+					}
 				}
 			}
 		}

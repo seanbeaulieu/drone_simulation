@@ -82,6 +82,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
 				IEntity* passenger = drone->ReturnNearestEntity();
 				if (passenger) { // mulithread error? idk
 					double dist = TripDistance(passenger);
+					std::cout<<"TripDistance: " <<dist<<std::endl;
 					if ((dist / this->GetSpeed()) > (charge)) { // trip too long for battery
 						passenger->SetAvailability(true);
 						rechargeDest = nearestRecharge->GetPosition();

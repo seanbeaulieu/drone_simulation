@@ -1,5 +1,5 @@
 <map id="RechargeStation" name="RechargeStation">
-<area shape="rect" id="node1" title=" " alt="" coords="18,124,147,151"/>
-<area shape="rect" id="node2" href="$classIEntity.html" title=" " alt="" coords="5,5,69,32"/>
+<area shape="rect" id="node1" title="Recharge Station which allows Drones to charge their batteries and continue flying." alt="" coords="18,124,147,151"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="all object int he simulation model" alt="" coords="5,5,69,32"/>
 <area shape="rect" id="node3" href="$classVector3.html" title="A class built solely to handle 3D vector mathematics." alt="" coords="93,5,165,32"/>
 </map>

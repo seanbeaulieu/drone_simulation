@@ -69,19 +69,24 @@ $(function() {
 <div class="title">IStrategy Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Strategy class to host AStar, DFS, Dijkstra, and Beeline.  
+ <a href="classIStrategy.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="IStrategy_8h_source.html">IStrategy.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for IStrategy:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIStrategy__inherit__graph.png" border="0" usemap="#IStrategy_inherit__map" alt="Inheritance graph"/></div>
 <map name="IStrategy_inherit__map" id="IStrategy_inherit__map">
-<area shape="rect" title=" " alt="" coords="331,5,412,32"/>
+<area shape="rect" title="Strategy class to host AStar, DFS, Dijkstra, and Beeline." alt="" coords="331,5,412,32"/>
 <area shape="rect" href="classAstarStrategy.html" title="this class inhertis from the IStrategy class and is responsible for generating the beeline that the d..." alt="" coords="5,80,116,107"/>
 <area shape="rect" href="classBeelineStrategy.html" title="this class inhertis from the IStrategy class and is responsible for generating the beeline that the d..." alt="" coords="140,80,267,107"/>
-<area shape="rect" href="classCelebrationDecorator.html" title=" " alt="" coords="291,80,452,107"/>
+<area shape="rect" href="classCelebrationDecorator.html" title="Celebration Decorator for the IStrategy." alt="" coords="291,80,452,107"/>
 <area shape="rect" href="classDfsStrategy.html" title="this class inhertis from the IStrategy class and is responsible for generating the beeline that the d..." alt="" coords="477,80,575,107"/>
 <area shape="rect" href="classDijkstraStrategy.html" title="this class inhertis from the IStrategy class and is responsible for generating the beeline that the d..." alt="" coords="599,80,727,107"/>
-<area shape="rect" href="classJumpDecorator.html" title=" " alt="" coords="241,155,360,181"/>
-<area shape="rect" href="classSpinDecorator.html" title=" " alt="" coords="385,155,499,181"/>
+<area shape="rect" href="classJumpDecorator.html" title="Jump Decorator class. This class applies the jump animation to Celebration." alt="" coords="241,155,360,181"/>
+<area shape="rect" href="classSpinDecorator.html" title="The SpinDecorator class. This class applies the spin animation to Celebration." alt="" coords="385,155,499,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -100,7 +105,9 @@ Protected Attributes</h2></td></tr>
 const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></td></tr>
 <tr class="separator:abdcb4741836a0bb72017f52752962ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Strategy class to host AStar, DFS, Dijkstra, and Beeline. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a13c6048efd232b696db5f35000d5b106"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a13c6048efd232b696db5f35000d5b106">&#9670;&nbsp;</a></span>IsCompleted()</h2>
 
@@ -127,7 +134,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Checks to see if the route is completed. </p>
 <dl class="section return"><dt>Returns</dt><dd>IsCompleted, a true or false boolean value </dd></dl>
 
-<p>Implemented in <a class="el" href="classAstarStrategy.html#a65ae8d490fe820fa152a379da6845103">AstarStrategy</a>, <a class="el" href="classBeelineStrategy.html#a648eae389f7844f210ac267313ef6233">BeelineStrategy</a>, <a class="el" href="classDfsStrategy.html#a30fb7b230d0244cd87de51a13a8d8c5b">DfsStrategy</a>, <a class="el" href="classDijkstraStrategy.html#a409569a22f38028431ce25522d355ee2">DijkstraStrategy</a>, <a class="el" href="classCelebrationDecorator.html#a7ce83ef692d22773bf40e8733e20329a">CelebrationDecorator</a>, <a class="el" href="classJumpDecorator.html#a94b32bed5b764df15980356aa8763abe">JumpDecorator</a>, and <a class="el" href="classSpinDecorator.html#a0887a816731d9ff8ee8161034a03c4aa">SpinDecorator</a>.</p>
+<p>Implemented in <a class="el" href="classAstarStrategy.html#a65ae8d490fe820fa152a379da6845103">AstarStrategy</a>, <a class="el" href="classBeelineStrategy.html#a648eae389f7844f210ac267313ef6233">BeelineStrategy</a>, <a class="el" href="classDfsStrategy.html#a30fb7b230d0244cd87de51a13a8d8c5b">DfsStrategy</a>, <a class="el" href="classDijkstraStrategy.html#a409569a22f38028431ce25522d355ee2">DijkstraStrategy</a>, <a class="el" href="classCelebrationDecorator.html#a7ce83ef692d22773bf40e8733e20329a">CelebrationDecorator</a>, <a class="el" href="classSpinDecorator.html#a0887a816731d9ff8ee8161034a03c4aa">SpinDecorator</a>, and <a class="el" href="classJumpDecorator.html#a94b32bed5b764df15980356aa8763abe">JumpDecorator</a>.</p>
 
 </div>
 </div>
@@ -168,14 +175,14 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Moves the provided entity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">entity,a</td><td>pointer to an <a class="el" href="classIEntity.html">IEntity</a> object to be moved </td></tr>
+    <tr><td class="paramname">entity,a</td><td>pointer to an <a class="el" href="classIEntity.html" title="all object int he simulation model">IEntity</a> object to be moved </td></tr>
     <tr><td class="paramname">dt,a</td><td>double value to be moved by </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 
-<p>Implemented in <a class="el" href="classJumpDecorator.html#a6d46675428916bbe6acd10fb25d51f86">JumpDecorator</a>, <a class="el" href="classSpinDecorator.html#a766735ae467d0bb3a80169e109951804">SpinDecorator</a>, <a class="el" href="classAstarStrategy.html#afd13e7ed2b1872f01aa2a2f4b07b41c3">AstarStrategy</a>, <a class="el" href="classBeelineStrategy.html#ab8d3f5b05d5e9dd06465f5fc4cd4767e">BeelineStrategy</a>, <a class="el" href="classDfsStrategy.html#aab5a0a5c97f710075634b81a3e00ecf9">DfsStrategy</a>, <a class="el" href="classDijkstraStrategy.html#a24e0177f55b69a6b2260b0a0e2ce4430">DijkstraStrategy</a>, and <a class="el" href="classCelebrationDecorator.html#aaea8fd11f7d0e12dd79ccdc63ab1bbf6">CelebrationDecorator</a>.</p>
+<p>Implemented in <a class="el" href="classSpinDecorator.html#a766735ae467d0bb3a80169e109951804">SpinDecorator</a>, <a class="el" href="classJumpDecorator.html#a6d46675428916bbe6acd10fb25d51f86">JumpDecorator</a>, <a class="el" href="classAstarStrategy.html#afd13e7ed2b1872f01aa2a2f4b07b41c3">AstarStrategy</a>, <a class="el" href="classBeelineStrategy.html#ab8d3f5b05d5e9dd06465f5fc4cd4767e">BeelineStrategy</a>, <a class="el" href="classDfsStrategy.html#aab5a0a5c97f710075634b81a3e00ecf9">DfsStrategy</a>, <a class="el" href="classDijkstraStrategy.html#a24e0177f55b69a6b2260b0a0e2ce4430">DijkstraStrategy</a>, and <a class="el" href="classCelebrationDecorator.html#aaea8fd11f7d0e12dd79ccdc63ab1bbf6">CelebrationDecorator</a>.</p>
 
 </div>
 </div>

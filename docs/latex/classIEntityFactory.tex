@@ -2,6 +2,15 @@
 \label{classIEntityFactory}\index{IEntityFactory@{IEntityFactory}}
 
 
+\mbox{\hyperlink{classIEntityFactory}{I\+Entity\+Factory}} class to make new I\+Entitys.  
+
+
+
+
+{\ttfamily \#include $<$I\+Entity\+Factory.\+h$>$}
+
+
+
 Inheritance diagram for I\+Entity\+Factory\+:
 \nopagebreak
 \begin{figure}[H]
@@ -15,6 +24,16 @@ Inheritance diagram for I\+Entity\+Factory\+:
 \item 
 virtual \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{Create\+Entity}} (Json\+Object \&entity)=0
 \begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{classIEntity}{I\+Entity}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classIEntityFactory}{I\+Entity\+Factory}} class to make new I\+Entitys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity,a} & memory address for a Json\+Object \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -38,7 +57,7 @@ a pointer to the \mbox{\hyperlink{classIEntity}{I\+Entity}} that was created
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classCarFactory_a23d79ca5453ccce26e5f5bd08d0201cc}{Car\+Factory}}, \mbox{\hyperlink{classDroneFactory_ad0d77279eacf09e49c990b7d2a86e74e}{Drone\+Factory}}, \mbox{\hyperlink{classHelicopterFactory_abd76c809755d46d0f3266539d597c7fb}{Helicopter\+Factory}}, \mbox{\hyperlink{classLostDuckFactory_a4c9c461fb05cb1ab9676422fad5589e0}{Lost\+Duck\+Factory}}, \mbox{\hyperlink{classEM__Pickup__Factory_a8945720d270b5e306023e6de61598356}{E\+M\+\_\+\+Pickup\+\_\+\+Factory}}, \mbox{\hyperlink{classRobotFactory_ad2ceb080af7357b641332a237ae74959}{Robot\+Factory}}, \mbox{\hyperlink{classMobileRechargeFactory_a56e8d44cd8a63f725a1781796afb3742}{Mobile\+Recharge\+Factory}}, \mbox{\hyperlink{classRechargeStationFactory_a35ced7d0c77dec6bf4a7043811910caa}{Recharge\+Station\+Factory}}, and \mbox{\hyperlink{classCompositeFactory_a46a24b2fa2e5c077bd140b7075f61ff9}{Composite\+Factory}}.
+Implemented in \mbox{\hyperlink{classRobotFactory_ad2ceb080af7357b641332a237ae74959}{Robot\+Factory}}, \mbox{\hyperlink{classEM__Pickup__Factory_a8945720d270b5e306023e6de61598356}{E\+M\+\_\+\+Pickup\+\_\+\+Factory}}, \mbox{\hyperlink{classDroneFactory_ad0d77279eacf09e49c990b7d2a86e74e}{Drone\+Factory}}, \mbox{\hyperlink{classMobileRechargeFactory_a56e8d44cd8a63f725a1781796afb3742}{Mobile\+Recharge\+Factory}}, \mbox{\hyperlink{classRechargeStationFactory_a35ced7d0c77dec6bf4a7043811910caa}{Recharge\+Station\+Factory}}, \mbox{\hyperlink{classCarFactory_a23d79ca5453ccce26e5f5bd08d0201cc}{Car\+Factory}}, \mbox{\hyperlink{classHelicopterFactory_abd76c809755d46d0f3266539d597c7fb}{Helicopter\+Factory}}, \mbox{\hyperlink{classLostDuckFactory_a4c9c461fb05cb1ab9676422fad5589e0}{Lost\+Duck\+Factory}}, and \mbox{\hyperlink{classCompositeFactory_a46a24b2fa2e5c077bd140b7075f61ff9}{Composite\+Factory}}.
 
 
 

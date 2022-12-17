@@ -2,6 +2,15 @@
 \label{classRobotFactory}\index{RobotFactory@{RobotFactory}}
 
 
+\mbox{\hyperlink{classRobot}{Robot}} Factory class that creates \mbox{\hyperlink{classRobot}{Robot}} class if the provided text is \char`\"{}robot\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$Robot\+Factory.\+h$>$}
+
+
+
 Inheritance diagram for Robot\+Factory\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -23,6 +32,19 @@ Collaboration diagram for Robot\+Factory\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classRobotFactory_ad2ceb080af7357b641332a237ae74959}{Create\+Entity}} (Json\+Object \&entity)
 \begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{classRobot}{Robot}} entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classRobot}{Robot}} Factory class that creates \mbox{\hyperlink{classRobot}{Robot}} class if the provided text is \char`\"{}robot\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity,a} & memory address for a Json\+Object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{classRobot}{Robot}} filled with information from entity 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Function Documentation}

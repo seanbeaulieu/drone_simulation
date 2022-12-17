@@ -70,16 +70,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Simulation Model class handling the transit simulation. The model can communicate with the controller.  
+ <a href="classSimulationModel.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="SimulationModel_8h_source.html">SimulationModel.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for SimulationModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSimulationModel__coll__graph.png" border="0" usemap="#SimulationModel_coll__map" alt="Collaboration graph"/></div>
 <map name="SimulationModel_coll__map" id="SimulationModel_coll__map">
-<area shape="rect" title=" " alt="" coords="80,171,212,197"/>
-<area shape="rect" href="classCompositeFactory.html" title=" " alt="" coords="5,81,145,108"/>
-<area shape="rect" href="classIEntityFactory.html" title=" " alt="" coords="19,5,131,32"/>
-<area shape="rect" href="classIController.html" title=" " alt="" coords="170,81,261,108"/>
+<area shape="rect" title="Simulation Model class handling the transit simulation. The model can communicate with the controller..." alt="" coords="80,171,212,197"/>
+<area shape="rect" href="classCompositeFactory.html" title="A compositefactory for all other Factory." alt="" coords="5,81,145,108"/>
+<area shape="rect" href="classIEntityFactory.html" title="IEntityFactory class to make new IEntitys." alt="" coords="19,5,131,32"/>
+<area shape="rect" href="classIController.html" title="Abstract controller class used in the Transit Service. Uses the Model View." alt="" coords="170,81,261,108"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -123,7 +126,13 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <tr class="separator:aef89ec45aa188da7b9d7afa10320294f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simulation Model handling the transit simulation. The model can communicate with the controller. </p>
+<div class="textblock"><p>Simulation Model class handling the transit simulation. The model can communicate with the controller. </p>
+<p>Simulation Model handling the transit simulation. The model can communicate with the controller. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller,a</td><td>memory address for an <a class="el" href="classIController.html" title="Abstract controller class used in the Transit Service. Uses the Model View.">IController</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a44215da18f82ad591ead5085f6da13f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44215da18f82ad591ead5085f6da13f0">&#9670;&nbsp;</a></span>AddFactory()</h2>
@@ -144,7 +153,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Adds a new type of entity to be made. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">factory,a</td><td>pointer to a <a class="el" href="classIEntityFactory.html">IEntityFactory</a> type object </td></tr>
+    <tr><td class="paramname">factory,a</td><td>pointer to a <a class="el" href="classIEntityFactory.html" title="IEntityFactory class to make new IEntitys.">IEntityFactory</a> type object </td></tr>
   </table>
   </dd>
 </dl>

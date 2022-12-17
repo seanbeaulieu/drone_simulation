@@ -68,31 +68,44 @@ $(function() {
 <div class="title">IEntityFactory Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classIEntityFactory.html" title="IEntityFactory class to make new IEntitys.">IEntityFactory</a> class to make new IEntitys.  
+ <a href="classIEntityFactory.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="IEntityFactory_8h_source.html">IEntityFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for IEntityFactory:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIEntityFactory__inherit__graph.png" border="0" usemap="#IEntityFactory_inherit__map" alt="Inheritance graph"/></div>
 <map name="IEntityFactory_inherit__map" id="IEntityFactory_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,208,117,235"/>
+<area shape="rect" title="IEntityFactory class to make new IEntitys." alt="" coords="5,208,117,235"/>
 <area shape="rect" href="classCarFactory.html" title="Creates a new Car object if the text in the provided JsonObject parameter is “car”" alt="" coords="208,5,300,32"/>
-<area shape="rect" href="classCompositeFactory.html" title=" " alt="" coords="184,56,324,83"/>
-<area shape="rect" href="classDroneFactory.html" title=" " alt="" coords="199,107,309,133"/>
-<area shape="rect" href="classEM__Pickup__Factory.html" title=" " alt="" coords="181,157,327,184"/>
+<area shape="rect" href="classCompositeFactory.html" title="A compositefactory for all other Factory." alt="" coords="184,56,324,83"/>
+<area shape="rect" href="classDroneFactory.html" title="drone factory." alt="" coords="199,107,309,133"/>
+<area shape="rect" href="classEM__Pickup__Factory.html" title="Creates a New EmergencyPickup Entity object if the text in provided JsonObject parameter is &quot;Emergenc..." alt="" coords="181,157,327,184"/>
 <area shape="rect" href="classHelicopterFactory.html" title="Creates a new Helicopter object if the text in the provided JsonObject parameter is “helicopter”" alt="" coords="185,208,323,235"/>
 <area shape="rect" href="classLostDuckFactory.html" title="Creates a new LostDuck object if the text in the provided JsonObject parameter is “LostDuck”" alt="" coords="189,259,319,285"/>
-<area shape="rect" href="classMobileRechargeFactory.html" title=" " alt="" coords="167,309,341,336"/>
-<area shape="rect" href="classRechargeStationFactory.html" title=" " alt="" coords="165,360,343,387"/>
-<area shape="rect" href="classRobotFactory.html" title=" " alt="" coords="200,411,308,437"/>
+<area shape="rect" href="classMobileRechargeFactory.html" title="A class for a Mobile Recharge Factory which creates new Mobile Recharge Stations." alt="" coords="167,309,341,336"/>
+<area shape="rect" href="classRechargeStationFactory.html" title="Recharge Station Factory class to build new RechargeStations." alt="" coords="165,360,343,387"/>
+<area shape="rect" href="classRobotFactory.html" title="Robot Factory class that creates Robot class if the provided text is &quot;robot&quot;." alt="" coords="200,411,308,437"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9bd53cf7ca21ab252968062ea5d88180"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">CreateEntity</a> (JsonObject &amp;entity)=0</td></tr>
-<tr class="memdesc:a9bd53cf7ca21ab252968062ea5d88180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classIEntity.html">IEntity</a> object.  <a href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">More...</a><br /></td></tr>
+<tr class="memdesc:a9bd53cf7ca21ab252968062ea5d88180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classIEntity.html" title="all object int he simulation model">IEntity</a> object.  <a href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">More...</a><br /></td></tr>
 <tr class="separator:a9bd53cf7ca21ab252968062ea5d88180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classIEntityFactory.html" title="IEntityFactory class to make new IEntitys.">IEntityFactory</a> class to make new IEntitys. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity,a</td><td>memory address for a JsonObject </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9bd53cf7ca21ab252968062ea5d88180"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bd53cf7ca21ab252968062ea5d88180">&#9670;&nbsp;</a></span>CreateEntity()</h2>
 
@@ -117,16 +130,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a new <a class="el" href="classIEntity.html">IEntity</a> object. </p>
+<p>Creates a new <a class="el" href="classIEntity.html" title="all object int he simulation model">IEntity</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">entity,a</td><td>memory address for a JsonObject </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the <a class="el" href="classIEntity.html">IEntity</a> that was created </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the <a class="el" href="classIEntity.html" title="all object int he simulation model">IEntity</a> that was created </dd></dl>
 
-<p>Implemented in <a class="el" href="classCarFactory.html#a23d79ca5453ccce26e5f5bd08d0201cc">CarFactory</a>, <a class="el" href="classDroneFactory.html#ad0d77279eacf09e49c990b7d2a86e74e">DroneFactory</a>, <a class="el" href="classHelicopterFactory.html#abd76c809755d46d0f3266539d597c7fb">HelicopterFactory</a>, <a class="el" href="classLostDuckFactory.html#a4c9c461fb05cb1ab9676422fad5589e0">LostDuckFactory</a>, <a class="el" href="classEM__Pickup__Factory.html#a8945720d270b5e306023e6de61598356">EM_Pickup_Factory</a>, <a class="el" href="classRobotFactory.html#ad2ceb080af7357b641332a237ae74959">RobotFactory</a>, <a class="el" href="classMobileRechargeFactory.html#a56e8d44cd8a63f725a1781796afb3742">MobileRechargeFactory</a>, <a class="el" href="classRechargeStationFactory.html#a35ced7d0c77dec6bf4a7043811910caa">RechargeStationFactory</a>, and <a class="el" href="classCompositeFactory.html#a46a24b2fa2e5c077bd140b7075f61ff9">CompositeFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRobotFactory.html#ad2ceb080af7357b641332a237ae74959">RobotFactory</a>, <a class="el" href="classEM__Pickup__Factory.html#a8945720d270b5e306023e6de61598356">EM_Pickup_Factory</a>, <a class="el" href="classDroneFactory.html#ad0d77279eacf09e49c990b7d2a86e74e">DroneFactory</a>, <a class="el" href="classMobileRechargeFactory.html#a56e8d44cd8a63f725a1781796afb3742">MobileRechargeFactory</a>, <a class="el" href="classRechargeStationFactory.html#a35ced7d0c77dec6bf4a7043811910caa">RechargeStationFactory</a>, <a class="el" href="classCarFactory.html#a23d79ca5453ccce26e5f5bd08d0201cc">CarFactory</a>, <a class="el" href="classHelicopterFactory.html#abd76c809755d46d0f3266539d597c7fb">HelicopterFactory</a>, <a class="el" href="classLostDuckFactory.html#a4c9c461fb05cb1ab9676422fad5589e0">LostDuckFactory</a>, and <a class="el" href="classCompositeFactory.html#a46a24b2fa2e5c077bd140b7075f61ff9">CompositeFactory</a>.</p>
 
 </div>
 </div>

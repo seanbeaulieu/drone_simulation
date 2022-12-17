@@ -72,24 +72,23 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef I_ENTITY_FACTORY_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define I_ENTITY_FACTORY_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;util/json.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;IEntityFactory.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Drone.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classIEntityFactory.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIEntityFactory.html">IEntityFactory</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classIEntityFactory.html">IEntityFactory</a>() {}</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIEntity.html">IEntity</a>* <a class="code" href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">CreateEntity</a>(JsonObject&amp; entity) = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Drone.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;IEntityFactory.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;util/json.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classIEntityFactory.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIEntityFactory.html">IEntityFactory</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classIEntityFactory.html">IEntityFactory</a>() {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classIEntity.html">IEntity</a>* <a class="code" href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">CreateEntity</a>(JsonObject&amp; entity) = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIEntityFactory_html_a9bd53cf7ca21ab252968062ea5d88180"><div class="ttname"><a href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">IEntityFactory::CreateEntity</a></div><div class="ttdeci">virtual IEntity * CreateEntity(JsonObject &amp;entity)=0</div><div class="ttdoc">Creates a new IEntity object.</div></div>
-<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
-<div class="ttc" id="aclassIEntityFactory_html"><div class="ttname"><a href="classIEntityFactory.html">IEntityFactory</a></div><div class="ttdef"><b>Definition:</b> IEntityFactory.h:10</div></div>
+<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">all object int he simulation model</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
+<div class="ttc" id="aclassIEntityFactory_html"><div class="ttname"><a href="classIEntityFactory.html">IEntityFactory</a></div><div class="ttdoc">IEntityFactory class to make new IEntitys.</div><div class="ttdef"><b>Definition:</b> IEntityFactory.h:13</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

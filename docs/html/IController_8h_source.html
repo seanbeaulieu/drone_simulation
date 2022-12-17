@@ -77,38 +77,38 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//--------------------  Controller Interface ----------------------------</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classIController.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIController.html">IController</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classIController.html">IController</a>() {}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#a9d4ed07090f564f3d6f1847440835610">AddEntity</a>(<span class="keyword">const</span> <a class="code" href="classIEntity.html">IEntity</a>&amp; entity) = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#aae116763f3bbfc0875eb841912df7c59">UpdateEntity</a>(<span class="keyword">const</span> <a class="code" href="classIEntity.html">IEntity</a>&amp; entity) = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#a35b431eb8e01216df8b33fa3f4c2b25c">RemoveEntity</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#aa50f4cf3a9cc11decfc8e201dc00ab39">AddPath</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                       <span class="keyword">const</span> std::vector&lt;std::vector&lt;float&gt; &gt;&amp; path) = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#a23bf74a0e1672c6daba1674137759f55">RemovePath</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#ab9ee95cb6f33c04b1323cec88e5d27b5">SendEventToView</a>(<span class="keyword">const</span> std::string&amp; event,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                               <span class="keyword">const</span> JsonObject&amp; details) = 0;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classIController.html">IController</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classIController.html">IController</a>() {}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#a9d4ed07090f564f3d6f1847440835610">AddEntity</a>(<span class="keyword">const</span> <a class="code" href="classIEntity.html">IEntity</a>&amp; entity) = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#aae116763f3bbfc0875eb841912df7c59">UpdateEntity</a>(<span class="keyword">const</span> <a class="code" href="classIEntity.html">IEntity</a>&amp; entity) = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#a35b431eb8e01216df8b33fa3f4c2b25c">RemoveEntity</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#aa50f4cf3a9cc11decfc8e201dc00ab39">AddPath</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                       <span class="keyword">const</span> std::vector&lt;std::vector&lt;float&gt; &gt;&amp; path) = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#a23bf74a0e1672c6daba1674137759f55">RemovePath</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIController.html#ab9ee95cb6f33c04b1323cec88e5d27b5">SendEventToView</a>(<span class="keyword">const</span> std::string&amp; event,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                               <span class="keyword">const</span> JsonObject&amp; details) = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIController_html_a23bf74a0e1672c6daba1674137759f55"><div class="ttname"><a href="classIController.html#a23bf74a0e1672c6daba1674137759f55">IController::RemovePath</a></div><div class="ttdeci">virtual void RemovePath(int id)=0</div><div class="ttdoc">Removes a path from the program.</div></div>
-<div class="ttc" id="aclassIController_html"><div class="ttname"><a href="classIController.html">IController</a></div><div class="ttdef"><b>Definition:</b> IController.h:11</div></div>
+<div class="ttc" id="aclassIController_html"><div class="ttname"><a href="classIController.html">IController</a></div><div class="ttdoc">Abstract controller class used in the Transit Service. Uses the Model View.</div><div class="ttdef"><b>Definition:</b> IController.h:15</div></div>
 <div class="ttc" id="aclassIController_html_aae116763f3bbfc0875eb841912df7c59"><div class="ttname"><a href="classIController.html#aae116763f3bbfc0875eb841912df7c59">IController::UpdateEntity</a></div><div class="ttdeci">virtual void UpdateEntity(const IEntity &amp;entity)=0</div><div class="ttdoc">Updates an entity in the program.</div></div>
 <div class="ttc" id="aclassIController_html_a35b431eb8e01216df8b33fa3f4c2b25c"><div class="ttname"><a href="classIController.html#a35b431eb8e01216df8b33fa3f4c2b25c">IController::RemoveEntity</a></div><div class="ttdeci">virtual void RemoveEntity(int id)=0</div><div class="ttdoc">Removes an entity from the program.</div></div>
 <div class="ttc" id="aclassIController_html_aa50f4cf3a9cc11decfc8e201dc00ab39"><div class="ttname"><a href="classIController.html#aa50f4cf3a9cc11decfc8e201dc00ab39">IController::AddPath</a></div><div class="ttdeci">virtual void AddPath(int id, const std::vector&lt; std::vector&lt; float &gt; &gt; &amp;path)=0</div><div class="ttdoc">Adds a path to the program.</div></div>
 <div class="ttc" id="aclassIController_html_ab9ee95cb6f33c04b1323cec88e5d27b5"><div class="ttname"><a href="classIController.html#ab9ee95cb6f33c04b1323cec88e5d27b5">IController::SendEventToView</a></div><div class="ttdeci">virtual void SendEventToView(const std::string &amp;event, const JsonObject &amp;details)=0</div><div class="ttdoc">Allows messages to be passed back to the view.</div></div>
 <div class="ttc" id="aclassIController_html_a9d4ed07090f564f3d6f1847440835610"><div class="ttname"><a href="classIController.html#a9d4ed07090f564f3d6f1847440835610">IController::AddEntity</a></div><div class="ttdeci">virtual void AddEntity(const IEntity &amp;entity)=0</div><div class="ttdoc">Adds an entity to the program.</div></div>
-<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
+<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">all object int he simulation model</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

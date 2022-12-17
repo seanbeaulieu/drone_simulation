@@ -1,4 +1,4 @@
 <map id="MobileRechargeFactory" name="MobileRechargeFactory">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,180,107"/>
-<area shape="rect" id="node2" href="$classIEntityFactory.html" title=" " alt="" coords="37,5,149,32"/>
+<area shape="rect" id="node1" title="A class for a Mobile Recharge Factory which creates new Mobile Recharge Stations." alt="" coords="5,80,180,107"/>
+<area shape="rect" id="node2" href="$classIEntityFactory.html" title="IEntityFactory class to make new IEntitys." alt="" coords="37,5,149,32"/>
 </map>

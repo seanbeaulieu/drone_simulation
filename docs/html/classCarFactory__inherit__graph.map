@@ -1,4 +1,4 @@
 <map id="CarFactory" name="CarFactory">
 <area shape="rect" id="node1" title="Creates a new Car object if the text in the provided JsonObject parameter is “car”" alt="" coords="15,80,107,107"/>
-<area shape="rect" id="node2" href="$classIEntityFactory.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" id="node2" href="$classIEntityFactory.html" title="IEntityFactory class to make new IEntitys." alt="" coords="5,5,117,32"/>
 </map>

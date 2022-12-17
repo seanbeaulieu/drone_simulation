@@ -72,23 +72,22 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ROBOT_FACTORY_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ROBOT_FACTORY_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;IEntityFactory.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Robot.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;IEntityFactory.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Robot.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classRobotFactory.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRobotFactory.html">RobotFactory</a> : <span class="keyword">public</span> <a class="code" href="classIEntityFactory.html">IEntityFactory</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classIEntity.html">IEntity</a>* <a class="code" href="classRobotFactory.html#ad2ceb080af7357b641332a237ae74959">CreateEntity</a>(JsonObject&amp; entity);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classRobotFactory.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRobotFactory.html">RobotFactory</a> : <span class="keyword">public</span> <a class="code" href="classIEntityFactory.html">IEntityFactory</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classIEntity.html">IEntity</a>* <a class="code" href="classRobotFactory.html#ad2ceb080af7357b641332a237ae74959">CreateEntity</a>(JsonObject&amp; entity);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassRobotFactory_html"><div class="ttname"><a href="classRobotFactory.html">RobotFactory</a></div><div class="ttdef"><b>Definition:</b> RobotFactory.h:10</div></div>
-<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
-<div class="ttc" id="aclassIEntityFactory_html"><div class="ttname"><a href="classIEntityFactory.html">IEntityFactory</a></div><div class="ttdef"><b>Definition:</b> IEntityFactory.h:10</div></div>
+<div class="ttc" id="aclassRobotFactory_html"><div class="ttname"><a href="classRobotFactory.html">RobotFactory</a></div><div class="ttdoc">Robot Factory class that creates Robot class if the provided text is &quot;robot&quot;.</div><div class="ttdef"><b>Definition:</b> RobotFactory.h:17</div></div>
+<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">all object int he simulation model</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
+<div class="ttc" id="aclassIEntityFactory_html"><div class="ttname"><a href="classIEntityFactory.html">IEntityFactory</a></div><div class="ttdoc">IEntityFactory class to make new IEntitys.</div><div class="ttdef"><b>Definition:</b> IEntityFactory.h:13</div></div>
 <div class="ttc" id="aclassRobotFactory_html_ad2ceb080af7357b641332a237ae74959"><div class="ttname"><a href="classRobotFactory.html#ad2ceb080af7357b641332a237ae74959">RobotFactory::CreateEntity</a></div><div class="ttdeci">IEntity * CreateEntity(JsonObject &amp;entity)</div><div class="ttdoc">Creates a new Robot entity.</div><div class="ttdef"><b>Definition:</b> RobotFactory.cc:3</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

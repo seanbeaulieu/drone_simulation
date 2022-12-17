@@ -1,4 +1,4 @@
 <map id="EmergencyPickup" name="EmergencyPickup">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,144,107"/>
-<area shape="rect" id="node2" href="$classIEntity.html" title=" " alt="" coords="43,5,107,32"/>
+<area shape="rect" id="node1" title="A new entity called EmergencyPick is responsible for picking up the drone if it runs out of battery." alt="" coords="5,80,144,107"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="all object int he simulation model" alt="" coords="43,5,107,32"/>
 </map>

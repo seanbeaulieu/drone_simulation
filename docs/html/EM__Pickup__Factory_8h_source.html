@@ -72,24 +72,24 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef Emergency_P_F_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define Emergency_P_F_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;IEntityFactory.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;EmergencyPickup.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;BatteryDecorator.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;BatteryDecorator.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;EmergencyPickup.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;IEntityFactory.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classEM__Pickup__Factory.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEM__Pickup__Factory.html">EM_Pickup_Factory</a> : <span class="keyword">public</span> <a class="code" href="classIEntityFactory.html">IEntityFactory</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classEM__Pickup__Factory.html">EM_Pickup_Factory</a>() {}</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classIEntity.html">IEntity</a>* <a class="code" href="classEM__Pickup__Factory.html#a8945720d270b5e306023e6de61598356">CreateEntity</a>(JsonObject&amp; entity);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classEM__Pickup__Factory.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEM__Pickup__Factory.html">EM_Pickup_Factory</a> : <span class="keyword">public</span> <a class="code" href="classIEntityFactory.html">IEntityFactory</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classEM__Pickup__Factory.html">EM_Pickup_Factory</a>() {}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classIEntity.html">IEntity</a>* <a class="code" href="classEM__Pickup__Factory.html#a8945720d270b5e306023e6de61598356">CreateEntity</a>(JsonObject&amp; entity);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdef"><b>Definition:</b> IEntity.h:16</div></div>
+<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">all object int he simulation model</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
 <div class="ttc" id="aclassEM__Pickup__Factory_html_a8945720d270b5e306023e6de61598356"><div class="ttname"><a href="classEM__Pickup__Factory.html#a8945720d270b5e306023e6de61598356">EM_Pickup_Factory::CreateEntity</a></div><div class="ttdeci">IEntity * CreateEntity(JsonObject &amp;entity)</div><div class="ttdoc">Creates a new entity as an Emergency Pickup Drone.</div><div class="ttdef"><b>Definition:</b> EM_Pickup_Factory.cc:3</div></div>
-<div class="ttc" id="aclassEM__Pickup__Factory_html"><div class="ttname"><a href="classEM__Pickup__Factory.html">EM_Pickup_Factory</a></div><div class="ttdef"><b>Definition:</b> EM_Pickup_Factory.h:9</div></div>
-<div class="ttc" id="aclassIEntityFactory_html"><div class="ttname"><a href="classIEntityFactory.html">IEntityFactory</a></div><div class="ttdef"><b>Definition:</b> IEntityFactory.h:10</div></div>
+<div class="ttc" id="aclassEM__Pickup__Factory_html"><div class="ttname"><a href="classEM__Pickup__Factory.html">EM_Pickup_Factory</a></div><div class="ttdoc">Creates a New EmergencyPickup Entity object if the text in provided JsonObject parameter is &quot;Emergenc...</div><div class="ttdef"><b>Definition:</b> EM_Pickup_Factory.h:14</div></div>
+<div class="ttc" id="aclassIEntityFactory_html"><div class="ttname"><a href="classIEntityFactory.html">IEntityFactory</a></div><div class="ttdoc">IEntityFactory class to make new IEntitys.</div><div class="ttdef"><b>Definition:</b> IEntityFactory.h:13</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

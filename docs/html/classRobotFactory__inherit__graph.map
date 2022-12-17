@@ -1,4 +1,4 @@
 <map id="RobotFactory" name="RobotFactory">
-<area shape="rect" id="node1" title=" " alt="" coords="7,80,115,107"/>
-<area shape="rect" id="node2" href="$classIEntityFactory.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" id="node1" title="Robot Factory class that creates Robot class if the provided text is &quot;robot&quot;." alt="" coords="7,80,115,107"/>
+<area shape="rect" id="node2" href="$classIEntityFactory.html" title="IEntityFactory class to make new IEntitys." alt="" coords="5,5,117,32"/>
 </map>

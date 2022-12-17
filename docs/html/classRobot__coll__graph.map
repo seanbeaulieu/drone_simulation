@@ -1,4 +1,4 @@
 <map id="Robot" name="Robot">
-<area shape="rect" id="node1" title=" " alt="" coords="7,80,67,107"/>
-<area shape="rect" id="node2" href="$classIEntity.html" title=" " alt="" coords="5,5,69,32"/>
+<area shape="rect" id="node1" title="Robot class to represent a user to be picked up and transported." alt="" coords="7,80,67,107"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="all object int he simulation model" alt="" coords="5,5,69,32"/>
 </map>

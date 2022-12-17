@@ -1,4 +1,4 @@
 <map id="BatteryDecorator" name="BatteryDecorator">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,140,107"/>
-<area shape="rect" id="node2" href="$classIEntity.html" title=" " alt="" coords="41,5,105,32"/>
+<area shape="rect" id="node1" title="A Battery Decorator for the drone, it give and battery." alt="" coords="5,80,140,107"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="all object int he simulation model" alt="" coords="41,5,105,32"/>
 </map>
